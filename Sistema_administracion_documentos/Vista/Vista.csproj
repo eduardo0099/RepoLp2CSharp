@@ -49,19 +49,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAgregarDoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAgregarDoc.Designer.cs">
-      <DependentUpon>frmAgregarDoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDocumentos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDocumentos.Designer.cs">
-      <DependentUpon>frmDocumentos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmInicio.cs">
+    <Compile Include="frmManejoDeGrupos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmInicio.Designer.cs">
@@ -72,11 +60,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAgregarDoc.resx">
-      <DependentUpon>frmAgregarDoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDocumentos.resx">
-      <DependentUpon>frmDocumentos.cs</DependentUpon>
+    <EmbeddedResource Include="frmManejoDeGrupos.resx">
+      <DependentUpon>frmManejoDeGrupos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>

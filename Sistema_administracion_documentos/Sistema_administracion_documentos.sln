@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vista", "Vista\Vista.csproj", "{54440FAF-0BB0-479B-98A5-B73DE8E24B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{47EDD035-F362-416C-882B-8594D0E28952}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{54440FAF-0BB0-479B-98A5-B73DE8E24B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54440FAF-0BB0-479B-98A5-B73DE8E24B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54440FAF-0BB0-479B-98A5-B73DE8E24B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47EDD035-F362-416C-882B-8594D0E28952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47EDD035-F362-416C-882B-8594D0E28952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47EDD035-F362-416C-882B-8594D0E28952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47EDD035-F362-416C-882B-8594D0E28952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

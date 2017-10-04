@@ -74,5 +74,11 @@ namespace Vista
             //otras formularios false
             frmDocumento.Visible = false;
         }
+
+        private void nuevoAnuncioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManejoDeAnuncios formAnuncio = new frmManejoDeAnuncios();
+            formAnuncio.Show();
+        }
     }
 }
