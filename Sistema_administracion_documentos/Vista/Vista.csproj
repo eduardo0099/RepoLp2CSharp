@@ -49,6 +49,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarAnuncio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarAnuncio.Designer.cs">
+      <DependentUpon>frmBuscarAnuncio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManejoDeAnuncios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManejoDeAnuncios.Designer.cs">
+      <DependentUpon>frmManejoDeAnuncios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManejoDeGrupos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +71,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarAnuncio.resx">
+      <DependentUpon>frmBuscarAnuncio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManejoDeAnuncios.resx">
+      <DependentUpon>frmManejoDeAnuncios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManejoDeGrupos.resx">
       <DependentUpon>frmManejoDeGrupos.cs</DependentUpon>

@@ -53,63 +53,64 @@
             this.manejoDeUsuariosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(994, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1325, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // manejoDeSitiosToolStripMenuItem
             // 
             this.manejoDeSitiosToolStripMenuItem.Name = "manejoDeSitiosToolStripMenuItem";
-            this.manejoDeSitiosToolStripMenuItem.Size = new System.Drawing.Size(156, 29);
+            this.manejoDeSitiosToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.manejoDeSitiosToolStripMenuItem.Text = "Manejo de Sitios";
             // 
             // manejoDeGruposToolStripMenuItem
             // 
             this.manejoDeGruposToolStripMenuItem.Name = "manejoDeGruposToolStripMenuItem";
-            this.manejoDeGruposToolStripMenuItem.Size = new System.Drawing.Size(171, 29);
+            this.manejoDeGruposToolStripMenuItem.Size = new System.Drawing.Size(225, 36);
             this.manejoDeGruposToolStripMenuItem.Text = "Manejo de Grupos";
             // 
             // manejoDeUsuariosToolStripMenuItem
             // 
             this.manejoDeUsuariosToolStripMenuItem.Name = "manejoDeUsuariosToolStripMenuItem";
-            this.manejoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(181, 29);
+            this.manejoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(239, 36);
             this.manejoDeUsuariosToolStripMenuItem.Text = "Manejo de Usuarios";
             // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Location = new System.Drawing.Point(21, 59);
+            this.lblBuscar.Location = new System.Drawing.Point(28, 74);
+            this.lblBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(59, 20);
+            this.lblBuscar.Size = new System.Drawing.Size(79, 25);
             this.lblBuscar.TabIndex = 1;
             this.lblBuscar.Text = "Buscar";
             this.lblBuscar.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 59);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Location = new System.Drawing.Point(116, 74);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 26);
+            this.textBox1.Size = new System.Drawing.Size(301, 31);
             this.textBox1.TabIndex = 2;
             // 
             // bttnBuscar
             // 
-            this.bttnBuscar.Location = new System.Drawing.Point(321, 56);
-            this.bttnBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bttnBuscar.Location = new System.Drawing.Point(428, 70);
+            this.bttnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bttnBuscar.Name = "bttnBuscar";
-            this.bttnBuscar.Size = new System.Drawing.Size(45, 31);
+            this.bttnBuscar.Size = new System.Drawing.Size(60, 39);
             this.bttnBuscar.TabIndex = 3;
             this.bttnBuscar.Text = "Go";
             this.bttnBuscar.UseVisualStyleBackColor = true;
             // 
             // bttnNuevoGrupo
             // 
-            this.bttnNuevoGrupo.Location = new System.Drawing.Point(834, 55);
-            this.bttnNuevoGrupo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bttnNuevoGrupo.Location = new System.Drawing.Point(1112, 69);
+            this.bttnNuevoGrupo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bttnNuevoGrupo.Name = "bttnNuevoGrupo";
-            this.bttnNuevoGrupo.Size = new System.Drawing.Size(141, 31);
+            this.bttnNuevoGrupo.Size = new System.Drawing.Size(188, 39);
             this.bttnNuevoGrupo.TabIndex = 4;
             this.bttnNuevoGrupo.Text = "Nuevo Grupo";
             this.bttnNuevoGrupo.UseVisualStyleBackColor = true;
@@ -118,60 +119,60 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 112);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 140);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(312, 509);
+            this.dataGridView1.Size = new System.Drawing.Size(416, 636);
             this.dataGridView1.TabIndex = 5;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(343, 112);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView2.Location = new System.Drawing.Point(457, 140);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(312, 509);
+            this.dataGridView2.Size = new System.Drawing.Size(416, 636);
             this.dataGridView2.TabIndex = 6;
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(663, 112);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView3.Location = new System.Drawing.Point(884, 140);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(312, 509);
+            this.dataGridView3.Size = new System.Drawing.Size(416, 636);
             this.dataGridView3.TabIndex = 7;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(314, 112);
+            this.vScrollBar1.Location = new System.Drawing.Point(419, 140);
             this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(20, 509);
+            this.vScrollBar1.Size = new System.Drawing.Size(20, 636);
             this.vScrollBar1.TabIndex = 8;
             // 
             // vScrollBar2
             // 
-            this.vScrollBar2.Location = new System.Drawing.Point(632, 112);
+            this.vScrollBar2.Location = new System.Drawing.Point(843, 140);
             this.vScrollBar2.Name = "vScrollBar2";
-            this.vScrollBar2.Size = new System.Drawing.Size(20, 509);
+            this.vScrollBar2.Size = new System.Drawing.Size(20, 636);
             this.vScrollBar2.TabIndex = 9;
             // 
             // vScrollBar3
             // 
-            this.vScrollBar3.Location = new System.Drawing.Point(952, 112);
+            this.vScrollBar3.Location = new System.Drawing.Point(1269, 140);
             this.vScrollBar3.Name = "vScrollBar3";
-            this.vScrollBar3.Size = new System.Drawing.Size(20, 509);
+            this.vScrollBar3.Size = new System.Drawing.Size(20, 636);
             this.vScrollBar3.TabIndex = 10;
             // 
             // frmManejoDeGrupos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 655);
+            this.ClientSize = new System.Drawing.Size(1325, 819);
             this.Controls.Add(this.vScrollBar3);
             this.Controls.Add(this.vScrollBar2);
             this.Controls.Add(this.vScrollBar1);
@@ -184,7 +185,7 @@
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmManejoDeGrupos";
             this.Text = "Manejo de Grupos";
             this.menuStrip1.ResumeLayout(false);
