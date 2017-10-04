@@ -35,32 +35,28 @@
             this.modificarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoAnuncioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // tolMenuDer
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1296, 46);
+            this.menuStrip1.Size = new System.Drawing.Size(648, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // accionesToolStripMenuItem
+            // lblNombreUsuario
             // 
             this.accionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarDocumentoToolStripMenuItem,
-            this.nuevoAnuncioToolStripMenuItem});
+            this.registrarDocumentoToolStripMenuItem});
             this.accionesToolStripMenuItem.Name = "accionesToolStripMenuItem";
-            this.accionesToolStripMenuItem.Size = new System.Drawing.Size(121, 38);
+            this.accionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.accionesToolStripMenuItem.Text = "Acciones";
             // 
-            // registrarDocumentoToolStripMenuItem
+            // btnCerrarSes
             // 
             this.registrarDocumentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirDocumentoToolStripMenuItem,
@@ -68,31 +64,31 @@
             this.eliminarDocumentoToolStripMenuItem,
             this.buscarDocumentoToolStripMenuItem});
             this.registrarDocumentoToolStripMenuItem.Name = "registrarDocumentoToolStripMenuItem";
-            this.registrarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(355, 38);
+            this.registrarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.registrarDocumentoToolStripMenuItem.Text = "Gestionar documentos";
             // 
-            // añadirDocumentoToolStripMenuItem
+            // picLogo
             // 
             this.añadirDocumentoToolStripMenuItem.Name = "añadirDocumentoToolStripMenuItem";
-            this.añadirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(345, 38);
+            this.añadirDocumentoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.añadirDocumentoToolStripMenuItem.Text = "Añadir documento";
             // 
-            // modificarDocumentoToolStripMenuItem
+            // toolStripButton2
             // 
             this.modificarDocumentoToolStripMenuItem.Name = "modificarDocumentoToolStripMenuItem";
-            this.modificarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(345, 38);
+            this.modificarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.modificarDocumentoToolStripMenuItem.Text = "Modificar documento";
             // 
-            // eliminarDocumentoToolStripMenuItem
+            // toolStripButton1
             // 
             this.eliminarDocumentoToolStripMenuItem.Name = "eliminarDocumentoToolStripMenuItem";
-            this.eliminarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(345, 38);
+            this.eliminarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.eliminarDocumentoToolStripMenuItem.Text = "Eliminar documento";
             // 
-            // buscarDocumentoToolStripMenuItem
+            // picHeader
             // 
             this.buscarDocumentoToolStripMenuItem.Name = "buscarDocumentoToolStripMenuItem";
-            this.buscarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(345, 38);
+            this.buscarDocumentoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.buscarDocumentoToolStripMenuItem.Text = "Buscar documento";
             // 
             // nuevoAnuncioToolStripMenuItem
@@ -106,17 +102,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 621);
+            this.ClientSize = new System.Drawing.Size(648, 323);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Pantalla principal";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.tolMenuDer.ResumeLayout(false);
+            this.tolMenuDer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHeader)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -129,7 +126,6 @@
         private System.Windows.Forms.ToolStripMenuItem modificarDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarDocumentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoAnuncioToolStripMenuItem;
     }
 }
 

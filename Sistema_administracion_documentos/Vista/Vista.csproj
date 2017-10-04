@@ -49,37 +49,22 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscarAnuncio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarAnuncio.Designer.cs">
-      <DependentUpon>frmBuscarAnuncio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmManejoDeAnuncios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmManejoDeAnuncios.Designer.cs">
-      <DependentUpon>frmManejoDeAnuncios.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmManejoDeGrupos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManejoDeGrupos.Designer.cs">
-      <DependentUpon>frmManejoDeGrupos.cs</DependentUpon>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarAnuncio.resx">
-      <DependentUpon>frmBuscarAnuncio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmManejoDeAnuncios.resx">
-      <DependentUpon>frmManejoDeAnuncios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmManejoDeGrupos.resx">
       <DependentUpon>frmManejoDeGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,6 +85,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pucp-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Ico-documents.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Documents-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
