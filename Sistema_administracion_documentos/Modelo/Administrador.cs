@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class Administrador
+    public class Administrador: Usuario
     {
+        private int codigo;
+        private string cargo;
+
+        public Administrador() {
+
+        }
+
+        public int Codigo { get => codigo; set => codigo = value; }
+        public string Cargo { get => cargo; set => cargo = value; }
     }
 }

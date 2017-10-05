@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class Docente
+    public class Docente:Usuario
     {
+        private int codigo;
+        private string especialidad;
+
+        public Docente() {
+
+        }
+
+        public int Codigo { get => codigo; set => codigo = value; }
+        public string Especialidad { get => especialidad; set => especialidad = value; }
     }
 }
