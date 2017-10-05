@@ -55,6 +55,12 @@
     <Compile Include="frmAgregarDoc.Designer.cs">
       <DependentUpon>frmAgregarDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarAnuncio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarAnuncio.Designer.cs">
+      <DependentUpon>frmBuscarAnuncio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDocumentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,12 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManejoDeAnuncios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManejoDeAnuncios.Designer.cs">
+      <DependentUpon>frmManejoDeAnuncios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -75,11 +87,17 @@
     <EmbeddedResource Include="frmAgregarDoc.resx">
       <DependentUpon>frmAgregarDoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarAnuncio.resx">
+      <DependentUpon>frmBuscarAnuncio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDocumentos.resx">
       <DependentUpon>frmDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManejoDeAnuncios.resx">
+      <DependentUpon>frmManejoDeAnuncios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
