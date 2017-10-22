@@ -24,3 +24,18 @@ G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Proyectos Practica\RepoLp2CSharp\Sistema_a
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Proyectos Practica\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Proyectos Practica\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Proyectos Practica\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Vista.exe
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Vista.pdb
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmAgregarDoc.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmBuscarAnuncio.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmDocumentos.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmInicio.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmManejoDeAnuncios.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmPrincipal.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmLogin.resources

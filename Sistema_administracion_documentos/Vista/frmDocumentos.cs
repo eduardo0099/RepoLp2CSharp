@@ -41,5 +41,9 @@ namespace Vista
             frmAgregarDoc FrmagregaDocumento = new frmAgregarDoc();
             FrmagregaDocumento.ShowDialog();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+
+        }
     }
 }

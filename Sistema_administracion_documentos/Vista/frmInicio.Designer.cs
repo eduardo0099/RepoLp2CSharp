@@ -34,20 +34,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 170);
+            this.label1.Location = new System.Drawing.Point(230, 241);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 13);
+            this.label1.Size = new System.Drawing.Size(395, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido a sistema de gestion de documentos de EEGGCC";
             // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 404);
+            this.ClientSize = new System.Drawing.Size(867, 530);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(867, 530);
             this.Name = "frmInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInicio";
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.ResumeLayout(false);

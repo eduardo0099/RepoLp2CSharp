@@ -19,6 +19,8 @@ namespace Vista
         public frmInicio(Form padre)
         {
             InitializeComponent();
+            
+
             this.MdiParent = padre;
         }
         private void frmInicio_Load(object sender, EventArgs e)

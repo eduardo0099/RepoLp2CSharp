@@ -14,6 +14,7 @@ namespace Vista
         public frmAgregarDoc()
         {
             InitializeComponent();
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -33,6 +34,10 @@ namespace Vista
             {
                 txtArchSelec.Text = openFileDialog1.FileName;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+
         }
     }
 }
