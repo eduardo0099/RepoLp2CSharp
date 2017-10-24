@@ -39,3 +39,5 @@ C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmPrincipal.resources
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmLogin.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Modelo.dll
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Modelo.pdb

@@ -4,3 +4,9 @@ G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Proyectos Practica\RepoLp2CSharp\Sistema_a
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Proyectos Practica\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.pdb
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Proyectos Practica\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Proyectos Practica\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.dll
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb

@@ -24,12 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bttnLogin = new System.Windows.Forms.Button();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.lblSep1 = new System.Windows.Forms.Label();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.lblSep2 = new System.Windows.Forms.Label();
-            this.bttnCerrar = new System.Windows.Forms.Button();
+            this.lblSep1 = new System.Windows.Forms.Label();
+            this.bttnLogin = new System.Windows.Forms.Button();
             this.picContrasena = new System.Windows.Forms.PictureBox();
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.picUserLogo = new System.Windows.Forms.PictureBox();
@@ -42,7 +41,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.bttnCerrar);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.txtContrasena);
             this.panel1.Controls.Add(this.lblSep2);
@@ -55,15 +53,18 @@
             this.panel1.Size = new System.Drawing.Size(424, 229);
             this.panel1.TabIndex = 1;
             // 
-            // bttnLogin
+            // txtUsuario
             // 
-            this.bttnLogin.Location = new System.Drawing.Point(97, 165);
-            this.bttnLogin.Name = "bttnLogin";
-            this.bttnLogin.Size = new System.Drawing.Size(75, 23);
-            this.bttnLogin.TabIndex = 4;
-            this.bttnLogin.Text = "Entrar";
-            this.bttnLogin.UseVisualStyleBackColor = true;
-            this.bttnLogin.Click += new System.EventHandler(this.bttnLogin_Click);
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtUsuario.Location = new System.Drawing.Point(85, 48);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(299, 15);
+            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.Text = "Usuario";
+            this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtContrasena
             // 
@@ -74,29 +75,11 @@
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(299, 15);
             this.txtContrasena.TabIndex = 3;
+            this.txtContrasena.Text = "Contrasena";
             this.txtContrasena.UseSystemPasswordChar = true;
+            this.txtContrasena.Click += new System.EventHandler(this.txtContrasena_Click);
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtContrasena_TextChanged);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtUsuario.Location = new System.Drawing.Point(85, 48);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(299, 15);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            // 
-            // lblSep1
-            // 
-            this.lblSep1.AutoSize = true;
-            this.lblSep1.BackColor = System.Drawing.Color.Transparent;
-            this.lblSep1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.lblSep1.Location = new System.Drawing.Point(82, 53);
-            this.lblSep1.Name = "lblSep1";
-            this.lblSep1.Size = new System.Drawing.Size(304, 17);
-            this.lblSep1.TabIndex = 5;
-            this.lblSep1.Text = "_____________________________________";
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // lblSep2
             // 
@@ -109,15 +92,26 @@
             this.lblSep2.TabIndex = 6;
             this.lblSep2.Text = "_____________________________________";
             // 
-            // bttnCerrar
+            // lblSep1
             // 
-            this.bttnCerrar.Location = new System.Drawing.Point(251, 165);
-            this.bttnCerrar.Name = "bttnCerrar";
-            this.bttnCerrar.Size = new System.Drawing.Size(75, 23);
-            this.bttnCerrar.TabIndex = 7;
-            this.bttnCerrar.Text = "Cerrar";
-            this.bttnCerrar.UseVisualStyleBackColor = true;
-            this.bttnCerrar.Click += new System.EventHandler(this.bttnCerrar_Click);
+            this.lblSep1.AutoSize = true;
+            this.lblSep1.BackColor = System.Drawing.Color.Transparent;
+            this.lblSep1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.lblSep1.Location = new System.Drawing.Point(82, 53);
+            this.lblSep1.Name = "lblSep1";
+            this.lblSep1.Size = new System.Drawing.Size(304, 17);
+            this.lblSep1.TabIndex = 5;
+            this.lblSep1.Text = "_____________________________________";
+            // 
+            // bttnLogin
+            // 
+            this.bttnLogin.Location = new System.Drawing.Point(184, 166);
+            this.bttnLogin.Name = "bttnLogin";
+            this.bttnLogin.Size = new System.Drawing.Size(75, 23);
+            this.bttnLogin.TabIndex = 4;
+            this.bttnLogin.Text = "Entrar";
+            this.bttnLogin.UseVisualStyleBackColor = true;
+            this.bttnLogin.Click += new System.EventHandler(this.bttnLogin_Click);
             // 
             // picContrasena
             // 
@@ -140,7 +134,7 @@
             // picUserLogo
             // 
             this.picUserLogo.Image = global::Vista.Properties.Resources.loguin;
-            this.picUserLogo.Location = new System.Drawing.Point(97, 29);
+            this.picUserLogo.Location = new System.Drawing.Point(103, 29);
             this.picUserLogo.Name = "picUserLogo";
             this.picUserLogo.Size = new System.Drawing.Size(229, 218);
             this.picUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -156,10 +150,13 @@
             this.ClientSize = new System.Drawing.Size(423, 479);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picUserLogo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cerrar);
             this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmLogin_KeyPress);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picContrasena)).EndInit();
@@ -180,6 +177,5 @@
         private System.Windows.Forms.PictureBox picUsuario;
         private System.Windows.Forms.Label lblSep1;
         private System.Windows.Forms.Label lblSep2;
-        private System.Windows.Forms.Button bttnCerrar;
     }
 }

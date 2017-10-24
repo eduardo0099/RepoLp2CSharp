@@ -90,8 +90,14 @@ namespace Vista
 
         private void btnCerrarSes_Click(object sender, EventArgs e) {
             frmLogin ventanaLogin = new frmLogin();
-            ventanaLogin.Show();
-            this.Close();
+            
+            this.Hide();
+            if (ventanaLogin.ShowDialog() == DialogResult.OK) {
+                    lblNombreUsuario.Text = ventanaLogin.NombreUsuario;
+                    this.Show();
+            }
+            else if(ventanaLogin.estado == false) this.Close();
+
         }
     }
 }

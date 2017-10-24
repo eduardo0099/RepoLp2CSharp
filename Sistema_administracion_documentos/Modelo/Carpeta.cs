@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Modelo
 {
+    [Serializable]
     public class Carpeta
     {
         private int _id;

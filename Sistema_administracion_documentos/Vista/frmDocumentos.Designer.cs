@@ -38,7 +38,7 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,22 +116,20 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label1
+            // treeView1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(252, 245);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Aqui se mostrará la lista de documentos y carpetas";
+            this.treeView1.Location = new System.Drawing.Point(12, 30);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(843, 488);
+            this.treeView1.TabIndex = 4;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // frmDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 530);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -158,6 +156,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }

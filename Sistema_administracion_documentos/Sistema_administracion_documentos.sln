@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{8F6EB753-865F-4E76-840A-9F95315E2768}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controlador", "Controlador\Controlador.csproj", "{DEF241B8-D881-4CD9-8FDF-69F4E93C9308}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8F6EB753-865F-4E76-840A-9F95315E2768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F6EB753-865F-4E76-840A-9F95315E2768}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F6EB753-865F-4E76-840A-9F95315E2768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEF241B8-D881-4CD9-8FDF-69F4E93C9308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF241B8-D881-4CD9-8FDF-69F4E93C9308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF241B8-D881-4CD9-8FDF-69F4E93C9308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF241B8-D881-4CD9-8FDF-69F4E93C9308}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

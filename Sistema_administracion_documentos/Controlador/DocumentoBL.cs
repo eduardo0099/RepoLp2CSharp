@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccesoDatos {
-    class Program {
+namespace Controlador {
+    class DocumentoBL {
         static void Main(string[] args) {
         }
     }
