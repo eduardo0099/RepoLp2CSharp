@@ -27,5 +27,15 @@ namespace Vista
         {
 
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblColorAnu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
