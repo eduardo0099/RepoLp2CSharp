@@ -13,6 +13,8 @@ namespace Vista {
         private string masterKey = "123456";
         private string nombreUsuario;
         public bool estado = true;
+        private bool limpiarCampoUsuario = false;
+        private bool limpiarCampoContra = false;
 
         public string NombreUsuario { get => nombreUsuario; set => nombreUsuario = value; }
 
@@ -75,6 +77,7 @@ namespace Vista {
         private void Cerrar(object sender, FormClosingEventArgs e) {
             //this.DialogResult = DialogResult.OK;
             this.estado = false;
+
         }
 
         private void frmLogin_KeyPress(object sender, KeyPressEventArgs e) {
@@ -153,11 +156,13 @@ namespace Vista {
         }
 
         private void txtUsuario_Click(object sender, EventArgs e) {
-            txtUsuario.Text = "";
+            if (!limpiarCampoUsuario) txtUsuario.Text = "";
+            limpiarCampoUsuario = true;
         }
 
         private void txtContrasena_Click(object sender, EventArgs e) {
-            txtContrasena.Text = "";
+            if (!limpiarCampoContra) txtContrasena.Text = "";
+            limpiarCampoContra = true;
         }
 
         private void lblRecuperar_Click(object sender, EventArgs e)
