@@ -37,5 +37,10 @@ namespace Vista
         {
 
         }
+
+        private void cmbFiltroCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

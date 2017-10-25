@@ -29,6 +29,7 @@
             this.lblSep2 = new System.Windows.Forms.Label();
             this.lblSep1 = new System.Windows.Forms.Label();
             this.bttnLogin = new System.Windows.Forms.Button();
+            this.lblRecuperar = new System.Windows.Forms.Label();
             this.picContrasena = new System.Windows.Forms.PictureBox();
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.picUserLogo = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblRecuperar);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.txtContrasena);
             this.panel1.Controls.Add(this.lblSep2);
@@ -48,18 +50,21 @@
             this.panel1.Controls.Add(this.bttnLogin);
             this.panel1.Controls.Add(this.picContrasena);
             this.panel1.Controls.Add(this.picUsuario);
-            this.panel1.Location = new System.Drawing.Point(0, 253);
+            this.panel1.Location = new System.Drawing.Point(0, 206);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(424, 229);
+            this.panel1.Size = new System.Drawing.Size(318, 186);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtUsuario
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtUsuario.Location = new System.Drawing.Point(85, 48);
+            this.txtUsuario.Location = new System.Drawing.Point(64, 39);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(299, 15);
+            this.txtUsuario.Size = new System.Drawing.Size(224, 13);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Click += new System.EventHandler(this.txtUsuario_Click);
@@ -70,10 +75,11 @@
             // 
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtContrasena.Location = new System.Drawing.Point(85, 111);
+            this.txtContrasena.Location = new System.Drawing.Point(64, 90);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(299, 15);
+            this.txtContrasena.Size = new System.Drawing.Size(224, 13);
             this.txtContrasena.TabIndex = 3;
             this.txtContrasena.Text = "Contrasena";
             this.txtContrasena.UseSystemPasswordChar = true;
@@ -86,9 +92,10 @@
             this.lblSep2.AutoSize = true;
             this.lblSep2.BackColor = System.Drawing.Color.Transparent;
             this.lblSep2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.lblSep2.Location = new System.Drawing.Point(82, 116);
+            this.lblSep2.Location = new System.Drawing.Point(62, 94);
+            this.lblSep2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSep2.Name = "lblSep2";
-            this.lblSep2.Size = new System.Drawing.Size(304, 17);
+            this.lblSep2.Size = new System.Drawing.Size(229, 13);
             this.lblSep2.TabIndex = 6;
             this.lblSep2.Text = "_____________________________________";
             // 
@@ -97,60 +104,78 @@
             this.lblSep1.AutoSize = true;
             this.lblSep1.BackColor = System.Drawing.Color.Transparent;
             this.lblSep1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.lblSep1.Location = new System.Drawing.Point(82, 53);
+            this.lblSep1.Location = new System.Drawing.Point(62, 43);
+            this.lblSep1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSep1.Name = "lblSep1";
-            this.lblSep1.Size = new System.Drawing.Size(304, 17);
+            this.lblSep1.Size = new System.Drawing.Size(229, 13);
             this.lblSep1.TabIndex = 5;
             this.lblSep1.Text = "_____________________________________";
             // 
             // bttnLogin
             // 
-            this.bttnLogin.Location = new System.Drawing.Point(184, 166);
+            this.bttnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnLogin.Location = new System.Drawing.Point(127, 135);
+            this.bttnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bttnLogin.Name = "bttnLogin";
-            this.bttnLogin.Size = new System.Drawing.Size(75, 23);
+            this.bttnLogin.Size = new System.Drawing.Size(67, 22);
             this.bttnLogin.TabIndex = 4;
-            this.bttnLogin.Text = "Entrar";
+            this.bttnLogin.Text = "Acceder";
             this.bttnLogin.UseVisualStyleBackColor = true;
             this.bttnLogin.Click += new System.EventHandler(this.bttnLogin_Click);
+            // 
+            // lblRecuperar
+            // 
+            this.lblRecuperar.AutoSize = true;
+            this.lblRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecuperar.Location = new System.Drawing.Point(99, 160);
+            this.lblRecuperar.Name = "lblRecuperar";
+            this.lblRecuperar.Size = new System.Drawing.Size(119, 13);
+            this.lblRecuperar.TabIndex = 7;
+            this.lblRecuperar.Text = "¿Olvidó su contraseña?";
+            this.lblRecuperar.Click += new System.EventHandler(this.lblRecuperar_Click);
             // 
             // picContrasena
             // 
             this.picContrasena.Image = global::Vista.Properties.Resources.usuario;
-            this.picContrasena.Location = new System.Drawing.Point(36, 104);
+            this.picContrasena.Location = new System.Drawing.Point(27, 84);
+            this.picContrasena.Margin = new System.Windows.Forms.Padding(2);
             this.picContrasena.Name = "picContrasena";
-            this.picContrasena.Size = new System.Drawing.Size(34, 36);
+            this.picContrasena.Size = new System.Drawing.Size(26, 29);
             this.picContrasena.TabIndex = 2;
             this.picContrasena.TabStop = false;
             // 
             // picUsuario
             // 
             this.picUsuario.Image = global::Vista.Properties.Resources.usuario2;
-            this.picUsuario.Location = new System.Drawing.Point(36, 41);
+            this.picUsuario.Location = new System.Drawing.Point(27, 33);
+            this.picUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Size = new System.Drawing.Size(34, 36);
+            this.picUsuario.Size = new System.Drawing.Size(26, 29);
             this.picUsuario.TabIndex = 0;
             this.picUsuario.TabStop = false;
             // 
             // picUserLogo
             // 
             this.picUserLogo.Image = global::Vista.Properties.Resources.loguin;
-            this.picUserLogo.Location = new System.Drawing.Point(103, 29);
+            this.picUserLogo.Location = new System.Drawing.Point(77, 24);
+            this.picUserLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picUserLogo.Name = "picUserLogo";
-            this.picUserLogo.Size = new System.Drawing.Size(229, 218);
+            this.picUserLogo.Size = new System.Drawing.Size(172, 177);
             this.picUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picUserLogo.TabIndex = 0;
             this.picUserLogo.TabStop = false;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(127)))));
-            this.ClientSize = new System.Drawing.Size(423, 479);
+            this.ClientSize = new System.Drawing.Size(317, 389);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.picUserLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.Text = "Login";
@@ -177,5 +202,6 @@
         private System.Windows.Forms.PictureBox picUsuario;
         private System.Windows.Forms.Label lblSep1;
         private System.Windows.Forms.Label lblSep2;
+        private System.Windows.Forms.Label lblRecuperar;
     }
 }

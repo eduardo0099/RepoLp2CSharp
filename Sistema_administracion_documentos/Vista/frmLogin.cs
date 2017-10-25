@@ -36,7 +36,7 @@ namespace Vista {
                 return;
             }
             if (txtContrasena.Text == "") {
-                MessageBox.Show("Ingrese una contrasena.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (txtUsuario.Text == masterUser && txtContrasena.Text == masterKey) {
@@ -47,7 +47,7 @@ namespace Vista {
                 this.DialogResult = DialogResult.OK;
             }
             else {
-                MessageBox.Show("Usuario o contrasena incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
         }
@@ -85,7 +85,7 @@ namespace Vista {
                     return;
                 }
                 if (txtContrasena.Text == "") {
-                    MessageBox.Show("Ingrese una contrasena.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ingrese una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (txtUsuario.Text == masterUser && txtContrasena.Text == masterKey) {
@@ -96,7 +96,7 @@ namespace Vista {
                     this.DialogResult = DialogResult.OK;
                 }
                 else {
-                    MessageBox.Show("Usuario o contrasena incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
@@ -110,7 +110,7 @@ namespace Vista {
                     return;
                 }
                 if (txtContrasena.Text == "") {
-                    MessageBox.Show("Ingrese una contrasena.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ingrese una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (txtUsuario.Text == masterUser && txtContrasena.Text == masterKey) {
@@ -121,7 +121,7 @@ namespace Vista {
                     this.DialogResult = DialogResult.OK;
                 }
                 else {
-                    MessageBox.Show("Usuario o contrasena incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
@@ -135,7 +135,7 @@ namespace Vista {
                     return;
                 }
                 if (txtContrasena.Text == "") {
-                    MessageBox.Show("Ingrese una contrasena.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ingrese una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (txtUsuario.Text == masterUser && txtContrasena.Text == masterKey) {
@@ -146,7 +146,7 @@ namespace Vista {
                     this.DialogResult = DialogResult.OK;
                 }
                 else {
-                    MessageBox.Show("Usuario o contrasena incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuario o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
@@ -158,6 +158,17 @@ namespace Vista {
 
         private void txtContrasena_Click(object sender, EventArgs e) {
             txtContrasena.Text = "";
+        }
+
+        private void lblRecuperar_Click(object sender, EventArgs e)
+        {
+            frmRecuperarCuenta ventanaRecuperar = new frmRecuperarCuenta();
+            ventanaRecuperar.ShowDialog();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

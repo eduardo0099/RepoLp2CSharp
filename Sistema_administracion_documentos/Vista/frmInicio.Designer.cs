@@ -44,16 +44,33 @@
             this.lblFechaAnu = new System.Windows.Forms.Label();
             this.lblPorAnu = new System.Windows.Forms.Label();
             this.lblAutorAnu = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.cmbFiltroCurso = new System.Windows.Forms.ComboBox();
+            this.cmbFiltroAccion = new System.Windows.Forms.ComboBox();
+            this.cmbFiltroFecha = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ColAutorActivi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAccionActivi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCursoActivi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDocActivi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -77,10 +94,20 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.cmbFiltroFecha);
+            this.tabPage2.Controls.Add(this.cmbFiltroAccion);
+            this.tabPage2.Controls.Add(this.cmbFiltroCurso);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.Size = new System.Drawing.Size(641, 403);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Actividades";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -208,6 +235,136 @@
             this.lblAutorAnu.TabIndex = 5;
             this.lblAutorAnu.Text = "Nombre autor";
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(12, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(617, 285);
+            this.label1.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColAutorActivi,
+            this.colAccionActivi,
+            this.ColCursoActivi,
+            this.ColDocActivi});
+            this.dataGridView2.Location = new System.Drawing.Point(18, 183);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(605, 206);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // cmbFiltroCurso
+            // 
+            this.cmbFiltroCurso.FormattingEnabled = true;
+            this.cmbFiltroCurso.Location = new System.Drawing.Point(100, 153);
+            this.cmbFiltroCurso.Name = "cmbFiltroCurso";
+            this.cmbFiltroCurso.Size = new System.Drawing.Size(179, 21);
+            this.cmbFiltroCurso.TabIndex = 2;
+            this.cmbFiltroCurso.Text = "Todos los Cursos";
+            this.cmbFiltroCurso.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroCurso_SelectedIndexChanged);
+            // 
+            // cmbFiltroAccion
+            // 
+            this.cmbFiltroAccion.FormattingEnabled = true;
+            this.cmbFiltroAccion.Location = new System.Drawing.Point(314, 153);
+            this.cmbFiltroAccion.Name = "cmbFiltroAccion";
+            this.cmbFiltroAccion.Size = new System.Drawing.Size(143, 21);
+            this.cmbFiltroAccion.TabIndex = 3;
+            this.cmbFiltroAccion.Text = "Todos las acciones";
+            // 
+            // cmbFiltroFecha
+            // 
+            this.cmbFiltroFecha.FormattingEnabled = true;
+            this.cmbFiltroFecha.Location = new System.Drawing.Point(494, 153);
+            this.cmbFiltroFecha.Name = "cmbFiltroFecha";
+            this.cmbFiltroFecha.Size = new System.Drawing.Size(112, 21);
+            this.cmbFiltroFecha.TabIndex = 4;
+            this.cmbFiltroFecha.Text = "Hoy";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(36, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Filtros:";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(15, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(610, 252);
+            this.label3.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Location = new System.Drawing.Point(17, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Actividades: ";
+            // 
+            // ColAutorActivi
+            // 
+            this.ColAutorActivi.HeaderText = "Autor";
+            this.ColAutorActivi.Name = "ColAutorActivi";
+            this.ColAutorActivi.ReadOnly = true;
+            this.ColAutorActivi.Width = 200;
+            // 
+            // colAccionActivi
+            // 
+            this.colAccionActivi.HeaderText = "Accion";
+            this.colAccionActivi.Name = "colAccionActivi";
+            this.colAccionActivi.ReadOnly = true;
+            // 
+            // ColCursoActivi
+            // 
+            this.ColCursoActivi.HeaderText = "Curso";
+            this.ColCursoActivi.Name = "ColCursoActivi";
+            this.ColCursoActivi.ReadOnly = true;
+            // 
+            // ColDocActivi
+            // 
+            this.ColDocActivi.HeaderText = "Titulo Documento";
+            this.ColDocActivi.Name = "ColDocActivi";
+            this.ColDocActivi.ReadOnly = true;
+            this.ColDocActivi.Width = 150;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::Vista.Properties.Resources.loguin;
+            this.pictureBox1.Image = global::Vista.Properties.Resources.loguin;
+            this.pictureBox1.InitialImage = global::Vista.Properties.Resources.loguin;
+            this.pictureBox1.Location = new System.Drawing.Point(339, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(35, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 24);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Bienvenido:";
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,9 +381,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +410,19 @@
         private System.Windows.Forms.Label lblFechaAnu;
         private System.Windows.Forms.Label lblPubli;
         private System.Windows.Forms.TextBox txtAnuncio;
+        private System.Windows.Forms.ComboBox cmbFiltroAccion;
+        private System.Windows.Forms.ComboBox cmbFiltroCurso;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbFiltroFecha;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColAutorActivi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAccionActivi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCursoActivi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDocActivi;
+        private System.Windows.Forms.Label label5;
     }
 }

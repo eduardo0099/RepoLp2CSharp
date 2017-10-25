@@ -42,7 +42,7 @@ namespace Vista
             frmInicio = new frmInicio(this);
             //frmDocumento.Width = width - tolMenuDer.Width - 5;
             //frmDocumento.Height = height - picHeader.Height - 50;
-            //frmInicio.Visible = true;
+            frmInicio.Visible = true;
         }
 
 

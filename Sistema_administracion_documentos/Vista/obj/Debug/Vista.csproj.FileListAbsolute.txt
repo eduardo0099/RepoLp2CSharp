@@ -58,3 +58,4 @@ G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Last Repo C#\RepoLp2CSharp\Sistema_adminis
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Last Repo C#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Last Repo C#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Last Repo C#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\Last Repo C#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmRecuperarCuenta.resources

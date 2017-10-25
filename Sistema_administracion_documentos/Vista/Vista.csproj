@@ -107,6 +107,12 @@
     <Compile Include="frmManejoDeAnuncios.Designer.cs">
       <DependentUpon>frmManejoDeAnuncios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRecuperarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecuperarCuenta.Designer.cs">
+      <DependentUpon>frmRecuperarCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManejoDeAnuncios.resx">
       <DependentUpon>frmManejoDeAnuncios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecuperarCuenta.resx">
+      <DependentUpon>frmRecuperarCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
