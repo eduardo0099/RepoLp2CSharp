@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManejoDeAnuncios));
             this.label3 = new System.Windows.Forms.Label();
-            this.AsuntoTextBox = new System.Windows.Forms.TextBox();
-            this.anunsioTextBox = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.txtAnunsio = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nombreDeCursoComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.nuevoAnuncioToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.buscarAnuncioToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.ModificarAnuncioToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.guardarAnuncioToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.modificarAnuncioToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.eleminarAnuncioToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.cancelarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,40 +49,40 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label3.Location = new System.Drawing.Point(13, 68);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(26, 131);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 15);
+            this.label3.Size = new System.Drawing.Size(81, 32);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Asunto:";
+            this.label3.Text = "Titulo:";
             // 
-            // AsuntoTextBox
+            // txtTitulo
             // 
-            this.AsuntoTextBox.Enabled = false;
-            this.AsuntoTextBox.Location = new System.Drawing.Point(77, 69);
-            this.AsuntoTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.AsuntoTextBox.Name = "AsuntoTextBox";
-            this.AsuntoTextBox.Size = new System.Drawing.Size(254, 20);
-            this.AsuntoTextBox.TabIndex = 20;
+            this.txtTitulo.Enabled = false;
+            this.txtTitulo.Location = new System.Drawing.Point(154, 133);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(504, 31);
+            this.txtTitulo.TabIndex = 20;
             // 
-            // anunsioTextBox
+            // txtAnunsio
             // 
-            this.anunsioTextBox.Enabled = false;
-            this.anunsioTextBox.Location = new System.Drawing.Point(77, 103);
-            this.anunsioTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.anunsioTextBox.Multiline = true;
-            this.anunsioTextBox.Name = "anunsioTextBox";
-            this.anunsioTextBox.Size = new System.Drawing.Size(291, 149);
-            this.anunsioTextBox.TabIndex = 19;
+            this.txtAnunsio.Enabled = false;
+            this.txtAnunsio.Location = new System.Drawing.Point(154, 198);
+            this.txtAnunsio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAnunsio.Multiline = true;
+            this.txtAnunsio.Name = "txtAnunsio";
+            this.txtAnunsio.Size = new System.Drawing.Size(578, 283);
+            this.txtAnunsio.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label2.Location = new System.Drawing.Point(13, 101);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(26, 194);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
+            this.label2.Size = new System.Drawing.Size(108, 32);
             this.label2.TabIndex = 18;
             this.label2.Text = "Anuncio:";
             // 
@@ -89,20 +90,20 @@
             // 
             this.nombreDeCursoComboBox.Enabled = false;
             this.nombreDeCursoComboBox.FormattingEnabled = true;
-            this.nombreDeCursoComboBox.Location = new System.Drawing.Point(125, 36);
-            this.nombreDeCursoComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nombreDeCursoComboBox.Location = new System.Drawing.Point(250, 69);
+            this.nombreDeCursoComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nombreDeCursoComboBox.Name = "nombreDeCursoComboBox";
-            this.nombreDeCursoComboBox.Size = new System.Drawing.Size(206, 21);
+            this.nombreDeCursoComboBox.Size = new System.Drawing.Size(408, 33);
             this.nombreDeCursoComboBox.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.Location = new System.Drawing.Point(13, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(26, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 15);
+            this.label1.Size = new System.Drawing.Size(206, 32);
             this.label1.TabIndex = 16;
             this.label1.Text = "Nombre de curso:";
             // 
@@ -112,13 +113,14 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoAnuncioToolStripButton,
             this.buscarAnuncioToolStripButton,
-            this.toolStripButton1,
-            this.ModificarAnuncioToolStripButton,
-            this.eleminarAnuncioToolStripButton});
+            this.guardarAnuncioToolStripButton,
+            this.modificarAnuncioToolStripButton,
+            this.eleminarAnuncioToolStripButton,
+            this.cancelarToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(393, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(786, 39);
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -128,7 +130,7 @@
             this.nuevoAnuncioToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("nuevoAnuncioToolStripButton.Image")));
             this.nuevoAnuncioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.nuevoAnuncioToolStripButton.Name = "nuevoAnuncioToolStripButton";
-            this.nuevoAnuncioToolStripButton.Size = new System.Drawing.Size(46, 22);
+            this.nuevoAnuncioToolStripButton.Size = new System.Drawing.Size(90, 36);
             this.nuevoAnuncioToolStripButton.Text = "Nuevo";
             this.nuevoAnuncioToolStripButton.Click += new System.EventHandler(this.nuevoAnuncioToolStripButton_Click);
             // 
@@ -138,31 +140,31 @@
             this.buscarAnuncioToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("buscarAnuncioToolStripButton.Image")));
             this.buscarAnuncioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buscarAnuncioToolStripButton.Name = "buscarAnuncioToolStripButton";
-            this.buscarAnuncioToolStripButton.Size = new System.Drawing.Size(46, 22);
+            this.buscarAnuncioToolStripButton.Size = new System.Drawing.Size(88, 36);
             this.buscarAnuncioToolStripButton.Text = "Buscar";
             this.buscarAnuncioToolStripButton.Click += new System.EventHandler(this.buscarAnuncioToolStripButton_Click_1);
             // 
-            // toolStripButton1
+            // guardarAnuncioToolStripButton
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(53, 22);
-            this.toolStripButton1.Text = "Guardar";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            this.guardarAnuncioToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.guardarAnuncioToolStripButton.Enabled = false;
+            this.guardarAnuncioToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("guardarAnuncioToolStripButton.Image")));
+            this.guardarAnuncioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.guardarAnuncioToolStripButton.Name = "guardarAnuncioToolStripButton";
+            this.guardarAnuncioToolStripButton.Size = new System.Drawing.Size(103, 36);
+            this.guardarAnuncioToolStripButton.Text = "Guardar";
+            this.guardarAnuncioToolStripButton.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
-            // ModificarAnuncioToolStripButton
+            // modificarAnuncioToolStripButton
             // 
-            this.ModificarAnuncioToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.ModificarAnuncioToolStripButton.Enabled = false;
-            this.ModificarAnuncioToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ModificarAnuncioToolStripButton.Image")));
-            this.ModificarAnuncioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ModificarAnuncioToolStripButton.Name = "ModificarAnuncioToolStripButton";
-            this.ModificarAnuncioToolStripButton.Size = new System.Drawing.Size(62, 22);
-            this.ModificarAnuncioToolStripButton.Text = "Modificar";
-            this.ModificarAnuncioToolStripButton.Click += new System.EventHandler(this.ModificarAnuncioToolStripButton_Click_1);
+            this.modificarAnuncioToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.modificarAnuncioToolStripButton.Enabled = false;
+            this.modificarAnuncioToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("modificarAnuncioToolStripButton.Image")));
+            this.modificarAnuncioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.modificarAnuncioToolStripButton.Name = "modificarAnuncioToolStripButton";
+            this.modificarAnuncioToolStripButton.Size = new System.Drawing.Size(120, 36);
+            this.modificarAnuncioToolStripButton.Text = "Modificar";
+            this.modificarAnuncioToolStripButton.Click += new System.EventHandler(this.ModificarAnuncioToolStripButton_Click_1);
             // 
             // eleminarAnuncioToolStripButton
             // 
@@ -171,24 +173,36 @@
             this.eleminarAnuncioToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("eleminarAnuncioToolStripButton.Image")));
             this.eleminarAnuncioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.eleminarAnuncioToolStripButton.Name = "eleminarAnuncioToolStripButton";
-            this.eleminarAnuncioToolStripButton.Size = new System.Drawing.Size(57, 22);
+            this.eleminarAnuncioToolStripButton.Size = new System.Drawing.Size(111, 36);
             this.eleminarAnuncioToolStripButton.Text = "Eleminar";
             this.eleminarAnuncioToolStripButton.Click += new System.EventHandler(this.eleminarAnuncioToolStripButton_Click_1);
             // 
+            // cancelarToolStripButton
+            // 
+            this.cancelarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.cancelarToolStripButton.Enabled = false;
+            this.cancelarToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelarToolStripButton.Image")));
+            this.cancelarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cancelarToolStripButton.Name = "cancelarToolStripButton";
+            this.cancelarToolStripButton.Size = new System.Drawing.Size(110, 36);
+            this.cancelarToolStripButton.Text = "Cancelar";
+            this.cancelarToolStripButton.Click += new System.EventHandler(this.cancelarToolStripButton_Click);
+            // 
             // frmManejoDeAnuncios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 284);
+            this.ClientSize = new System.Drawing.Size(786, 546);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.AsuntoTextBox);
-            this.Controls.Add(this.anunsioTextBox);
+            this.Controls.Add(this.txtTitulo);
+            this.Controls.Add(this.txtAnunsio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nombreDeCursoComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmManejoDeAnuncios";
-            this.Text = "frmManejoDeAnuncios";
+            this.Text = "Manejo De Anuncios";
             this.Load += new System.EventHandler(this.frmManejoDeAnuncios_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -200,16 +214,17 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox AsuntoTextBox;
-        private System.Windows.Forms.TextBox anunsioTextBox;
+        private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.TextBox txtAnunsio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox nombreDeCursoComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton nuevoAnuncioToolStripButton;
         private System.Windows.Forms.ToolStripButton buscarAnuncioToolStripButton;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton ModificarAnuncioToolStripButton;
+        private System.Windows.Forms.ToolStripButton guardarAnuncioToolStripButton;
+        private System.Windows.Forms.ToolStripButton modificarAnuncioToolStripButton;
         private System.Windows.Forms.ToolStripButton eleminarAnuncioToolStripButton;
+        private System.Windows.Forms.ToolStripButton cancelarToolStripButton;
     }
 }

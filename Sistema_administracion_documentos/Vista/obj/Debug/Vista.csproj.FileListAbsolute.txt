@@ -77,3 +77,21 @@ C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documento
 C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Vista.exe
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Vista.pdb
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Modelo.dll
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Modelo.pdb
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmLogin.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmPrincipal.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmAgregarDoc.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmBuscarAnuncio.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmDocumentos.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmInicio.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmManejoDeAnuncios.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmRecuperarCuenta.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,10 @@ namespace Vista
 {
     public partial class frmBuscarAnuncio : Form
     {
+        private Anuncio selectedAnuncio;
+
+        public Anuncio SelectedAnuncio { get => selectedAnuncio; set => selectedAnuncio = value; }
+
         public frmBuscarAnuncio()
         {
             InitializeComponent();
@@ -19,6 +24,15 @@ namespace Vista
         private void frmBuscarAnuncio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSeleccionarAnuncio_Click(object sender, EventArgs e)
+        {
+            try{
+                selectedAnuncio = (Anuncio)buscarAnuncioDataGridView.CurrentRow.DataBoundItem;
+                this.DialogResult = DialogResult.OK;
+            }
+            catch (Exception) { }
         }
     }
 }

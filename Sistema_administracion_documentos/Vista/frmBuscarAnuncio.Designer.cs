@@ -28,63 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSeleccionarAnuncio = new System.Windows.Forms.Button();
             this.buscarAnuncioDataGridView = new System.Windows.Forms.DataGridView();
             this.buscarAnuncioTextBox = new System.Windows.Forms.TextBox();
-            this.buscarAnuncioButton = new System.Windows.Forms.Button();
+            this.btnBuscarAnuncio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.buscarAnuncioDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnSeleccionarAnuncio
             // 
-            this.button2.Location = new System.Drawing.Point(314, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 27);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Seleccionar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSeleccionarAnuncio.Location = new System.Drawing.Point(614, 29);
+            this.btnSeleccionarAnuncio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionarAnuncio.Name = "btnSeleccionarAnuncio";
+            this.btnSeleccionarAnuncio.Size = new System.Drawing.Size(150, 52);
+            this.btnSeleccionarAnuncio.TabIndex = 8;
+            this.btnSeleccionarAnuncio.Text = "Seleccionar";
+            this.btnSeleccionarAnuncio.UseVisualStyleBackColor = true;
+            this.btnSeleccionarAnuncio.Click += new System.EventHandler(this.btnSeleccionarAnuncio_Click);
             // 
             // buscarAnuncioDataGridView
             // 
             this.buscarAnuncioDataGridView.AllowUserToAddRows = false;
             this.buscarAnuncioDataGridView.AllowUserToDeleteRows = false;
             this.buscarAnuncioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.buscarAnuncioDataGridView.Location = new System.Drawing.Point(20, 53);
-            this.buscarAnuncioDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.buscarAnuncioDataGridView.Location = new System.Drawing.Point(40, 102);
+            this.buscarAnuncioDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.buscarAnuncioDataGridView.Name = "buscarAnuncioDataGridView";
             this.buscarAnuncioDataGridView.ReadOnly = true;
             this.buscarAnuncioDataGridView.RowTemplate.Height = 33;
-            this.buscarAnuncioDataGridView.Size = new System.Drawing.Size(362, 243);
+            this.buscarAnuncioDataGridView.Size = new System.Drawing.Size(724, 467);
             this.buscarAnuncioDataGridView.TabIndex = 7;
             // 
             // buscarAnuncioTextBox
             // 
-            this.buscarAnuncioTextBox.Location = new System.Drawing.Point(20, 20);
-            this.buscarAnuncioTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.buscarAnuncioTextBox.Location = new System.Drawing.Point(40, 38);
+            this.buscarAnuncioTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.buscarAnuncioTextBox.Name = "buscarAnuncioTextBox";
-            this.buscarAnuncioTextBox.Size = new System.Drawing.Size(207, 20);
+            this.buscarAnuncioTextBox.Size = new System.Drawing.Size(376, 31);
             this.buscarAnuncioTextBox.TabIndex = 6;
             // 
-            // buscarAnuncioButton
+            // btnBuscarAnuncio
             // 
-            this.buscarAnuncioButton.Location = new System.Drawing.Point(236, 15);
-            this.buscarAnuncioButton.Margin = new System.Windows.Forms.Padding(2);
-            this.buscarAnuncioButton.Name = "buscarAnuncioButton";
-            this.buscarAnuncioButton.Size = new System.Drawing.Size(68, 27);
-            this.buscarAnuncioButton.TabIndex = 5;
-            this.buscarAnuncioButton.Text = "Buscar";
-            this.buscarAnuncioButton.UseVisualStyleBackColor = true;
+            this.btnBuscarAnuncio.Location = new System.Drawing.Point(440, 29);
+            this.btnBuscarAnuncio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarAnuncio.Name = "btnBuscarAnuncio";
+            this.btnBuscarAnuncio.Size = new System.Drawing.Size(166, 52);
+            this.btnBuscarAnuncio.TabIndex = 5;
+            this.btnBuscarAnuncio.Text = "Buscar";
+            this.btnBuscarAnuncio.UseVisualStyleBackColor = true;
             // 
             // frmBuscarAnuncio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 318);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(798, 612);
+            this.Controls.Add(this.btnSeleccionarAnuncio);
             this.Controls.Add(this.buscarAnuncioDataGridView);
             this.Controls.Add(this.buscarAnuncioTextBox);
-            this.Controls.Add(this.buscarAnuncioButton);
+            this.Controls.Add(this.btnBuscarAnuncio);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmBuscarAnuncio";
             this.Text = "frmBuscarAnuncio";
             this.Load += new System.EventHandler(this.frmBuscarAnuncio_Load);
@@ -96,9 +98,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSeleccionarAnuncio;
         private System.Windows.Forms.DataGridView buscarAnuncioDataGridView;
         private System.Windows.Forms.TextBox buscarAnuncioTextBox;
-        private System.Windows.Forms.Button buscarAnuncioButton;
+        private System.Windows.Forms.Button btnBuscarAnuncio;
     }
 }
