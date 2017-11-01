@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using AccesoDatos;
 namespace Vista {
     public partial class frmLogin : Form {
         private string masterUser = "FreddyPaz";
@@ -21,6 +21,8 @@ namespace Vista {
         public frmLogin() {
             InitializeComponent();
             this.CenterToScreen();
+            UsuarioDA usu = new UsuarioDA();
+            usu.listarUsuarios();
         }
 
         private void label1_Click(object sender, EventArgs e) {

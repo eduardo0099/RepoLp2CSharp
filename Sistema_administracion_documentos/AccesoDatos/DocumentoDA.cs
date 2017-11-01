@@ -8,12 +8,12 @@ using System.ComponentModel;
 
 namespace AccesoDatos {
     public class DocumentoDA {
-        public void registrarDocumento() {
+        //public void registrarDocumento() {
 
-        }
+        //}
 
-        public BindingList<Documento> devolverListaDocumentos() {
+        //public BindingList<Documento> devolverListaDocumentos() {
 
-        }
+        //}
     }
 }
