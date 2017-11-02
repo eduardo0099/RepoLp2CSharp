@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Controlador;
 
 namespace Vista {
     public partial class frmLogin : Form {
-        private string masterUser = "FreddyPaz";
-        private string masterKey = "123456";
+        private UsuarioBL sistemaUsuario;
         private string nombreUsuario;
         public bool estado = true;
         private bool limpiarCampoUsuario = false;
@@ -20,6 +20,7 @@ namespace Vista {
 
         public frmLogin() {
             InitializeComponent();
+            sistemaUsuario = new UsuarioBL();
             this.CenterToScreen();
         }
 
@@ -41,11 +42,8 @@ namespace Vista {
                 MessageBox.Show("Ingrese una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (txtUsuario.Text == masterUser && txtContrasena.Text == masterKey) {
-
-                NombreUsuario = txtUsuario.Text;
-                //frmPrincipal ventanaPrincipal = new frmPrincipal(nombreUsuario);
-                //ventanaPrincipal.Show();
+            if (sistemaUsuario.validarUsuario(txtUsuario.Text, txtContrasena.Text)) {
+                NombreUsuario = sistemaUsuario.obtenerNombreUsuario(txtUsuario.Text);
                 this.DialogResult = DialogResult.OK;
             }
             else {
@@ -91,11 +89,8 @@ namespace Vista {
                     MessageBox.Show("Ingrese una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (txtUsuario.Text == masterUser && txtContrasena.Text == masterKey) {
-
-                    NombreUsuario = txtUsuario.Text;
-                    //frmPrincipal ventanaPrincipal = new frmPrincipal(nombreUsuario);
-                    //ventanaPrincipal.Show();
+                if (sistemaUsuario.validarUsuario(txtUsuario.Text, txtContrasena.Text)) {
+                    NombreUsuario = sistemaUsuario.obtenerNombreUsuario(txtUsuario.Text);
                     this.DialogResult = DialogResult.OK;
                 }
                 else {
@@ -116,11 +111,8 @@ namespace Vista {
                     MessageBox.Show("Ingrese una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (txtUsuario.Text == masterUser && txtContrasena.Text == masterKey) {
-
-                    NombreUsuario = txtUsuario.Text;
-                    //frmPrincipal ventanaPrincipal = new frmPrincipal(nombreUsuario);
-                    //ventanaPrincipal.Show();
+                if (sistemaUsuario.validarUsuario(txtUsuario.Text, txtContrasena.Text)) {
+                    NombreUsuario = sistemaUsuario.obtenerNombreUsuario(txtUsuario.Text);
                     this.DialogResult = DialogResult.OK;
                 }
                 else {
@@ -141,11 +133,8 @@ namespace Vista {
                     MessageBox.Show("Ingrese una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (txtUsuario.Text == masterUser && txtContrasena.Text == masterKey) {
-
-                    NombreUsuario = txtUsuario.Text;
-                    //frmPrincipal ventanaPrincipal = new frmPrincipal(nombreUsuario);
-                    //ventanaPrincipal.Show();
+                if (sistemaUsuario.validarUsuario(txtUsuario.Text, txtContrasena.Text)) {
+                    NombreUsuario = sistemaUsuario.obtenerNombreUsuario(txtUsuario.Text);
                     this.DialogResult = DialogResult.OK;
                 }
                 else {

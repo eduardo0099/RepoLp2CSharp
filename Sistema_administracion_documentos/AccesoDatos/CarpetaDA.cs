@@ -10,8 +10,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AccesoDatos {
     public class CarpetaDA {
-        public BindingList<Carpeta> devolverListaCarpetas() {
-            BindingList<Carpeta> listaCarpetas = new BindingList<Carpeta>;
+        /*public BindingList<Carpeta> devolverListaCarpetas() {
+            BindingList<Carpeta> listaCarpetas = new BindingList<Carpeta>();
             FileStream inFile = new FileStream("promociones.dat", FileMode.Open, FileAccess.Read);
             BinaryFormatter breader = new BinaryFormatter();
 
@@ -24,6 +24,6 @@ namespace AccesoDatos {
             }
 
             return listaCarpetas;
-        }
+        }*/
     }
 }
