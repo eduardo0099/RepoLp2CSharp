@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Vista</RootNamespace>
     <AssemblyName>Vista</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -189,9 +189,9 @@
     <None Include="Resources\usuario2.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
-      <Project>{8f6eb753-865f-4e76-840a-9f95315e2768}</Project>
-      <Name>AccesoDatos</Name>
+    <ProjectReference Include="..\Controlador\Controlador.csproj">
+      <Project>{def241b8-d881-4cd9-8fdf-69f4e93c9308}</Project>
+      <Name>Controlador</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{b668b62a-97e3-4ccd-a33d-8785abe8403f}</Project>

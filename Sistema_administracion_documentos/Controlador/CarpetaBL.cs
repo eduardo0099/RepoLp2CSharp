@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace Controlador {
     public class CarpetaBL {
-        private CarpetaDA sistemaCarpetas;
+        /*private CarpetaDA sistemaCarpetas;
 
         public CarpetaBL() {
             sistemaCarpetas = new CarpetaDA();
@@ -17,6 +17,6 @@ namespace Controlador {
 
         public BindingList<Carpeta> devolverListaCarpetas() {
             return sistemaCarpetas.devolverListaCarpetas();
-        }
+        }*/
     }
 }

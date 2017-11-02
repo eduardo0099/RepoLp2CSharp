@@ -1,0 +1,13 @@
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.dll
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.dll
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.pdb
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll.config
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.pdb
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
