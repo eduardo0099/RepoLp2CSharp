@@ -8,19 +8,18 @@ namespace Modelo
 {
     public class Curso
     {
-        private string _codCurso;
-        private string _horario;
-        private Docente _docente;
-        private BindingList<Alumno> alumnos;
+        private int _id;
+        private string _nombre;
+        private string _codigo;
 
         public Curso()
         {
 
         }
 
-        public string CodCurso { get => _codCurso; set => _codCurso = value; }
-        public string Horario { get => _horario; set => _horario = value; }
-        public Docente Docente { get => _docente; set => _docente = value; }
-        public BindingList<Alumno> Alumnos { get => alumnos; set => alumnos = value; }
+ 
+        public string Nombre { get => _nombre; set => _nombre = value; }
+        public string Codigo { get => _codigo; set => _codigo = value; }
+        public int Id { get => _id; set => _id = value; }
     }
 }

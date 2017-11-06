@@ -42,7 +42,7 @@ namespace Vista
             {
                 txtAnunsio.Text = formBuscarAnuncio.SelectedAnuncio.Descripcion;
                 txtTitulo.Text = formBuscarAnuncio.SelectedAnuncio.Titulo;
-                nombreDeCursoComboBox.Text = formBuscarAnuncio.SelectedAnuncio.Curso.CodCurso;
+                nombreDeCursoComboBox.Text = formBuscarAnuncio.SelectedAnuncio.Curso.Codigo;
                 modificarAnuncioToolStripButton.Enabled = true;
                 eleminarAnuncioToolStripButton.Enabled = true;
                 guardarAnuncioToolStripButton.Enabled = false;

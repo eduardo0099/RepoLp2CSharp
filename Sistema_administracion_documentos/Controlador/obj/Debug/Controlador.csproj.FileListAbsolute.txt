@@ -11,3 +11,16 @@ C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documento
 C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
 C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
 C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.dll
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.dll
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.pdb
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll.config
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.pdb
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
+G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb

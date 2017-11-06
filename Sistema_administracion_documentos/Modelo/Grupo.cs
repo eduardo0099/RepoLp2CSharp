@@ -10,7 +10,7 @@ namespace Modelo
     {
         private int _id;
         private string _nombre;
-        private string _permisos;
+        private Permiso _permiso;
         private BindingList<Usuario> listaUsuarios;
 
         public Grupo()
@@ -20,7 +20,8 @@ namespace Modelo
 
         public int Id { get => _id; set => _id = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
-        public string Permisos { get => _permisos; set => _permisos = value; }
+
         public BindingList<Usuario> ListaUsuarios { get => listaUsuarios; set => listaUsuarios = value; }
+        public Permiso Permiso { get => _permiso; set => _permiso = value; }
     }
 }

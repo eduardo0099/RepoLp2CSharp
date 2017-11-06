@@ -9,28 +9,35 @@ using System.Windows.Forms;
 using Modelo;
 namespace Vista
 {
+
     public partial class frmDocumentos : Form
     {
+
         public frmDocumentos()
         {
             InitializeComponent();
             BindingList<Carpeta> c = new BindingList<Carpeta>();
             c.Add(new Carpeta());
 
-            
         }
 
         public frmDocumentos(Form padre)
         {
             InitializeComponent();
             this.MdiParent = padre;
+            naveDocs.AutoScroll = true;
+            naveDocs.VerticalScroll.Visible = true;
+            naveDocs.VerticalScroll.Enabled = true;
+            naveDocs.HorizontalScroll.Enabled = false;
+            naveDocs.HorizontalScroll.Visible = false;
 
-            treeView1.Nodes.Add("LP2");
-            treeView1.Nodes.Add("LP1");
-            treeView1.Nodes.Add("SI2");
-            treeView1.Nodes.Add("SI3");
-            treeView1.Nodes.Add("FP");
+            for (int i = 0; i < 10; i++)
+            {
+                generarPanelCarp(1, "Carpeta de prueba", "Sin descripción", DateTime.Parse("12/9/2017"));
+
+            }
         }
+
         private void frmDocumentos_Load(object sender, EventArgs e)
         {
 
@@ -58,6 +65,142 @@ namespace Vista
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e) {
 
+        }
+
+        private void ingresaCarpeta(int idCarpeta)
+        {
+            //Que ocurre cuando se entra a una carpeta
+            MessageBox.Show(idCarpeta.ToString());
+        }
+
+        private void bttPanelC_2Click(object sender, EventArgs e)
+        {
+            Panel clickedPanel = (Panel)sender;
+            ingresaCarpeta(Int32.Parse((String)clickedPanel.Tag));
+        }
+
+        private void bttLabelC_2Click(object sender, EventArgs e)
+        {
+            Label clickedLabel = (Label)sender;
+            ingresaCarpeta(Int32.Parse((String)clickedLabel.Tag));
+        }
+
+        private Panel generarPanelCarp(int idCarp, String tituloCarpeta, String descripcion, DateTime fechaCrea)
+        {
+            //Imagen Carpeta
+            Label labCarp = new Label();
+            Image i = Image.FromFile("carpeta50.png");
+            labCarp.Size = new Size(i.Width, i.Height);
+            labCarp.Image = i;
+            labCarp.Location = new Point(42, 12);
+            labCarp.Tag = idCarp.ToString();
+            labCarp.DoubleClick += bttLabelC_2Click;
+            //Titulo Carpeta
+            Label labTit = new Label();
+            labTit.Size = new Size(400, 20);
+            labTit.Text = tituloCarpeta;
+            labTit.Location = new Point(105, 12);
+            //labTit.ForeColor = System.Drawing.Color.CadetBlue;
+            labTit.ForeColor = Color.FromArgb(255, 255, 255);
+            labTit.Font = new Font(labTit.Font.Name, 10, FontStyle.Bold);
+            labTit.Tag = idCarp.ToString();
+            labTit.DoubleClick += bttLabelC_2Click;
+            //Descripcion
+            Label labDes = new Label();
+            labDes.Size = new Size(400, 20);
+            labDes.Text = descripcion;
+            labDes.Location = new Point(105, 33);
+            labDes.ForeColor = System.Drawing.Color.White;
+            labDes.Tag = idCarp.ToString();
+            labDes.DoubleClick += bttLabelC_2Click;
+            //Fecha creacion
+            Label labCrea = new Label();
+            labCrea.Size = new Size(400, 20);
+            labCrea.Text = "Fecha creación: " + fechaCrea.ToLongDateString();
+            labCrea.Location = new Point(105, 53);
+            labCrea.ForeColor = System.Drawing.Color.White;
+            labCrea.Tag = idCarp.ToString();
+            labCrea.DoubleClick += bttLabelC_2Click;
+            //CheckBoX
+            CheckBox checSec = new CheckBox();
+            checSec.Location = new Point(12, 12);
+            checSec.Size = new Size(15, 15);
+            //Panel
+            Panel p = new Panel();
+            p.Name = "carpeta";
+            p.BackColor = Color.FromArgb(0, 97, 129);
+            p.Size = new Size(575, 75);
+            p.Tag = idCarp.ToString();
+            p.DoubleClick += bttPanelC_2Click;
+
+            p.Controls.Add(labCarp);
+            p.Controls.Add(labTit);
+            p.Controls.Add(labDes);
+            p.Controls.Add(labCrea);
+            p.Controls.Add(checSec);
+
+            naveDocs.Controls.Add(p);
+            naveDocs.Invalidate();
+            return p;
+        }
+        private Panel generarPanelDoc(int idDocu, String tituloDocum, String descripcionD, DateTime fechaCrea)
+        {
+            //Imagen Documento
+            Label labDoc = new Label();
+            Image i = Image.FromFile("documento50.png");
+            labDoc.Size = new Size(i.Width, i.Height);
+            labDoc.Image = i;
+            labDoc.Location = new Point(42, 12);
+            labDoc.Tag = idDocu.ToString();
+            labDoc.DoubleClick += bttLabelC_2Click;
+            //Titulo Carpeta
+            Label labTit = new Label();
+            labTit.Size = new Size(400, 20);
+            labTit.Text = tituloDocum;
+            labTit.Location = new Point(105, 12);
+            //labTit.ForeColor = System.Drawing.Color.CadetBlue;
+            labTit.ForeColor = Color.FromArgb(0, 92, 153);
+            labTit.Font = new Font(labTit.Font.Name, 10, FontStyle.Bold);
+            labTit.Tag = idDocu.ToString();
+            labTit.DoubleClick += bttLabelC_2Click;
+            //Descripcion
+            Label labDes = new Label();
+            labDes.Size = new Size(400, 20);
+            labDes.Text = descripcionD;
+            labDes.Location = new Point(105, 33);
+            labDes.ForeColor = System.Drawing.Color.Black;
+            labDes.Tag = idDocu.ToString();
+            labDes.DoubleClick += bttLabelC_2Click;
+            //Fecha creacion
+            Label labCrea = new Label();
+            labCrea.Size = new Size(400, 20);
+            labCrea.Text = "Fecha creación: " + fechaCrea.ToLongDateString();
+            labCrea.Location = new Point(105, 53);
+            labCrea.ForeColor = System.Drawing.Color.Black;
+            labCrea.Tag = idDocu.ToString();
+            labCrea.DoubleClick += bttLabelC_2Click;
+            //CheckBoX
+            CheckBox checSec = new CheckBox();
+            checSec.Location = new Point(12, 12);
+            checSec.Size = new Size(15, 15);
+            //Panel
+            Panel p = new Panel();
+            p.Name = "documento";
+            p.BackColor = Color.FromArgb(255, 255, 255);
+            p.Size = new Size(575, 75);
+            p.Tag = idDocu.ToString();
+            p.BorderStyle = BorderStyle.FixedSingle;
+            p.DoubleClick += bttPanelC_2Click;
+
+            p.Controls.Add(labDoc);
+            p.Controls.Add(labTit);
+            p.Controls.Add(labDes);
+            p.Controls.Add(labCrea);
+            p.Controls.Add(checSec);
+
+            naveDocs.Controls.Add(p);
+            naveDocs.Invalidate();
+            return p;
         }
     }
 }
