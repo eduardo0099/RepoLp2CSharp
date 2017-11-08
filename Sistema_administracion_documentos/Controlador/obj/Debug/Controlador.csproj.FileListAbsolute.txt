@@ -24,3 +24,15 @@ G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll.config
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb

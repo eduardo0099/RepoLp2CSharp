@@ -34,10 +34,13 @@ namespace AccesoDatos
             conn.Open();
             //Comando
             MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "SELECT * FROM Grupo where Id = " +
-                "(SELECT distinct Grupo_Id from GrupoXUsuario where Usuario_IdUsuario = " +
-                    "((select Usuario_IdUsuario from Docente where Codigo = " + codigoUsu + ")" +
-                    " or (select Usuario_IdUsuario from Alumno where Codigo = " + codigoUsu + ")));";
+
+            cmd.CommandText = "Select * from Carpeta  where id = (select distinct Carpeta_id from GrupoXCarpeta where Grupo_Id in " +
+                "(SELECT Id FROM Grupo where Id = (SELECT distinct Grupo_Id from GrupoXUsuario " +
+                "where Usuario_IdUsuario = " +
+                "((select Usuario_IdUsuario from Docente where Codigo = 20112728) or " +
+                "(select Usuario_IdUsuario from Alumno where Codigo = 20112728)))) and " +
+                "Carpeta_id in (Select Carpeta.id from Carpeta where habilitado = 1)); ";
             cmd.Connection = conn;
             MySqlDataReader reader = cmd.ExecuteReader();
             //Consulta

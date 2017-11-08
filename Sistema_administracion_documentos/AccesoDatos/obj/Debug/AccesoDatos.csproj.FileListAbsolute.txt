@@ -41,3 +41,21 @@ G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.dll
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.dll.config
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\Modelo.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\EntityFramework.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\Modelo.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\de\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\es\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\fr\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\it\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ja\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ko\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ru\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hans\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hant\EntityFramework.resources.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.csprojResolveAssemblyReference.cache
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.pdb

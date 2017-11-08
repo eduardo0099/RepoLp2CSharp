@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 using AccesoDatos;
 
 namespace Controlador {
-    class DocumentoBL {
-        static void Main(string[] args) {
+    public class DocumentoBL {
+
+        public DocumentoBL()
+        {
+
         }
     }
 }

@@ -22,3 +22,8 @@ G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TAC#\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.pdb
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
+T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb
