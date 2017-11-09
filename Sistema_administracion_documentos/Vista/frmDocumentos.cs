@@ -7,17 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Modelo;
+using Controlador;
 namespace Vista
 {
 
     public partial class frmDocumentos : Form
     {
-
+        
+        
         public frmDocumentos()
         {
             InitializeComponent();
             BindingList<Carpeta> c = new BindingList<Carpeta>();
             c.Add(new Carpeta());
+            
 
         }
 
@@ -36,6 +39,7 @@ namespace Vista
                 generarPanelCarp(1, "Carpeta de prueba", "Sin descripción", DateTime.Parse("12/9/2017"));
 
             }
+
         }
 
         private void frmDocumentos_Load(object sender, EventArgs e)

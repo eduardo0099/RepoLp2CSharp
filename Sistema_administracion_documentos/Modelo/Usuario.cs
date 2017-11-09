@@ -7,6 +7,7 @@ namespace Modelo
 {
     public class Usuario
     {
+        private int id;
         private string nickname;
         private string contrasena;
         private int _nroEntidad;
@@ -35,5 +36,6 @@ namespace Modelo
         public string Direccion { get => direccion; set => direccion = value; }
         public string Dni { get => dni; set => dni = value; }
         public string NumeroTele { get => numeroTele; set => numeroTele = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

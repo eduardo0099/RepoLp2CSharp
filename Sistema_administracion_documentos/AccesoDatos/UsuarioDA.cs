@@ -203,7 +203,7 @@ namespace AccesoDatos {
             cmd2.CommandText = "SELECT * FROM inf282g5.Usuario where IdUsuario =" + idUsuarioAux;
             reader = cmd2.ExecuteReader();
             reader.Read();
-
+            user.Id = idUsuario;
             user.AMaterno = reader.GetString("AMaterno");
             user.APaterno = reader.GetString("APaterno");
             user.Contrasena = reader.GetString("Password");

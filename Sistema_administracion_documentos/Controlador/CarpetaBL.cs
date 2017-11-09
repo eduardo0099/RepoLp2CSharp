@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using Modelo;
 using AccesoDatos;
 using System.ComponentModel;
-
+using AccesoDatos;
 namespace Controlador {
     public class CarpetaBL {
-        /*private CarpetaDA sistemaCarpetas;
-
-        public CarpetaBL() {
-            sistemaCarpetas = new CarpetaDA();
+        private CarpetaDA accCarpeta;
+        public CarpetaBL()
+        {
+            accCarpeta = new CarpetaDA();
         }
-
-        public BindingList<Carpeta> devolverListaCarpetas() {
-            return sistemaCarpetas.devolverListaCarpetas();
-        }*/
+        public List<int> devolverListaCarpetas(int cod)
+        {
+            return accCarpeta.devolverIdCarpetas(cod);
+        }
     }
 }

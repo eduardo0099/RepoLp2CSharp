@@ -23,7 +23,7 @@ namespace AccesoDatos
             accPermisos = new PermisoDA();
         }
 
-        public List<Grupo> listaDeGruposPresente(int codigoUsu)
+        public List<Grupo> listaDeGruposPresente()
         {
             List<Grupo> listG = new List<Grupo>();
             List<Permiso> listP = new List<Permiso>();

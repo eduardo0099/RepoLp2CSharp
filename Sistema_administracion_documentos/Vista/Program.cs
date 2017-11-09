@@ -13,7 +13,7 @@ namespace Vista
         /// </summary>
 
         public static Usuario userobj;
-
+        public static List<int> listaId;
         [STAThread]
         static void Main()
         {

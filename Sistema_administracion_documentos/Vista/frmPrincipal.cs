@@ -6,20 +6,21 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using Controlador;
 namespace Vista
 {
     public partial class frmPrincipal : Form
     {
         private int height = Screen.PrimaryScreen.Bounds.Height;
         private int width = Screen.PrimaryScreen.Bounds.Width;
+        private CarpetaBL blcarp;
         Form frmDocumento;
         Form frmInicio;
         public frmPrincipal(string nombreUsuario)
         {
             InitializeComponent();
             lblNombreUsuario.Text = nombreUsuario;
-
+            blcarp = new CarpetaBL();
             //this.WindowState = FormWindowState.Maximized;
             //Left = Top = 0;
             //Width = Screen.PrimaryScreen.WorkingArea.Width;
@@ -92,9 +93,13 @@ namespace Vista
             frmLogin ventanaLogin = new frmLogin();
             
             this.Hide();
+            MessageBox.Show("ENTRA");
             if (ventanaLogin.ShowDialog() == DialogResult.OK) {
-                    lblNombreUsuario.Text = ventanaLogin.NombreUsuario;
-                    this.Show();
+                lblNombreUsuario.Text = ventanaLogin.NombreUsuario;
+                
+                this.Show();
+                
+                Program.listaId = blcarp.devolverListaCarpetas(Program.userobj.Id);
             }
             else if(ventanaLogin.estado == false) this.Close();
 
