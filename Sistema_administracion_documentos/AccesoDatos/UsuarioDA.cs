@@ -160,33 +160,75 @@ namespace AccesoDatos {
         
         public Usuario obtenerUsuario(string codigoUsuario)
         {
-            user = new Usuario();
             MySqlConnection conn = new MySqlConnection(url);
-            conn.Open(); //Se abre conexion
+            conn.Open();
             MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "SELECT * FROM inf282g5.Admin_Sistema where Codigo =" + codigoUsuario;
             cmd.Connection = conn;
+            cmd.CommandText = "BUSCAR_USUARIO_EN_ALUMNO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("codigoUsuario", codigoUsuario);
+            cmd.Parameters.Add("idUsuario", MySqlDbType.Int32);
+            cmd.Parameters["idUsuario"].Direction = System.Data.ParameterDirection.Output;
+
             MySqlDataReader reader = cmd.ExecuteReader();
-            reader.Read();
-            int idUsuario = reader.GetInt32("Usuario_IdUsuario");
+            string idUsuarioAux = cmd.Parameters["idUsuario"].Value.ToString();
             conn.Close();
 
+            if (idUsuarioAux == null)
+            {
+                conn = new MySqlConnection(url);
+                conn.Open();
+                cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "BUSCAR_USUARIO_EN_DOCENTE";
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("codigoUsuario", codigoUsuario);
+                cmd.Parameters.Add("idUsuario", MySqlDbType.Int32);
+                cmd.Parameters["idUsuario"].Direction = System.Data.ParameterDirection.Output;
+
+                reader = cmd.ExecuteReader();
+                idUsuarioAux = cmd.Parameters["idUsuario"].Value.ToString();
+                conn.Close();
+            }
+
+            //
+            int idUsuario = Int32.Parse(idUsuarioAux); 
+            user = new Usuario();
             conn = new MySqlConnection(url);
+            MySqlCommand cmd2 = new MySqlCommand();
+            cmd2.Connection = conn;
             conn.Open();
-            cmd.CommandText = "SELECT * FROM inf282g5.Usuario where IdUsuario =" + idUsuario;
-            cmd.Connection = conn;
-            reader = cmd.ExecuteReader();
+            cmd2.CommandText = "SELECT * FROM inf282g5.Usuario where IdUsuario =" + idUsuarioAux;
+            reader = cmd2.ExecuteReader();
             reader.Read();
 
             user.AMaterno = reader.GetString("AMaterno");
             user.APaterno = reader.GetString("APaterno");
             user.Contrasena = reader.GetString("Password");
-            user.Direccion = reader.GetString("Direccion");
+            
             user.Dni = reader.GetString("DNI");
             user.Email = reader.GetString("Email");
             user.Nombres = reader.GetString("Nombre");
-            user.NumeroTele = reader.GetString("Telefono");
+            
+            try
+            {
+                user.NumeroTele = reader.GetString("Telefono"); 
+            }
+            catch(Exception e)
+            {
+                user.NumeroTele = "no asignado";
+            }
+            try
+            {
+                user.Direccion = reader.GetString("Direccion");
+            }
+            catch (Exception e)
+            {
+                user.Direccion = "no asignado";
+            }
+            
             if (reader.GetInt32("Habilitado") == 1) user.Habilitado = true;
             else user.Habilitado = false;
 
