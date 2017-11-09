@@ -99,5 +99,11 @@ namespace Vista
             else if(ventanaLogin.estado == false) this.Close();
 
         }
+
+        private void btnDetallesPersonal_Click(object sender, EventArgs e)
+        {
+            frmInfoPersonal ventanaPersonal = new frmInfoPersonal();
+            ventanaPersonal.Show();
+        }
     }
 }

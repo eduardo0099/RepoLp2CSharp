@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AccesoDatos;
+using Modelo;
 
 namespace Controlador {
     public class UsuarioBL {
@@ -19,6 +20,11 @@ namespace Controlador {
 
         public string obtenerNombreUsuario(string codigoUsuario) {
             return sistemaUsuario.obtenerNombreUsuario(codigoUsuario);
+        }
+
+        public Usuario obtenerUsuario(string codigoUsuario)
+        {
+            return sistemaUsuario.obtenerUsuario(codigoUsuario);
         }
     }
 }

@@ -15,6 +15,9 @@ namespace Modelo
         private string _aMaterno;
         private string _email;
         private Boolean _habilitado;
+        private string direccion;
+        private string dni;
+        private string numeroTele;
 
         public Usuario()
         {
@@ -29,5 +32,8 @@ namespace Modelo
         public bool Habilitado { get => _habilitado; set => _habilitado = value; }
         public string Nickname { get => nickname; set => nickname = value; }
         public string Contrasena { get => contrasena; set => contrasena = value; }
+        public string Direccion { get => direccion; set => direccion = value; }
+        public string Dni { get => dni; set => dni = value; }
+        public string NumeroTele { get => numeroTele; set => numeroTele = value; }
     }
 }

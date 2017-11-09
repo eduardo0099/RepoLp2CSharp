@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Modelo;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos {
     public class UsuarioDA {
+
+        private Usuario user;
+
+        public Usuario User { get => user; set => user = value; }
 
         private string url = "server=200.16.7.96;" +
                 "user=inf282g5;" +
@@ -96,5 +101,41 @@ namespace AccesoDatos {
             return ""; //Nunca se va a dar
         }
 
+        
+        public Usuario obtenerUsuario(string codigoUsuario)
+        {
+            user = new Usuario();
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open(); //Se abre conexion
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "SELECT * FROM inf282g5.Admin_Sistema where Codigo =" + codigoUsuario;
+            cmd.Connection = conn;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            int idUsuario = reader.GetInt32("Usuario_IdUsuario");
+            conn.Close();
+
+
+            conn = new MySqlConnection(url);
+            conn.Open();
+            cmd.CommandText = "SELECT * FROM inf282g5.Usuario where IdUsuario =" + idUsuario;
+            cmd.Connection = conn;
+            reader = cmd.ExecuteReader();
+            reader.Read();
+
+            user.AMaterno = reader.GetString("AMaterno");
+            user.APaterno = reader.GetString("APaterno");
+            user.Contrasena = reader.GetString("Password");
+            user.Direccion = reader.GetString("Direccion");
+            user.Dni = reader.GetString("DNI");
+            user.Email = reader.GetString("Email");
+            user.Nombres = reader.GetString("Nombre");
+            user.NumeroTele = reader.GetString("Telefono");
+            if (reader.GetInt32("Habilitado") == 1) user.Habilitado = true;
+            else user.Habilitado = false;
+
+            conn.Close();
+            return user;
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace Vista {
             if (sistemaUsuario.validarUsuario(txtUsuario.Text, txtContrasena.Text)) {
                 NombreUsuario = sistemaUsuario.obtenerNombreUsuario(txtUsuario.Text);
                 this.DialogResult = DialogResult.OK;
+                Program.userobj = sistemaUsuario.obtenerUsuario(txtUsuario.Text);
             }
             else {
                 MessageBox.Show("Usuario o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -92,6 +93,7 @@ namespace Vista {
                 if (sistemaUsuario.validarUsuario(txtUsuario.Text, txtContrasena.Text)) {
                     NombreUsuario = sistemaUsuario.obtenerNombreUsuario(txtUsuario.Text);
                     this.DialogResult = DialogResult.OK;
+                    Program.userobj = sistemaUsuario.obtenerUsuario(txtUsuario.Text);
                 }
                 else {
                     MessageBox.Show("Usuario o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -114,6 +116,7 @@ namespace Vista {
                 if (sistemaUsuario.validarUsuario(txtUsuario.Text, txtContrasena.Text)) {
                     NombreUsuario = sistemaUsuario.obtenerNombreUsuario(txtUsuario.Text);
                     this.DialogResult = DialogResult.OK;
+                    Program.userobj = sistemaUsuario.obtenerUsuario(txtUsuario.Text);
                 }
                 else {
                     MessageBox.Show("Usuario o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -136,6 +139,7 @@ namespace Vista {
                 if (sistemaUsuario.validarUsuario(txtUsuario.Text, txtContrasena.Text)) {
                     NombreUsuario = sistemaUsuario.obtenerNombreUsuario(txtUsuario.Text);
                     this.DialogResult = DialogResult.OK;
+                    Program.userobj = sistemaUsuario.obtenerUsuario(txtUsuario.Text);
                 }
                 else {
                     MessageBox.Show("Usuario o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);

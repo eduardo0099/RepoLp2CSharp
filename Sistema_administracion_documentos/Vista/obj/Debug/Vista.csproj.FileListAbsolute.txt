@@ -154,3 +154,13 @@ T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.P
 T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
 T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Vista.exe.config
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Controlador.dll
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\AccesoDatos.dll
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\MySql.Data.dll
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Controlador.pdb
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Controlador.dll.config
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\AccesoDatos.pdb
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\AccesoDatos.dll.config
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\MySql.Data.xml
+C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmInfoPersonal.resources
