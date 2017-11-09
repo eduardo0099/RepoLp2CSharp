@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="AnuncioDA.cs" />
     <Compile Include="CarpetaDA.cs" />
+    <Compile Include="CicloDA.cs" />
     <Compile Include="CursoDA.cs" />
     <Compile Include="DocumentoDA.cs" />
     <Compile Include="GrupoDA.cs" />

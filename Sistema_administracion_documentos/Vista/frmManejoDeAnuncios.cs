@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controlador;
+using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,10 +13,22 @@ namespace Vista
 {
     public partial class frmManejoDeAnuncios : Form
     {
+        private int cicloVigente;//id del ciclo vigente
+        private CicloBL logicaN;
+        private CursoBL logicaCurso;
+        private BindingList<Curso> listaCursos;
+        private Anuncio anuncio;
+        private AnuncioBL logicaAnuncio;
         public frmManejoDeAnuncios()
         {
             InitializeComponent();
             estadoInitsial();
+            listaCursos = new BindingList<Curso>();
+            logicaN = new CicloBL();
+            logicaCurso = new CursoBL();
+            logicaAnuncio = new AnuncioBL();
+            cicloVigente = logicaN.busquedaCicloVingente();
+            listaCursos = logicaCurso.cursosDictados(cicloVigente,Program.userobj.Dni);
         }
 
         private void frmManejoDeAnuncios_Load(object sender, EventArgs e)
@@ -24,13 +38,18 @@ namespace Vista
 
         private void nuevoAnuncioToolStripButton_Click(object sender, EventArgs e)
         {
-            nombreDeCursoComboBox.Enabled = true;
+            cboCursos.Enabled = true;
             txtTitulo.Enabled = true;
             txtAnunsio.Enabled = true;
             buscarAnuncioToolStripButton.Enabled = false;
             nuevoAnuncioToolStripButton.Enabled = false;
             cancelarToolStripButton.Enabled = true;
             guardarAnuncioToolStripButton.Enabled = true;
+            cboCursos.ValueMember = "_nombre";
+            foreach(Curso c in listaCursos)
+            {
+                cboCursos.Items.Add(c);
+            }
         }
 
         private void buscarAnuncioToolStripButton_Click_1(object sender, EventArgs e)
@@ -42,7 +61,7 @@ namespace Vista
             {
                 txtAnunsio.Text = formBuscarAnuncio.SelectedAnuncio.Descripcion;
                 txtTitulo.Text = formBuscarAnuncio.SelectedAnuncio.Titulo;
-                nombreDeCursoComboBox.Text = formBuscarAnuncio.SelectedAnuncio.Curso.Codigo;
+                cboCursos.Text = formBuscarAnuncio.SelectedAnuncio.Curso.Codigo;
                 modificarAnuncioToolStripButton.Enabled = true;
                 eleminarAnuncioToolStripButton.Enabled = true;
                 guardarAnuncioToolStripButton.Enabled = false;
@@ -54,6 +73,11 @@ namespace Vista
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             // guardar el anuncio.
+            Curso c = new Curso();
+            Docente d = new Docente();
+            Ciclo cl = new Ciclo();
+            anuncio = new Anuncio(this.txtTitulo.Text, this.txtAnunsio.Text, DateTime.Today, d, c, cl);
+            logicaAnuncio.guardarAnuncio(anuncio);
             estadoInitsial();
             MessageBox.Show("No esta listo", "Guardar anuncio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
@@ -69,7 +93,7 @@ namespace Vista
 
         private void ModificarAnuncioToolStripButton_Click_1(object sender, EventArgs e)
         {
-            nombreDeCursoComboBox.Enabled = true;
+            cboCursos.Enabled = true;
             txtTitulo.Enabled = true;
             txtAnunsio.Enabled = true;
         }
@@ -85,7 +109,7 @@ namespace Vista
 
         private void limpiaTodo()
         {
-            nombreDeCursoComboBox.Text = "";
+            cboCursos.Text = "";
             txtAnunsio.Text = "";
             txtTitulo.Text = "";
         }
@@ -93,7 +117,7 @@ namespace Vista
         private void estadoInitsial()
         {
             limpiaTodo();
-            nombreDeCursoComboBox.Enabled = false;
+            cboCursos.Enabled = false;
             txtTitulo.Enabled = false;
             txtAnunsio.Enabled = false;
             nuevoAnuncioToolStripButton.Enabled = true;
