@@ -20,6 +20,7 @@ namespace AccesoDatos {
                 "password=reFuKUxhUijfr8np;";
 
         public bool validarUsuario(string codigoUsuario, string contrasenaUsuario) {
+            /*
             //Conexion
             MySqlConnection conn = new MySqlConnection(url);
             conn.Open();
@@ -29,14 +30,14 @@ namespace AccesoDatos {
             cmd.Connection = conn;
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            /*
-             * Aca se tiene que hacer una consulta a las tablas administradores, personal,
-             * profesores y alumnos, es decir, a todos los que puedan acceder al sistema,
-             * ya que se desea que ingresen por codigo. Si no fuera por codigo y se accede
-             * por correo, seria mas facil, pues no se buscaria el codigo en las tablas
-             * que ya mencione. Si se ingresara solo por correo, se haria una busqueda en
-             * la tabla usuario.
-             */
+            
+             // Aca se tiene que hacer una consulta a las tablas administradores, personal,
+             // profesores y alumnos, es decir, a todos los que puedan acceder al sistema,
+             // ya que se desea que ingresen por codigo. Si no fuera por codigo y se accede
+             // por correo, seria mas facil, pues no se buscaria el codigo en las tablas
+             // que ya mencione. Si se ingresara solo por correo, se haria una busqueda en
+             // la tabla usuario.
+             
 
 
             //Verificar codigo
@@ -64,7 +65,62 @@ namespace AccesoDatos {
                 }
             }
             conn.Close();
-            return false;
+            return false;*/
+
+            /* Buscar alumno */
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "BUSCAR_USUARIO_EN_ALUMNO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("codigoUsuario", codigoUsuario);
+            cmd.Parameters.Add("idUsuario", MySqlDbType.Int32);
+            cmd.Parameters["idUsuario"].Direction = System.Data.ParameterDirection.Output;
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            string idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
+            conn.Close();
+
+            if (idUsuario == null) {
+                /* Buscar profesor */
+                conn = new MySqlConnection(url);
+                conn.Open();
+                cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "BUSCAR_USUARIO_EN_DOCENTE";
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("codigoUsuario", codigoUsuario);
+                cmd.Parameters.Add("idUsuario", MySqlDbType.Int32);
+                cmd.Parameters["idUsuario"].Direction = System.Data.ParameterDirection.Output;
+
+                reader = cmd.ExecuteReader();
+                idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
+                conn.Close();
+
+                if (idUsuario == null) return false;
+            }
+
+            /* Buscar contrasena */
+            conn = new MySqlConnection(url);
+            conn.Open();
+            cmd.Connection = conn;
+            cmd.CommandText = "BUSCAR_CONTRASENA_USUARIO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("n_IdUsuario", idUsuario);
+            cmd.Parameters.Add("contrasena", MySqlDbType.String);
+            cmd.Parameters["contrasena"].Direction = System.Data.ParameterDirection.Output;
+
+            reader = cmd.ExecuteReader();
+            string contrasena = cmd.Parameters["contrasena"].Value.ToString();
+            conn.Close();
+
+            /* Verificar contrasena */
+            if (contrasena == contrasenaUsuario) return true;
+            else return false;
         }
 
         public string obtenerNombreUsuario(string codigoUsuario) {

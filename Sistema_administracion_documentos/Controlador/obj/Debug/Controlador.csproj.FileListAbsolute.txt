@@ -64,3 +64,4 @@ C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Contr
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.xml

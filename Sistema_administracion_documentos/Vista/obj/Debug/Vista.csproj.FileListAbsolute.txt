@@ -192,3 +192,5 @@ C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\MySql.Data.xml
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmInfoPersonal.resources
