@@ -19,7 +19,7 @@ namespace Vista
         public frmPrincipal(string nombreUsuario)
         {
             InitializeComponent();
-            lblNombreUsuario.Text = nombreUsuario;
+            lblNombreUsuario.Text = Program.userobj.Nombres;
             blcarp = new CarpetaBL();
             //this.WindowState = FormWindowState.Maximized;
             //Left = Top = 0;
@@ -93,9 +93,8 @@ namespace Vista
             frmLogin ventanaLogin = new frmLogin();
             
             this.Hide();
-            MessageBox.Show("ENTRA");
             if (ventanaLogin.ShowDialog() == DialogResult.OK) {
-                lblNombreUsuario.Text = ventanaLogin.NombreUsuario;
+                lblNombreUsuario.Text = Program.userobj.Nombres;
                 
                 this.Show();
                 
