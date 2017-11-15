@@ -96,7 +96,7 @@ namespace Vista
             }
             usuarioBL.actualizarUsuario(Program.userobj);
             MessageBox.Show("Nuevo informacion ha guardado", "Success!", MessageBoxButtons.OK);
-            this.Close();
+            estadoInit();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
