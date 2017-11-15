@@ -14,9 +14,9 @@ namespace Controlador {
         {
             accCarpeta = new CarpetaDA();
         }
-        public List<int> devolverListaCarpetas(int cod)
+        public List<Carpeta> devolverListasCarpetasXPadre(int idPadreCarp,int idUsu)
         {
-            return accCarpeta.devolverIdCarpetas(cod);
+            return accCarpeta.devolverListasCarpetasXPadre(idPadreCarp,idUsu);
         }
     }
 }

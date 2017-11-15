@@ -136,3 +136,27 @@ G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TA2\RepoLp2CSharp\Sistema_administracion_d
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TA2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TA2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.dll
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TA2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.pdb
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.dll.config
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.pdb
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\Modelo.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\EntityFramework.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\Modelo.pdb
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySql.Data.xml
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySql.Data.Entity.EF6.xml
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.xml
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.xml
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySql.Web.xml
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\de\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\es\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\it\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ja\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ko\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.pdb

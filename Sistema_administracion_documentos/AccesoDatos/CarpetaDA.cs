@@ -23,30 +23,31 @@ namespace AccesoDatos {
                 "password=reFuKUxhUijfr8np;";
         }
 
-        public List<int> devolverIdCarpetas(int id)
+        public List<Carpeta> devolverListasCarpetasXPadre(int idCarpe,int idUsu)
         {
-            List<int> listaAux = new List<int>();
-
+            List<Carpeta> listaAux = new List<Carpeta>();
+            
             //Conexion
-            MySqlConnection conn = new MySqlConnection(url);
-            conn.Open();
-            //Comando
-            MySqlCommand cmd = new MySqlCommand();
-            System.Console.Out.WriteLine("id usuario es " + id.ToString());
-            cmd.CommandText = "select Carpeta_id from GrupoXCarpeta where (Grupo_Id in ( " +
-                "select Grupo_Id from GrupoXUsuario where " +
-                "Usuario_IdUsuario = "+ id +
-                ") and Carpeta_id in(Select id from Carpeta where habilitado = 0)); ";
-            cmd.Connection = conn;
-            MySqlDataReader reader = cmd.ExecuteReader();
-            listaAux.Add(2); //Id de Cursos En el Ciclo
-            while (reader.Read())
+            MySqlConnection con = new MySqlConnection(url);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "LISTAR_CARPETA_ALU_DOC";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("idUsu", idUsu);
+            comando.Parameters.AddWithValue("idCarpPadre", idCarpe);
+            MySqlDataReader dr = comando.ExecuteReader();
+
+            while (dr.Read())
             {
-                int varAux = reader.GetInt32("Carpeta_id");
-                listaAux.Add(varAux);
-                System.Console.Out.WriteLine(varAux.ToString());
+                Carpeta carpAux = new Carpeta();
+                carpAux.Id = dr.GetInt32("id");
+                carpAux.FechaCreacion = dr.GetDateTime("fechaCreacion");
+                carpAux.Descripcion = dr.GetString("descripcion");
+                carpAux.Nombre = dr.GetString("nombre");
+                System.Console.WriteLine(carpAux.Id + carpAux.Nombre + carpAux.FechaCreacion + carpAux.Descripcion);
             }
-            conn.Close();
+            con.Close();
             return listaAux;
         }
     }

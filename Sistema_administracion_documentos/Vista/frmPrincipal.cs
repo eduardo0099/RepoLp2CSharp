@@ -99,7 +99,7 @@ namespace Vista
                 
                 this.Show();
                 
-                Program.listaId = blcarp.devolverListaCarpetas(Program.userobj.Id);
+                //Program.listaId = blcarp.devolverListaCarpetas(Program.userobj.Id);
             }
             else if(ventanaLogin.estado == false) this.Close();
 

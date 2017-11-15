@@ -79,3 +79,17 @@ G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TA2\RepoLp2CSharp\Sistema_administracion_d
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TA2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TA2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
 G:\2017-2\LENGUAJE DE PROGRAMACIÓN 2\TA2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.pdb
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll.config
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.pdb
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.xml
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb

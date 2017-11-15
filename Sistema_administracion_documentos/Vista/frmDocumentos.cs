@@ -13,7 +13,7 @@ namespace Vista
 
     public partial class frmDocumentos : Form
     {
-        
+        private CarpetaBL carpetalog;
         
         public frmDocumentos()
         {
@@ -33,7 +33,8 @@ namespace Vista
             naveDocs.VerticalScroll.Enabled = true;
             naveDocs.HorizontalScroll.Enabled = false;
             naveDocs.HorizontalScroll.Visible = false;
-
+            carpetalog = new CarpetaBL();
+            carpetalog.devolverListasCarpetasXPadre(0, 3);
             for (int i = 0; i < 10; i++)
             {
                 generarPanelCarp(1, "Carpeta de prueba", "Sin descripción", DateTime.Parse("12/9/2017"));
@@ -59,6 +60,7 @@ namespace Vista
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+
             frmAgregarDoc FrmagregaDocumento = new frmAgregarDoc();
             FrmagregaDocumento.ShowDialog();
         }
