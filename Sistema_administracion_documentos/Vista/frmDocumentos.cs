@@ -14,7 +14,7 @@ namespace Vista
     public partial class frmDocumentos : Form
     {
         private CarpetaBL carpetalog;
-        
+        private List<Carpeta> listaCarps;
         public frmDocumentos()
         {
             InitializeComponent();
@@ -34,10 +34,11 @@ namespace Vista
             naveDocs.HorizontalScroll.Enabled = false;
             naveDocs.HorizontalScroll.Visible = false;
             carpetalog = new CarpetaBL();
-            carpetalog.devolverListasCarpetasXPadre(0, 3);
-            for (int i = 0; i < 10; i++)
+            listaCarps = carpetalog.devolverListasCarpetasXPadre(0, 3);
+            generarPanelCarp(2,"Cursos en el ciclo","Documentos sobre el ciclo actual", DateTime.Parse("2017-11-01"));
+            for (int i = 0; i < listaCarps.Count; i++)
             {
-                generarPanelCarp(1, "Carpeta de prueba", "Sin descripción", DateTime.Parse("12/9/2017"));
+                generarPanelCarp(listaCarps[i].Id, listaCarps[i].Nombre,listaCarps[i].Descripcion,listaCarps[i].FechaCreacion);
 
             }
 
@@ -60,7 +61,7 @@ namespace Vista
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            
             frmAgregarDoc FrmagregaDocumento = new frmAgregarDoc();
             FrmagregaDocumento.ShowDialog();
         }
@@ -76,7 +77,13 @@ namespace Vista
         private void ingresaCarpeta(int idCarpeta)
         {
             //Que ocurre cuando se entra a una carpeta
-            MessageBox.Show(idCarpeta.ToString());
+            //MessageBox.Show(idCarpeta.ToString());
+            listaCarps = carpetalog.devolverListasCarpetasXPadre(idCarpeta, 3);
+            naveDocs.Controls.Clear();
+            for (int i = 0; i < listaCarps.Count; i++)
+            {
+                generarPanelCarp(listaCarps[i].Id, listaCarps[i].Nombre, listaCarps[i].Descripcion, listaCarps[i].FechaCreacion);
+            }
         }
 
         private void bttPanelC_2Click(object sender, EventArgs e)
@@ -89,6 +96,7 @@ namespace Vista
         {
             Label clickedLabel = (Label)sender;
             ingresaCarpeta(Int32.Parse((String)clickedLabel.Tag));
+            
         }
 
         private Panel generarPanelCarp(int idCarp, String tituloCarpeta, String descripcion, DateTime fechaCrea)
@@ -206,6 +214,7 @@ namespace Vista
 
             naveDocs.Controls.Add(p);
             naveDocs.Invalidate();
+            
             return p;
         }
     }

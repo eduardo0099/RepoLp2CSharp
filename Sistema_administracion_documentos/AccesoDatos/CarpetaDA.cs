@@ -45,6 +45,7 @@ namespace AccesoDatos {
                 carpAux.FechaCreacion = dr.GetDateTime("fechaCreacion");
                 carpAux.Descripcion = dr.GetString("descripcion");
                 carpAux.Nombre = dr.GetString("nombre");
+                listaAux.Add(carpAux);
                 System.Console.WriteLine(carpAux.Id + carpAux.Nombre + carpAux.FechaCreacion + carpAux.Descripcion);
             }
             con.Close();

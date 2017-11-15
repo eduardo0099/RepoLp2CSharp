@@ -83,7 +83,7 @@ namespace AccesoDatos {
             string idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
             conn.Close();
 
-            if (idUsuario == null) {
+            if (idUsuario == "") {
                 /* Buscar profesor */
                 conn = new MySqlConnection(url);
                 conn.Open();
@@ -100,7 +100,7 @@ namespace AccesoDatos {
                 idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
                 conn.Close();
 
-                if (idUsuario == null) return false;
+                if (idUsuario == "") return false;
             }
 
             /* Buscar contrasena */
@@ -175,7 +175,7 @@ namespace AccesoDatos {
             string idUsuarioAux = cmd.Parameters["idUsuario"].Value.ToString();
             conn.Close();
 
-            if (idUsuarioAux == null)
+            if (idUsuarioAux == "")
             {
                 conn = new MySqlConnection(url);
                 conn.Open();
@@ -219,6 +219,7 @@ namespace AccesoDatos {
             catch(Exception e)
             {
                 user.NumeroTele = "no asignado";
+                
             }
             try
             {
