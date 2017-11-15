@@ -46,6 +46,7 @@
     <Compile Include="Alumno.cs" />
     <Compile Include="Anuncio.cs" />
     <Compile Include="ArbolP.cs" />
+    <Compile Include="CargaDoc.cs" />
     <Compile Include="Carpeta.cs" />
     <Compile Include="Ciclo.cs" />
     <Compile Include="Curso.cs" />

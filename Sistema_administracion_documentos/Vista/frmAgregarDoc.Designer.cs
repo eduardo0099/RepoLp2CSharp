@@ -33,17 +33,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtArchSelec = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTit = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.dgvListaDocs = new System.Windows.Forms.DataGridView();
-            this.titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblCursoAct = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDocs)).BeginInit();
@@ -95,23 +95,23 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Título:";
             // 
-            // textBox2
+            // txtTit
             // 
-            this.textBox2.Location = new System.Drawing.Point(168, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtTit.Location = new System.Drawing.Point(168, 119);
+            this.txtTit.Name = "txtTit";
+            this.txtTit.Size = new System.Drawing.Size(160, 20);
+            this.txtTit.TabIndex = 5;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtTit);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtArchSelec);
-            this.groupBox1.Location = new System.Drawing.Point(26, 26);
+            this.groupBox1.Location = new System.Drawing.Point(26, 41);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(347, 194);
             this.groupBox1.TabIndex = 6;
@@ -133,7 +133,7 @@
             // 
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.dgvListaDocs);
-            this.groupBox2.Location = new System.Drawing.Point(26, 226);
+            this.groupBox2.Location = new System.Drawing.Point(26, 238);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(347, 199);
             this.groupBox2.TabIndex = 7;
@@ -148,49 +148,32 @@
             this.button5.TabIndex = 1;
             this.button5.Text = "Eliminar de lista";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dgvListaDocs
             // 
             this.dgvListaDocs.AllowUserToAddRows = false;
             this.dgvListaDocs.AllowUserToDeleteRows = false;
             this.dgvListaDocs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaDocs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.titulo,
-            this.direccion});
             this.dgvListaDocs.Location = new System.Drawing.Point(6, 19);
             this.dgvListaDocs.Name = "dgvListaDocs";
             this.dgvListaDocs.ReadOnly = true;
             this.dgvListaDocs.Size = new System.Drawing.Size(335, 149);
             this.dgvListaDocs.TabIndex = 0;
             // 
-            // titulo
-            // 
-            this.titulo.Frozen = true;
-            this.titulo.HeaderText = "Título";
-            this.titulo.Name = "titulo";
-            this.titulo.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.FillWeight = 200F;
-            this.direccion.Frozen = true;
-            this.direccion.HeaderText = "Dirección Local";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Width = 200;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(78, 431);
+            this.button3.Location = new System.Drawing.Point(79, 440);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(109, 23);
             this.button3.TabIndex = 8;
             this.button3.Text = "Grabar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(194, 431);
+            this.button4.Location = new System.Drawing.Point(194, 440);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(109, 23);
             this.button4.TabIndex = 9;
@@ -201,11 +184,30 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Carpeta actual: ";
+            // 
+            // lblCursoAct
+            // 
+            this.lblCursoAct.Location = new System.Drawing.Point(248, 15);
+            this.lblCursoAct.Name = "lblCursoAct";
+            this.lblCursoAct.Size = new System.Drawing.Size(253, 23);
+            this.lblCursoAct.TabIndex = 11;
+            this.lblCursoAct.Text = "----";
+            // 
             // frmAgregarDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 466);
+            this.Controls.Add(this.lblCursoAct);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
@@ -218,6 +220,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDocs)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -228,16 +231,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtArchSelec;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dgvListaDocs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCursoAct;
     }
 }
