@@ -45,7 +45,17 @@ namespace AccesoDatos {
                 carpAux.FechaCreacion = dr.GetDateTime("fechaCreacion");
                 carpAux.Descripcion = dr.GetString("descripcion");
                 carpAux.Nombre = dr.GetString("nombre");
+                listaAux.Add(carpAux);
                 System.Console.WriteLine(carpAux.Id + carpAux.Nombre + carpAux.FechaCreacion + carpAux.Descripcion);
+            }
+            if (idCarpe == 0)
+            {
+                Carpeta cxc = new Carpeta();
+                cxc.Id = 2;
+                cxc.Nombre = "Cursos en el Ciclo";
+                cxc.Descripcion = "Documentos sobre el ciclo actual";
+                cxc.FechaCreacion = DateTime.Parse("2017-11-01");
+                listaAux.Add(cxc);
             }
             con.Close();
             return listaAux;

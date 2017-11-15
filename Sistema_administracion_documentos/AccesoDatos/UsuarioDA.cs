@@ -246,6 +246,7 @@ namespace AccesoDatos {
             catch(Exception e)
             {
                 user.NumeroTele = "no asignado";
+                
             }
             try
             {

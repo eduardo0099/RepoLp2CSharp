@@ -38,6 +38,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.naveDocs = new System.Windows.Forms.FlowLayoutPanel();
+            this.bttRegresar = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,11 +122,22 @@
             this.naveDocs.Size = new System.Drawing.Size(601, 336);
             this.naveDocs.TabIndex = 2;
             // 
+            // bttRegresar
+            // 
+            this.bttRegresar.Location = new System.Drawing.Point(552, 30);
+            this.bttRegresar.Name = "bttRegresar";
+            this.bttRegresar.Size = new System.Drawing.Size(75, 23);
+            this.bttRegresar.TabIndex = 3;
+            this.bttRegresar.Text = "Regresar";
+            this.bttRegresar.UseVisualStyleBackColor = true;
+            this.bttRegresar.Click += new System.EventHandler(this.bttRegresar_Click);
+            // 
             // frmDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 431);
+            this.Controls.Add(this.bttRegresar);
             this.Controls.Add(this.naveDocs);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -152,5 +164,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.FlowLayoutPanel naveDocs;
+        private System.Windows.Forms.Button bttRegresar;
     }
 }
