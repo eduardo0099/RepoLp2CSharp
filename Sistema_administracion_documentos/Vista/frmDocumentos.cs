@@ -15,6 +15,7 @@ namespace Vista
     {
         private CarpetaBL carpetalog;
         private List<Carpeta> listaCarps;
+        private List<List<Carpeta>> listaCarpsPasado;
         public frmDocumentos()
         {
             InitializeComponent();
@@ -34,7 +35,9 @@ namespace Vista
             naveDocs.HorizontalScroll.Enabled = false;
             naveDocs.HorizontalScroll.Visible = false;
             carpetalog = new CarpetaBL();
+            listaCarpsPasado = new List<List<Carpeta>>();
             listaCarps = carpetalog.devolverListasCarpetasXPadre(0, 3);
+            
             generarPanelCarp(2,"Cursos en el ciclo","Documentos sobre el ciclo actual", DateTime.Parse("2017-11-01"));
             for (int i = 0; i < listaCarps.Count; i++)
             {
@@ -78,6 +81,7 @@ namespace Vista
         {
             //Que ocurre cuando se entra a una carpeta
             //MessageBox.Show(idCarpeta.ToString());
+            listaCarpsPasado.Add(listaCarps);
             listaCarps = carpetalog.devolverListasCarpetasXPadre(idCarpeta, 3);
             naveDocs.Controls.Clear();
             for (int i = 0; i < listaCarps.Count; i++)
@@ -216,6 +220,24 @@ namespace Vista
             naveDocs.Invalidate();
             
             return p;
+        }
+
+        private void bttRegresar_Click(object sender, EventArgs e)
+        {
+            if (listaCarpsPasado.Count != 0)
+            {
+                listaCarps = listaCarpsPasado[listaCarpsPasado.Count - 1];
+                listaCarpsPasado.RemoveAt(listaCarpsPasado.Count - 1);
+                naveDocs.Controls.Clear();
+                for (int i = 0; i < listaCarps.Count; i++)
+                {
+                    generarPanelCarp(listaCarps[i].Id, listaCarps[i].Nombre, listaCarps[i].Descripcion, listaCarps[i].FechaCreacion);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se puede retroceder más");
+            }
         }
     }
 }
