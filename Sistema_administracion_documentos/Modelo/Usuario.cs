@@ -15,6 +15,7 @@ namespace Modelo
         private string _aPaterno;
         private string _aMaterno;
         private string _email;
+        private string _emailAlt;
         private Boolean _habilitado;
         private string direccion;
         private string dni;
@@ -37,5 +38,6 @@ namespace Modelo
         public string Dni { get => dni; set => dni = value; }
         public string NumeroTele { get => numeroTele; set => numeroTele = value; }
         public int Id { get => id; set => id = value; }
+        public string EmailAlt { get => _emailAlt; set => _emailAlt = value; }
     }
 }

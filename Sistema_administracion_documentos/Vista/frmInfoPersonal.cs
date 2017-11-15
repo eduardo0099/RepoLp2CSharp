@@ -14,6 +14,7 @@ namespace Vista
 {
     public partial class frmInfoPersonal : Form
     {
+        private UsuarioBL usuarioBL = new UsuarioBL();
 
         public frmInfoPersonal()
         {
@@ -30,6 +31,7 @@ namespace Vista
             btnGuardar.Visible = false;
             btnEditar.Visible = true;
             txtCorreo.Enabled = false;
+            txtCorreoAlt.Enabled = false;
             txtDireccion.Enabled = false;
             txtNumero.Enabled = false;
             txtDNI.Text = "";
@@ -44,6 +46,7 @@ namespace Vista
                 txtNombres.Text = Program.userobj.Nombres;
                 txtApellidos.Text = Program.userobj.APaterno + " " + Program.userobj.AMaterno;
                 txtCorreo.Text = Program.userobj.Email;
+                txtCorreoAlt.Text = Program.userobj.EmailAlt;
                 txtDireccion.Text = Program.userobj.Direccion;
                 txtNumero.Text = Program.userobj.NumeroTele;
             }catch(Exception e) { } // if it doesn't work the feelds are blank
@@ -55,7 +58,7 @@ namespace Vista
             btnCancelar.Visible = true;
             btnGuardar.Visible = true;
             btnEditar.Visible = false;
-            txtCorreo.Enabled = true;
+            txtCorreoAlt.Enabled = true;
             txtDireccion.Enabled = true;
             txtNumero.Enabled = true;
             txtContActual.Enabled = true;
@@ -79,9 +82,9 @@ namespace Vista
                     return;
                 }
             }
-            if (txtCorreo.Text != "")
+            if (txtCorreoAlt.Text != "")
             {
-                Program.userobj.Email = txtCorreo.Text;
+                Program.userobj.EmailAlt = txtCorreoAlt.Text;
             }
             if (txtDireccion.Text != "")
             {
@@ -91,8 +94,19 @@ namespace Vista
             {
                 Program.userobj.NumeroTele = txtNumero.Text;
             }
-            
+            usuarioBL.actualizarUsuario(Program.userobj);
+            MessageBox.Show("Nuevo informacion ha guardado", "Success!", MessageBoxButtons.OK);
             this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Está seguro", "todos los cambias van a cancelar", MessageBoxButtons.OKCancel);
+
+            if (result == DialogResult.OK)
+            {
+                estadoInit();
+            }
         }
     }
 }

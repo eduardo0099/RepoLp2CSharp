@@ -26,5 +26,9 @@ namespace Controlador {
         {
             return sistemaUsuario.obtenerUsuario(codigoUsuario);
         }
+        public void actualizarUsuario(Usuario user)
+        {
+            sistemaUsuario.actualizarUsuario(user);
+        }
     }
 }

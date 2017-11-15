@@ -83,7 +83,7 @@ namespace AccesoDatos {
             string idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
             conn.Close();
 
-            if (idUsuario == null) {
+            if (idUsuario == "") {
                 /* Buscar profesor */
                 conn = new MySqlConnection(url);
                 conn.Open();
@@ -100,7 +100,7 @@ namespace AccesoDatos {
                 idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
                 conn.Close();
 
-                if (idUsuario == null) return false;
+                if (idUsuario == "") return false;
             }
 
             /* Buscar contrasena */
@@ -157,6 +157,33 @@ namespace AccesoDatos {
             return ""; //Nunca se va a dar
         }
 
+        public void actualizarUsuario(Usuario user)
+        {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "ACTUALIZAR_USUARIO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("_ID", user.Id);
+            //cmd.Parameters.Add("_ID", MySqlDbType.UInt32);
+            //cmd.Parameters["_ID"].Direction = System.Data.ParameterDirection.Input;
+            cmd.Parameters.AddWithValue("_PASSWORD", user.Contrasena);
+            //cmd.Parameters.Add("_PASSWORD", MySqlDbType.VarChar);
+            //cmd.Parameters["_PASSWORD"].Direction = System.Data.ParameterDirection.Input;
+            cmd.Parameters.AddWithValue("_EMAILALT", user.EmailAlt);
+            //cmd.Parameters.Add("_EMAILALT", MySqlDbType.VarChar);
+            //cmd.Parameters["_EMAILALT"].Direction = System.Data.ParameterDirection.Input;
+            cmd.Parameters.AddWithValue("_DIRECCION", user.Direccion);
+            //cmd.Parameters.Add("_DIRECCION", MySqlDbType.VarChar);
+            //cmd.Parameters["_DIRECCION"].Direction = System.Data.ParameterDirection.Input;
+            cmd.Parameters.AddWithValue("_TELEFONO", user.NumeroTele);
+            //cmd.Parameters.Add("_TELEFONO", MySqlDbType.UInt32);
+            //cmd.Parameters["_TELEFONO"].Direction = System.Data.ParameterDirection.Input;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
         
         public Usuario obtenerUsuario(string codigoUsuario)
         {
@@ -175,7 +202,7 @@ namespace AccesoDatos {
             string idUsuarioAux = cmd.Parameters["idUsuario"].Value.ToString();
             conn.Close();
 
-            if (idUsuarioAux == null)
+            if (idUsuarioAux == "")
             {
                 conn = new MySqlConnection(url);
                 conn.Open();
@@ -189,6 +216,7 @@ namespace AccesoDatos {
                 cmd.Parameters["idUsuario"].Direction = System.Data.ParameterDirection.Output;
 
                 reader = cmd.ExecuteReader();
+                reader.Read();
                 idUsuarioAux = cmd.Parameters["idUsuario"].Value.ToString();
                 conn.Close();
             }
@@ -207,7 +235,6 @@ namespace AccesoDatos {
             user.AMaterno = reader.GetString("AMaterno");
             user.APaterno = reader.GetString("APaterno");
             user.Contrasena = reader.GetString("Password");
-            
             user.Dni = reader.GetString("DNI");
             user.Email = reader.GetString("Email");
             user.Nombres = reader.GetString("Nombre");
@@ -228,7 +255,15 @@ namespace AccesoDatos {
             {
                 user.Direccion = "no asignado";
             }
-            
+            try
+            {
+                user.EmailAlt = reader.GetString("EmailAlternativo");
+            }
+            catch (Exception e)
+            {
+                user.Direccion = "no asignado";
+            }
+
             if (reader.GetInt32("Habilitado") == 1) user.Habilitado = true;
             else user.Habilitado = false;
 
