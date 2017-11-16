@@ -19,6 +19,8 @@ namespace Vista
         private BindingList<Curso> listaCursos;
         private Anuncio anuncio;
         private AnuncioBL logicaAnuncio;
+        private Curso cursoSeleccionado;
+
         public frmManejoDeAnuncios()
         {
             InitializeComponent();
@@ -73,11 +75,15 @@ namespace Vista
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             // guardar el anuncio.
-            Curso c = new Curso();
+            int i = cboCursos.SelectedIndex;
+            Curso c = listaCursos[i];
             Docente d = new Docente();
+            d.Id = Program.userobj.Id;
             Ciclo cl = new Ciclo();
+            cl.Id = cicloVigente;
             anuncio = new Anuncio(this.txtTitulo.Text, this.txtAnunsio.Text, DateTime.Today, d, c, cl);
             logicaAnuncio.guardarAnuncio(anuncio);
+
             estadoInitsial();
             MessageBox.Show("No esta listo", "Guardar anuncio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
