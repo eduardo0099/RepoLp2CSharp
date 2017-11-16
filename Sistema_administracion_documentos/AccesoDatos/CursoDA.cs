@@ -54,31 +54,20 @@ namespace AccesoDatos
         }
 
 
-        public BindingList<Curso> cursosDictados(int id_Ciclo,string dni)
+        public BindingList<Curso> cursosDictados(int id_Ciclo,int id_Usuario)
         {
             BindingList<Curso> lista = new BindingList<Curso>();
             MySqlConnection conn = new MySqlConnection(cadenabd);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand();
-            string sql1 = "Select IdUsuario FROM Usuario where Usuario.DNI=" + dni;
             cmd.Connection = conn;
-            cmd.CommandText = sql1;
-            MySqlDataReader reader1 = cmd.ExecuteReader();
-            reader1.Read();
-            int id = Int32.Parse(reader1.GetString("IdUsuario"));
-            reader1.Close();
-            string sql2 = "Select Curso_idCurso FROM CursoXCiclo where CursoXCiclo.Docente_Usuario_IdUsuario=" + id + " and CursoXCiclo.Ciclo_idCiclo=" + id_Ciclo;
-            cmd.CommandText = sql2;
-            MySqlDataReader reader2 = cmd.ExecuteReader();
-            while (reader2.Read())
+            string sql = "SELECT * FROM Curso WHERE Curso.idCurso in (SELECT Curso_idCurso FROM CursoXCiclo WHERE CursoXCiclo.Docente_Usuario_IdUsuario ="+ id_Usuario+ " and CursoXCiclo.Ciclo_idCiclo ="+ id_Ciclo+"); ";
+            cmd.CommandText = sql;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
-                string sql3 = "Select * from Curso where idCurso=" + reader2.GetString("idCurso");
-                cmd.CommandText = sql3;
-                MySqlDataReader reader3 = cmd.ExecuteReader();
-                reader3.Read();
-                Curso c = new Curso(Int32.Parse(reader3.GetString("idCurso")), reader3.GetString("Nombre"), reader3.GetString("Codigo"));
+                Curso c = new Curso(Int32.Parse(reader.GetString("idCurso")), reader.GetString("Nombre"), reader.GetString("Codigo"));
                 lista.Add(c);
-                reader3.Close();
             }
             conn.Close();
             return lista;

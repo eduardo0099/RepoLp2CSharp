@@ -28,7 +28,7 @@ namespace Vista
             logicaCurso = new CursoBL();
             logicaAnuncio = new AnuncioBL();
             cicloVigente = logicaN.busquedaCicloVingente();
-            listaCursos = logicaCurso.cursosDictados(cicloVigente,Program.userobj.Dni);
+            listaCursos = logicaCurso.cursosDictados(cicloVigente,Program.userobj.Id);
         }
 
         private void frmManejoDeAnuncios_Load(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace Vista
             nuevoAnuncioToolStripButton.Enabled = false;
             cancelarToolStripButton.Enabled = true;
             guardarAnuncioToolStripButton.Enabled = true;
-            cboCursos.ValueMember = "_nombre";
+            cboCursos.ValueMember = "Nombre";
             foreach(Curso c in listaCursos)
             {
                 cboCursos.Items.Add(c);

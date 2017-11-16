@@ -51,3 +51,9 @@ C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Model
 C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
 C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb
+C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.dll
+C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.pdb
+C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
+C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb

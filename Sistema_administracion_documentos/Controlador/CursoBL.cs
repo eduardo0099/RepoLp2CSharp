@@ -11,11 +11,11 @@ namespace Controlador
 {
     public class CursoBL
     {
-        public BindingList<Curso> cursosDictados(int id_Ciclo, string dni)
+        public BindingList<Curso> cursosDictados(int id_Ciclo, int id_Usuario)
         {
             BindingList<Curso> lista = new BindingList<Curso>();
             CursoDA accesoDatos = new CursoDA();
-            lista = accesoDatos.cursosDictados(id_Ciclo, dni);
+            lista = accesoDatos.cursosDictados(id_Ciclo, id_Usuario);
             return lista;
         }
     }
