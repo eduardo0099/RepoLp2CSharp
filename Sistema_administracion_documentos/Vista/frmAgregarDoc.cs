@@ -8,18 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Modelo;
+using Controlador;
 namespace Vista
 {
     public partial class frmAgregarDoc : Form
     {
         private BindingList<CargaDoc> docsACargar;
         private int idCarpetaActual;
-
+        private DocumentoBL documentolog;
         public frmAgregarDoc()
         {
             InitializeComponent();
             docsACargar = new BindingList<CargaDoc>();
             dgvListaDocs.DataSource = docsACargar;
+            documentolog = new DocumentoBL();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -81,7 +83,7 @@ namespace Vista
                     nombArchivo = substring;
                 }
                 String[] subNombArch = nombArchivo.Split(delimiter2);
-                
+                documentolog.agregarDocumento(7, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
             }
         }
     }
