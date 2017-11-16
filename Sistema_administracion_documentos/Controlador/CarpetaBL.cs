@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Modelo;
 using AccesoDatos;
 using System.ComponentModel;
-using AccesoDatos;
 namespace Controlador {
     public class CarpetaBL {
         private CarpetaDA accCarpeta;

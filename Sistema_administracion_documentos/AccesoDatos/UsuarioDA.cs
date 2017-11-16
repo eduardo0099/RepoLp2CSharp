@@ -157,6 +157,27 @@ namespace AccesoDatos {
             return ""; //Nunca se va a dar
         }
 
+        public string devolverNombrePorID(int id) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "DEVOLVER_NOMBRE_USUARIO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("p_id", id);
+            cmd.Parameters.Add("p_nombre", MySqlDbType.String);
+            cmd.Parameters["p_nombre"].Direction = System.Data.ParameterDirection.Output;
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            //string idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
+            string nombreUsuario = cmd.Parameters["p_nombre"].Value.ToString();
+            conn.Close();
+            return nombreUsuario;
+        }
+
+        /***************Manfred**************/
+
         public void actualizarUsuario(Usuario user)
         {
             MySqlConnection conn = new MySqlConnection(url);

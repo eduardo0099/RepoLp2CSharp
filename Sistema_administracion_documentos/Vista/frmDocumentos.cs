@@ -19,6 +19,7 @@ namespace Vista
         private List<List<Carpeta>> listaCarpsPasado;
         private List<Documento> listaDocs;
         private List<List<Documento>> listaDocsPasado;
+        private string ultimaCarpeta;
         public frmDocumentos()
         {
             InitializeComponent();
@@ -110,8 +111,13 @@ namespace Vista
         }
         private void ingresaDocumento(int idDocumento)
         {
+            Documento doc = documentolog.obtenerObjetoDocumento(idDocumento);
+            frmVistaPreviaDocumento ventanaVistaPrevia = new frmVistaPreviaDocumento(doc, "Clase", Program.userobj.Id);
+            if (ventanaVistaPrevia.ShowDialog() == DialogResult.OK) {
+
+            }
             //Que ocurre cuando se entra a una carpeta
-            MessageBox.Show("IdCarpeta: " + idDocumento + "\nIdUsuario: " + Program.userobj.Id);
+            //MessageBox.Show("IdCarpeta: " + idDocumento + "\nIdUsuario: " + Program.userobj.Id);
             //Mostrrar form de descarga y/o edicion
         }
 

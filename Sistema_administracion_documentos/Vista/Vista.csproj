@@ -122,6 +122,12 @@
     <Compile Include="frmRecuperarCuenta.Designer.cs">
       <DependentUpon>frmRecuperarCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVistaPreviaDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaPreviaDocumento.Designer.cs">
+      <DependentUpon>frmVistaPreviaDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmInfoPersonal.resx">
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRecuperarCuenta.resx">
       <DependentUpon>frmRecuperarCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaPreviaDocumento.resx">
+      <DependentUpon>frmVistaPreviaDocumento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

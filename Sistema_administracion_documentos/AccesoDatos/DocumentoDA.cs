@@ -64,5 +64,152 @@ namespace AccesoDatos {
             }
             return docAuxLista;
         }
+
+        /*************** Ronie ***************/
+
+        public void actualizarNombreDocumento(string nombre) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "ACTUALIZAR_NOMBRE_DOCUMENTO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("nombreNuevo", nombre);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            conn.Close();
+        }
+
+        public void actualizarDescripcionDocumento(string descripcion) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "ACTUALIZAR_DESCRIPCION_DOCUMENTO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("nombreNuevo", descripcion);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            conn.Close();
+        }
+
+        public Byte[] obtenerDocumento(int idDoc) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "OBTENER_DOCUMENTO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("p_id", idDoc);
+            cmd.Parameters.Add("p_doc", MySqlDbType.VarBinary);
+            cmd.Parameters["p_doc"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.ExecuteNonQuery();
+            Byte[] documento = (Byte[])cmd.Parameters["p_doc"].Value;
+            //MySqlDataReader reader = cmd.ExecuteReader();
+            conn.Close();
+            return documento;
+        }
+
+        public int obtenerTamanoDocumento(int idDoc) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "OBTENER_TAMANO_DOCUMENTO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("p_id", idDoc);
+            cmd.Parameters.Add("p_tamano", MySqlDbType.Int32);
+            cmd.Parameters["p_tamano"].Direction = System.Data.ParameterDirection.Output;
+
+            //cmd.ExecuteNonQuery();
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            string tamano = cmd.Parameters["p_tamano"].Value.ToString();
+            //MySqlDataReader reader = cmd.ExecuteReader();
+            conn.Close();
+            return Int32.Parse(tamano);
+        }
+
+        public Documento obtenerObjetoDocumento(int id) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "OBTENER_OBJETO_DOCUMENTO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            //IN
+            cmd.Parameters.AddWithValue("p_id", id);
+            //OUT
+            cmd.Parameters.Add("p_Carpeta_id", MySqlDbType.Int32);
+            cmd.Parameters["p_Carpeta_id"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_Usuario_IdUsuario", MySqlDbType.Int32);
+            cmd.Parameters["p_Usuario_IdUsuario"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_FechaCreacion", MySqlDbType.Date);
+            cmd.Parameters["p_FechaCreacion"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_Titulo", MySqlDbType.String);
+            cmd.Parameters["p_Titulo"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_Nombre", MySqlDbType.String);
+            cmd.Parameters["p_Nombre"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_extension", MySqlDbType.String);
+            cmd.Parameters["p_extension"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_habilitado", MySqlDbType.Int32);
+            cmd.Parameters["p_habilitado"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_FechaMod", MySqlDbType.Date);
+            cmd.Parameters["p_FechaMod"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_DatosBinDoc", MySqlDbType.VarBinary);
+            cmd.Parameters["p_DatosBinDoc"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_tamanoDatos", MySqlDbType.Int32);
+            cmd.Parameters["p_tamanoDatos"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.Parameters.Add("p_Descripcion", MySqlDbType.String);
+            cmd.Parameters["p_Descripcion"].Direction = System.Data.ParameterDirection.Output;
+
+            //cmd.ExecuteNonQuery();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            //string idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
+            
+            int _idCarpeta = Int32.Parse(cmd.Parameters["p_Carpeta_id"].Value.ToString());
+            int _idUsuario = Int32.Parse(cmd.Parameters["p_Usuario_IdUsuario"].Value.ToString());
+            DateTime _fechaCreacion = DateTime.Parse(cmd.Parameters["p_FechaCreacion"].Value.ToString());
+            string _nombre = cmd.Parameters["p_Nombre"].Value.ToString();
+            string _extension = cmd.Parameters["p_extension"].Value.ToString();
+            int habilitado = Int32.Parse(cmd.Parameters["p_habilitado"].Value.ToString()); ;
+            DateTime _fechaMod = DateTime.Parse(cmd.Parameters["p_FechaMod"].Value.ToString());
+            Byte[] _datosBinary = (Byte[])(cmd.Parameters["p_DatosBinDoc"].Value);
+            long _tamañoDatos = Int64.Parse(cmd.Parameters["p_tamanoDatos"].Value.ToString());
+            String _descripcion = cmd.Parameters["p_Descripcion"].Value.ToString();
+            
+            conn.Close();
+
+            Documento doc = new Documento();
+            doc.Id = id;
+            doc.IdCarpeta = _idCarpeta;
+            doc.IdUsuario = _idUsuario;
+            doc.FechaCreacion = _fechaCreacion;
+            doc.Nombre = _nombre;
+            doc.Extension = _extension;
+            doc.Habilitado = habilitado;
+            doc.FechaMod = _fechaMod;
+            doc.DatosBinary = _datosBinary;
+            doc.TamañoDatos = _tamañoDatos;
+            doc.Descripcion = _descripcion;
+
+            return doc;
+        }
     }
 }

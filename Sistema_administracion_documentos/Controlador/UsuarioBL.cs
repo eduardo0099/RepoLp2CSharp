@@ -30,5 +30,8 @@ namespace Controlador {
         {
             sistemaUsuario.actualizarUsuario(user);
         }
+        public string devolverNombrePorId(int id) {
+            return sistemaUsuario.devolverNombrePorID(id);
+        }
     }
 }

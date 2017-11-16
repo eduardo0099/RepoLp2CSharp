@@ -21,5 +21,17 @@ namespace Controlador {
         {
             return accDocumento.obtenerDatosDoc(idCarpe);
         }
+
+        public void actualizarNombreDocumento(string nombre) {
+            accDocumento.actualizarNombreDocumento(nombre);
+        }
+
+        public void actualizarDescripcionDocumento(string descripcion) {
+            accDocumento.actualizarDescripcionDocumento(descripcion);
+        }
+
+        public Documento obtenerObjetoDocumento(int id) {
+            return accDocumento.obtenerObjetoDocumento(id);
+        }
     }
 }

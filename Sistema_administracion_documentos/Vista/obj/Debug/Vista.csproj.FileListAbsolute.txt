@@ -278,3 +278,4 @@ C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_document
 C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmVistaPreviaDocumento.resources
