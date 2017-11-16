@@ -7,6 +7,7 @@ namespace Modelo
 {
     public class Documento
     {
+        private int _id;
         private int idCarpeta;
         private int idUsuario;
         private DateTime _fechaCreacion;
@@ -33,5 +34,6 @@ namespace Modelo
         public byte[] DatosBinary { get => _datosBinary; set => _datosBinary = value; }
         public long TamañoDatos { get => _tamañoDatos; set => _tamañoDatos = value; }
         public string Descripcion { get => _descripcion; set => _descripcion = value; }
+        public int Id { get => _id; set => _id = value; }
     }
 }

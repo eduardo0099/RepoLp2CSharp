@@ -39,5 +39,30 @@ namespace AccesoDatos {
             comando.ExecuteReader();
             con.Close();
         }
+
+        public List<Documento> obtenerDatosDoc(int idCarpe)
+        {
+            List<Documento> docAuxLista = new List<Documento>();
+            MySqlConnection con =
+                new MySqlConnection(url);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "LISTAR_DOCUMENTO_ALU_DOC";
+            comando.CommandType =
+                System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("_idCarpeta", idCarpe);
+            MySqlDataReader dr = comando.ExecuteReader();
+            while (dr.Read())
+            {
+                Documento docAux = new Documento();
+                docAux.Id = dr.GetInt32("Id");
+                docAux.FechaCreacion = dr.GetDateTime("FechaCreacion");
+                docAux.Descripcion = dr.GetString("Descripcion");
+                docAux.Nombre = dr.GetString("Titulo");
+                docAuxLista.Add(docAux);
+            }
+            return docAuxLista;
+        }
     }
 }

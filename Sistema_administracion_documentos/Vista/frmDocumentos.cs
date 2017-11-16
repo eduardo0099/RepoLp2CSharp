@@ -14,8 +14,11 @@ namespace Vista
     public partial class frmDocumentos : Form
     {
         private CarpetaBL carpetalog;
+        private DocumentoBL documentolog;
         private List<Carpeta> listaCarps;
         private List<List<Carpeta>> listaCarpsPasado;
+        private List<Documento> listaDocs;
+        private List<List<Documento>> listaDocsPasado;
         public frmDocumentos()
         {
             InitializeComponent();
@@ -35,13 +38,21 @@ namespace Vista
             naveDocs.HorizontalScroll.Enabled = false;
             naveDocs.HorizontalScroll.Visible = false;
             carpetalog = new CarpetaBL();
+            documentolog = new DocumentoBL();
             listaCarpsPasado = new List<List<Carpeta>>();
+            listaDocsPasado = new List<List<Documento>>();
             listaCarps = carpetalog.devolverListasCarpetasXPadre(0, 3);
             
-            generarPanelCarp(2,"Cursos en el ciclo","Documentos sobre el ciclo actual", DateTime.Parse("2017-11-01"));
+            //generarPanelCarp(2,"Cursos en el ciclo","Documentos sobre el ciclo actual", DateTime.Parse("2017-11-01"));
             for (int i = 0; i < listaCarps.Count; i++)
             {
                 generarPanelCarp(listaCarps[i].Id, listaCarps[i].Nombre,listaCarps[i].Descripcion,listaCarps[i].FechaCreacion);
+
+            }
+            listaDocs = documentolog.obtenerDocumentosCarpeta(0);
+            for (int i = 0; i < listaDocs.Count; i++)
+            {
+                generarPanelDoc(listaDocs[i].Id, listaDocs[i].Nombre, listaDocs[i].Descripcion, listaDocs[i].FechaCreacion);
 
             }
 
@@ -87,6 +98,15 @@ namespace Vista
             for (int i = 0; i < listaCarps.Count; i++)
             {
                 generarPanelCarp(listaCarps[i].Id, listaCarps[i].Nombre, listaCarps[i].Descripcion, listaCarps[i].FechaCreacion);
+            }
+            //Manejo de documentos
+            listaDocsPasado.Add(listaDocs);
+            listaDocs = documentolog.obtenerDocumentosCarpeta(idCarpeta);
+            MessageBox.Show(listaDocs.Count.ToString() + "   "  + idCarpeta);
+            for (int i = 0; i < listaDocs.Count; i++)
+            {
+                generarPanelDoc(listaDocs[i].Id, listaDocs[i].Nombre, listaDocs[i].Descripcion, listaDocs[i].FechaCreacion);
+
             }
         }
 
