@@ -21,8 +21,7 @@ namespace AccesoDatos
             MySqlConnection con = new MySqlConnection(cadenabd);
             con.Open();
             MySqlCommand comando = new MySqlCommand();
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = conn;
+            comando.Connection = con;
             comando.CommandText = "GUARDAR_ANUNCIO";
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("_TITULO", an.Titulo);
