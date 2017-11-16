@@ -102,24 +102,44 @@ namespace Vista
             //Manejo de documentos
             listaDocsPasado.Add(listaDocs);
             listaDocs = documentolog.obtenerDocumentosCarpeta(idCarpeta);
-            MessageBox.Show(listaDocs.Count.ToString() + "   "  + idCarpeta);
             for (int i = 0; i < listaDocs.Count; i++)
             {
                 generarPanelDoc(listaDocs[i].Id, listaDocs[i].Nombre, listaDocs[i].Descripcion, listaDocs[i].FechaCreacion);
 
             }
         }
+        private void ingresaDocumento(int idDocumento)
+        {
+            //Que ocurre cuando se entra a una carpeta
+            MessageBox.Show("IdCarpeta: " + idDocumento + "\nIdUsuario: " + Program.userobj.Id);
+            //Mostrrar form de descarga y/o edicion
+        }
 
         private void bttPanelC_2Click(object sender, EventArgs e)
         {
             Panel clickedPanel = (Panel)sender;
-            ingresaCarpeta(Int32.Parse((String)clickedPanel.Tag));
+            if(clickedPanel.Name == "carpeta")
+            {
+                ingresaCarpeta(Int32.Parse((String)clickedPanel.Tag));
+            }
+            else if(clickedPanel.Name == "documento")
+            {
+                ingresaDocumento(Int32.Parse((String)clickedPanel.Tag));
+            }
+            
         }
 
         private void bttLabelC_2Click(object sender, EventArgs e)
         {
             Label clickedLabel = (Label)sender;
-            ingresaCarpeta(Int32.Parse((String)clickedLabel.Tag));
+            if (clickedLabel.Name == "carpeta")
+            {
+                ingresaCarpeta(Int32.Parse((String)clickedLabel.Tag));
+            }
+            else if (clickedLabel.Name == "documento")
+            {
+                ingresaDocumento(Int32.Parse((String)clickedLabel.Tag));
+            }
             
         }
 
@@ -133,16 +153,17 @@ namespace Vista
             labCarp.Location = new Point(42, 12);
             labCarp.Tag = idCarp.ToString();
             labCarp.DoubleClick += bttLabelC_2Click;
+            labCarp.Name = "carpeta";
             //Titulo Carpeta
             Label labTit = new Label();
             labTit.Size = new Size(400, 20);
             labTit.Text = tituloCarpeta;
             labTit.Location = new Point(105, 12);
-            //labTit.ForeColor = System.Drawing.Color.CadetBlue;
             labTit.ForeColor = Color.FromArgb(255, 255, 255);
             labTit.Font = new Font(labTit.Font.Name, 10, FontStyle.Bold);
             labTit.Tag = idCarp.ToString();
             labTit.DoubleClick += bttLabelC_2Click;
+            labTit.Name = "carpeta";
             //Descripcion
             Label labDes = new Label();
             labDes.Size = new Size(400, 20);
@@ -151,6 +172,7 @@ namespace Vista
             labDes.ForeColor = System.Drawing.Color.White;
             labDes.Tag = idCarp.ToString();
             labDes.DoubleClick += bttLabelC_2Click;
+            labDes.Name = "carpeta";
             //Fecha creacion
             Label labCrea = new Label();
             labCrea.Size = new Size(400, 20);
@@ -159,6 +181,7 @@ namespace Vista
             labCrea.ForeColor = System.Drawing.Color.White;
             labCrea.Tag = idCarp.ToString();
             labCrea.DoubleClick += bttLabelC_2Click;
+            labCrea.Name = "carpeta";
             //CheckBoX
             CheckBox checSec = new CheckBox();
             checSec.Location = new Point(12, 12);
@@ -191,12 +214,13 @@ namespace Vista
             labDoc.Location = new Point(42, 12);
             labDoc.Tag = idDocu.ToString();
             labDoc.DoubleClick += bttLabelC_2Click;
+            labDoc.Name = "documento";
             //Titulo Carpeta
             Label labTit = new Label();
             labTit.Size = new Size(400, 20);
             labTit.Text = tituloDocum;
             labTit.Location = new Point(105, 12);
-            //labTit.ForeColor = System.Drawing.Color.CadetBlue;
+            labTit.Name = "documento";
             labTit.ForeColor = Color.FromArgb(0, 92, 153);
             labTit.Font = new Font(labTit.Font.Name, 10, FontStyle.Bold);
             labTit.Tag = idDocu.ToString();
@@ -209,6 +233,7 @@ namespace Vista
             labDes.ForeColor = System.Drawing.Color.Black;
             labDes.Tag = idDocu.ToString();
             labDes.DoubleClick += bttLabelC_2Click;
+            labDes.Name = "documento";
             //Fecha creacion
             Label labCrea = new Label();
             labCrea.Size = new Size(400, 20);
@@ -217,6 +242,7 @@ namespace Vista
             labCrea.ForeColor = System.Drawing.Color.Black;
             labCrea.Tag = idDocu.ToString();
             labCrea.DoubleClick += bttLabelC_2Click;
+            labCrea.Name = "documento";
             //CheckBoX
             CheckBox checSec = new CheckBox();
             checSec.Location = new Point(12, 12);
@@ -252,6 +278,14 @@ namespace Vista
                 for (int i = 0; i < listaCarps.Count; i++)
                 {
                     generarPanelCarp(listaCarps[i].Id, listaCarps[i].Nombre, listaCarps[i].Descripcion, listaCarps[i].FechaCreacion);
+                }
+
+                listaDocs = listaDocsPasado[listaDocsPasado.Count - 1];
+                listaDocsPasado.RemoveAt(listaDocsPasado.Count - 1);
+                for (int i = 0; i < listaDocs.Count; i++)
+                {
+                    generarPanelDoc(listaDocs[i].Id, listaDocs[i].Nombre, listaDocs[i].Descripcion, listaDocs[i].FechaCreacion);
+
                 }
             }
             else
