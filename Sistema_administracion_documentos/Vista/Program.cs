@@ -14,9 +14,12 @@ namespace Vista
 
         public static Usuario userobj;
         public static List<int> listaId;
+        public static int idCarpAct = 0;
+        public static List<int> listidCarpPast;
         [STAThread]
         static void Main()
         {
+            listidCarpPast = new List<int>();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmLogin lg = new frmLogin();

@@ -42,7 +42,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblCursoAct = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -184,22 +183,12 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Carpeta actual: ";
-            // 
             // lblCursoAct
             // 
-            this.lblCursoAct.Location = new System.Drawing.Point(248, 15);
+            this.lblCursoAct.Location = new System.Drawing.Point(141, 9);
             this.lblCursoAct.Name = "lblCursoAct";
             this.lblCursoAct.Size = new System.Drawing.Size(253, 23);
             this.lblCursoAct.TabIndex = 11;
-            this.lblCursoAct.Text = "----";
             // 
             // frmAgregarDoc
             // 
@@ -207,7 +196,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 466);
             this.Controls.Add(this.lblCursoAct);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
@@ -220,7 +208,6 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDocs)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -240,7 +227,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCursoAct;
     }
 }

@@ -17,5 +17,10 @@ namespace Controlador {
         {
             return accCarpeta.devolverListasCarpetasXPadre(idPadreCarp,idUsu);
         }
+
+        public String retornarNombreCarpeta(int id)
+        {
+            return accCarpeta.devolverNombreCarpeta(id);
+        }
     }
 }

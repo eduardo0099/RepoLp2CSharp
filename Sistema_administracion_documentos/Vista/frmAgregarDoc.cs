@@ -16,8 +16,12 @@ namespace Vista
         private BindingList<CargaDoc> docsACargar;
         private int idCarpetaActual;
         private DocumentoBL documentolog;
+        private CarpetaBL carpetalog;
         public frmAgregarDoc()
         {
+            carpetalog = new CarpetaBL();
+            String val = carpetalog.retornarNombreCarpeta(Program.idCarpAct);
+            MessageBox.Show("Su archivo se agregará en la carpeta: "+ val,"Anuncio",MessageBoxButtons.OK);
             InitializeComponent();
             docsACargar = new BindingList<CargaDoc>();
             dgvListaDocs.DataSource = docsACargar;
@@ -83,7 +87,7 @@ namespace Vista
                     nombArchivo = substring;
                 }
                 String[] subNombArch = nombArchivo.Split(delimiter2);
-                documentolog.agregarDocumento(7, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
+                documentolog.agregarDocumento(Program.idCarpAct, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
             }
         }
     }

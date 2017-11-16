@@ -42,6 +42,7 @@ namespace Vista
             documentolog = new DocumentoBL();
             listaCarpsPasado = new List<List<Carpeta>>();
             listaDocsPasado = new List<List<Documento>>();
+            Program.idCarpAct = 0;
             listaCarps = carpetalog.devolverListasCarpetasXPadre(0, 3);
             
             //generarPanelCarp(2,"Cursos en el ciclo","Documentos sobre el ciclo actual", DateTime.Parse("2017-11-01"));
@@ -108,6 +109,8 @@ namespace Vista
                 generarPanelDoc(listaDocs[i].Id, listaDocs[i].Nombre, listaDocs[i].Descripcion, listaDocs[i].FechaCreacion);
 
             }
+            Program.listidCarpPast.Add(Program.idCarpAct);
+            Program.idCarpAct = idCarpeta;
         }
         private void ingresaDocumento(int idDocumento)
         {
@@ -293,6 +296,8 @@ namespace Vista
                     generarPanelDoc(listaDocs[i].Id, listaDocs[i].Nombre, listaDocs[i].Descripcion, listaDocs[i].FechaCreacion);
 
                 }
+                Program.idCarpAct = Program.listidCarpPast[Program.listidCarpPast.Count - 1];
+                Program.listidCarpPast.RemoveAt(Program.listidCarpPast.Count - 1);
             }
             else
             {

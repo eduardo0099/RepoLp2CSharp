@@ -22,6 +22,27 @@ namespace AccesoDatos {
                 "port=3306;" +
                 "password=reFuKUxhUijfr8np;";
         }
+        
+        public String devolverNombreCarpeta(int idCarpe)
+        {
+            String nombAux = "";
+            //Conexion
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            //Comando
+            MySqlCommand cmd = new MySqlCommand();
+            System.Console.WriteLine(">>>>>id> " + idCarpe);
+            cmd.CommandText = "SELECT nombre FROM Carpeta where id="+ idCarpe;
+            cmd.Connection = conn;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                nombAux = reader.GetString("nombre");
+            }
+            System.Console.WriteLine(">>>>>> "+nombAux);
+            conn.Close();
+            return nombAux;
+        }
 
         public List<Carpeta> devolverListasCarpetasXPadre(int idCarpe,int idUsu)
         {
