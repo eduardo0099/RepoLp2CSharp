@@ -85,7 +85,6 @@ namespace Vista
             logicaAnuncio.guardarAnuncio(anuncio);
 
             estadoInitsial();
-            MessageBox.Show("No esta listo", "Guardar anuncio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void eleminarAnuncioToolStripButton_Click_1(object sender, EventArgs e)
