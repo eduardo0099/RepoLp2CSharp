@@ -310,3 +310,15 @@ C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\Vist
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Vista.exe.config
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Controlador.dll
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\AccesoDatos.dll
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\MySql.Data.dll
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Controlador.pdb
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\Controlador.dll.config
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\AccesoDatos.pdb
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\AccesoDatos.dll.config
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\bin\Debug\MySql.Data.xml
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmInfoPersonal.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmRecuperarCuenta.resources
+C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmVistaPreviaDocumento.resources

@@ -22,12 +22,16 @@ namespace Controlador {
             return accDocumento.obtenerDatosDoc(idCarpe);
         }
 
-        public void actualizarNombreDocumento(string nombre) {
-            accDocumento.actualizarNombreDocumento(nombre);
+        public void actualizarNombreDocumento(string nombre, int idDocumento) {
+            accDocumento.actualizarNombreDocumento(nombre, idDocumento);
         }
 
-        public void actualizarDescripcionDocumento(string descripcion) {
-            accDocumento.actualizarDescripcionDocumento(descripcion);
+        public void actualizarDescripcionDocumento(string descripcion, int idDocumento) {
+            accDocumento.actualizarDescripcionDocumento(descripcion, idDocumento);
+        }
+
+        public void actualizarFechaModDocumento(int idDocumento) {
+            accDocumento.actualizarFechaModDocumento(idDocumento);
         }
 
         public Documento obtenerObjetoDocumento(int id) {

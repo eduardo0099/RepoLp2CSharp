@@ -67,7 +67,7 @@ namespace AccesoDatos {
 
         /*************** Ronie ***************/
 
-        public void actualizarNombreDocumento(string nombre) {
+        public void actualizarNombreDocumento(string nombre, int idDocumento) {
             MySqlConnection conn = new MySqlConnection(url);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand();
@@ -75,13 +75,18 @@ namespace AccesoDatos {
             cmd.CommandText = "ACTUALIZAR_NOMBRE_DOCUMENTO";
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("nombreNuevo", nombre);
+            cmd.Parameters.AddWithValue("p_nombre", nombre);
+            cmd.Parameters.AddWithValue("p_id", idDocumento);
+
+            Console.WriteLine("ENTRO A NOMBRE");
+            Console.WriteLine(nombre);
+            Console.WriteLine(idDocumento);
 
             MySqlDataReader reader = cmd.ExecuteReader();
             conn.Close();
         }
 
-        public void actualizarDescripcionDocumento(string descripcion) {
+        public void actualizarDescripcionDocumento(string descripcion, int idDocumento) {
             MySqlConnection conn = new MySqlConnection(url);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand();
@@ -89,9 +94,25 @@ namespace AccesoDatos {
             cmd.CommandText = "ACTUALIZAR_DESCRIPCION_DOCUMENTO";
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("nombreNuevo", descripcion);
+            cmd.Parameters.AddWithValue("p_desc", descripcion);
+            cmd.Parameters.AddWithValue("p_id", idDocumento);
 
             MySqlDataReader reader = cmd.ExecuteReader();
+            conn.Close();
+        }
+
+        public void actualizarFechaModDocumento(int idDocumento) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "ACTUALIZAR_FECHA_MOD";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("p_id", idDocumento);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            //cmd.ExecuteNonQuery();
             conn.Close();
         }
 

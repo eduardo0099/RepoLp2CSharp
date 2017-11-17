@@ -20,25 +20,40 @@ namespace Vista {
         private string extensionDocumento;
         private int idUsuarioDocumento;
         private int idUsuarioLogueado;
+        private int idDocumento;
+        private int idCarpeta;
 
         public enum estado { Inicial, Editar, Eliminado };
+        private Dictionary<string, string> dia;
+        private string[] mes = { "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+        "septiembre", "octubre", "noviembre", "diciembre"};
 
-        public frmVistaPreviaDocumento(Documento doc, string nombreCarp, int idUsuario) {
+        public frmVistaPreviaDocumento(Documento doc, int idCarpetaAux, int idUsuario) {
             InitializeComponent();
             sistemaUsuario = new UsuarioBL();
             sistemaDocumento = new DocumentoBL();
             estadoCampos(estado.Inicial);
+            dia = new Dictionary<string, string>();
+            inicializarMapas();
 
-            /* IDs de los usuarios */
+            /* IDs de los usuarios y documento*/
             idUsuarioDocumento = doc.IdUsuario;
             idUsuarioLogueado = idUsuario;
+            idDocumento = doc.Id;
+            idCarpeta = idCarpetaAux;
 
             /* Rellenar los campos del documento */
             txtboxNombre.Text = doc.Nombre; nombreDocumento = doc.Nombre;
             txtboxDescripcion.Text = doc.Descripcion; descripcionDocumento = doc.Descripcion;
             lblExtensionR.Text = doc.Extension; extensionDocumento = doc.Extension;
-            lblCarpetaR.Text = nombreCarp;
-            lblFechaCreacionR.Text = doc.FechaCreacion.ToString();
+            //lblCarpetaR.Text = nombreCarp;
+
+            //Dia de creacion
+            lblFechaCreacionR.Text = dia[doc.FechaCreacion.DayOfWeek.ToString()] + ", " +
+                                     doc.FechaCreacion.Day.ToString() + " de " +
+                                     mes[doc.FechaCreacion.Month - 1] + " de " +
+                                     doc.FechaCreacion.Year;
+            
             if (doc.Habilitado == 1) lblEstadoR.Text = "Habilitado";
             else {
                 lblExtensionL.Text = "El documento fue eliminado";
@@ -47,7 +62,21 @@ namespace Vista {
 
             /* Rellenar los campos del autor */
             lblAutorR.Text = sistemaUsuario.devolverNombrePorId(doc.IdUsuario);
-            lblFechaModifR.Text = doc.FechaMod.ToString();
+            lblFechaModifR.Text = dia[doc.FechaMod.DayOfWeek.ToString()] + ", " +
+                                  doc.FechaMod.Day.ToString() + " de " +
+                                  mes[doc.FechaMod.Month - 1] + " de " +
+                                  doc.FechaMod.Year;
+        }
+
+        public void inicializarMapas() {
+            //Dias
+            dia["Monday"] = "lunes";
+            dia["Tuesday"] = "martes";
+            dia["Wednesday"] = "miercoles";
+            dia["Thursday"] = "jueves";
+            dia["Friday"] = "viernes";
+            dia["Saturday"] = "sabado";
+            dia["Sunday"] = "domingo;";
         }
 
         public void estadoCampos(estado est) {
@@ -128,11 +157,20 @@ namespace Vista {
         }
 
         private void bttnGuardar_Click_1(object sender, EventArgs e) {
-            /* Se modifica el nombre y la descripcion*/
-            nombreDocumento = txtboxNombre.Text;
-            descripcionDocumento = txtboxDescripcion.Text;
-            sistemaDocumento.actualizarNombreDocumento(nombreDocumento);
-            sistemaDocumento.actualizarDescripcionDocumento(descripcionDocumento);
+            DialogResult dialogResult = MessageBox.Show("Se modificaran los datos", "¿Esta seguro que desea guardar?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes) {
+                /* Se modifica el nombre y la descripcion*/
+                nombreDocumento = txtboxNombre.Text;
+                descripcionDocumento = txtboxDescripcion.Text;
+
+                MessageBox.Show("nombre: " + nombreDocumento + "\ndescripcion" + descripcionDocumento + "\niddocumento" + idDocumento);
+
+                sistemaDocumento.actualizarNombreDocumento(nombreDocumento, idDocumento);
+                sistemaDocumento.actualizarDescripcionDocumento(descripcionDocumento, idDocumento);
+                sistemaDocumento.actualizarFechaModDocumento(idDocumento);
+
+                estadoCampos(estado.Inicial);
+            }
         }
 
         private void bttnEditar_Click_1(object sender, EventArgs e) {

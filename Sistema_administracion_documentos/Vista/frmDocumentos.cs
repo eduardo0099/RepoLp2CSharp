@@ -19,7 +19,6 @@ namespace Vista
         private List<List<Carpeta>> listaCarpsPasado;
         private List<Documento> listaDocs;
         private List<List<Documento>> listaDocsPasado;
-        private string ultimaCarpeta;
         public frmDocumentos()
         {
             InitializeComponent();
@@ -115,7 +114,8 @@ namespace Vista
         private void ingresaDocumento(int idDocumento)
         {
             Documento doc = documentolog.obtenerObjetoDocumento(idDocumento);
-            frmVistaPreviaDocumento ventanaVistaPrevia = new frmVistaPreviaDocumento(doc, "Clase", Program.userobj.Id);
+            frmVistaPreviaDocumento ventanaVistaPrevia = new frmVistaPreviaDocumento(doc, Program.idCarpAct, Program.userobj.Id);
+            
             if (ventanaVistaPrevia.ShowDialog() == DialogResult.OK) {
 
             }
