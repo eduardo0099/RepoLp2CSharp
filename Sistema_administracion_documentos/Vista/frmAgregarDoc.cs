@@ -51,14 +51,22 @@ namespace Vista
 
             FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
             long fSize = fs.Length;
-            byte[] rawData = new byte[fSize];
-            fs.Read(rawData, 0, (int)fSize);
-            fs.Close();
-            //dgvListaDocs
-            CargaDoc auxCargaDoc = new CargaDoc();
-            auxCargaDoc.Titulo = txtTit.Text;
-            auxCargaDoc.Ruta = txtArchSelec.Text;
-            docsACargar.Add(auxCargaDoc);
+            if (fSize <= 1000000)
+            {
+                byte[] rawData = new byte[fSize];
+                fs.Read(rawData, 0, (int)fSize);
+                fs.Close();
+                //dgvListaDocs
+                CargaDoc auxCargaDoc = new CargaDoc();
+                auxCargaDoc.Titulo = txtTit.Text;
+                auxCargaDoc.Ruta = txtArchSelec.Text;
+                docsACargar.Add(auxCargaDoc);
+            }
+            else
+            {
+                MessageBox.Show("No se puede agregar archivo mayores a 1MB", "Error", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -90,6 +98,11 @@ namespace Vista
                 documentolog.agregarDocumento(Program.idCarpAct, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
                 MessageBox.Show("Documento guardado correctamente", "Aviso", MessageBoxButtons.OK);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
