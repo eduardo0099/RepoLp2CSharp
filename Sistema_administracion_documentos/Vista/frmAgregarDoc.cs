@@ -88,6 +88,7 @@ namespace Vista
                 }
                 String[] subNombArch = nombArchivo.Split(delimiter2);
                 documentolog.agregarDocumento(Program.idCarpAct, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
+                MessageBox.Show("Documento guardado correctamente", "Aviso", MessageBoxButtons.OK);
             }
         }
     }

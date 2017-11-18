@@ -22,6 +22,7 @@ namespace Vista {
         private int idUsuarioLogueado;
         private int idDocumento;
         private int idCarpeta;
+        private Documento docParam;
 
         public enum estado { Inicial, Editar, Eliminado };
         private Dictionary<string, string> dia;
@@ -29,6 +30,8 @@ namespace Vista {
         "septiembre", "octubre", "noviembre", "diciembre"};
 
         public frmVistaPreviaDocumento(Documento doc, int idCarpetaAux, int idUsuario) {
+            docParam = new Documento();
+            docParam = doc;
             InitializeComponent();
             sistemaUsuario = new UsuarioBL();
             sistemaDocumento = new DocumentoBL();
@@ -150,9 +153,10 @@ namespace Vista {
             /* Se abre la ventana */
             if (sfd.ShowDialog() == DialogResult.OK) {
                 string path = sfd.FileName;
-                BinaryWriter bw = new BinaryWriter(File.Create(path));
-                bw.Write("Holi");
-                bw.Dispose();
+                File.WriteAllBytes(path, docParam.DatosBinary);
+                //BinaryWriter bw = new BinaryWriter(File.Create(path));
+                //bw.Write("Holi");
+                //bw.Dispose();
             }
         }
 
