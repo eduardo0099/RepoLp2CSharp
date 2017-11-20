@@ -33,5 +33,17 @@ namespace Controlador {
         public string devolverNombrePorId(int id) {
             return sistemaUsuario.devolverNombrePorID(id);
         }
+
+        public int devolverIDUsuario(string codigo) {
+            return sistemaUsuario.devolverIDUsuario(codigo);
+        }
+
+        public string obtenerCorreoAlternativo(int id) {
+            return sistemaUsuario.obtenerCorreoAlternativo(id);
+        }
+
+        public string obtenerContrasenaUsuario(int id) {
+            return sistemaUsuario.obtenerContrasenaUsuario(id);
+        }
     }
 }

@@ -20,53 +20,6 @@ namespace AccesoDatos {
                 "password=reFuKUxhUijfr8np;";
 
         public bool validarUsuario(string codigoUsuario, string contrasenaUsuario) {
-            /*
-            //Conexion
-            MySqlConnection conn = new MySqlConnection(url);
-            conn.Open();
-            //Comando
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "SELECT * FROM Admin_Sistema;";
-            cmd.Connection = conn;
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            
-             // Aca se tiene que hacer una consulta a las tablas administradores, personal,
-             // profesores y alumnos, es decir, a todos los que puedan acceder al sistema,
-             // ya que se desea que ingresen por codigo. Si no fuera por codigo y se accede
-             // por correo, seria mas facil, pues no se buscaria el codigo en las tablas
-             // que ya mencione. Si se ingresara solo por correo, se haria una busqueda en
-             // la tabla usuario.
-             
-
-
-            //Verificar codigo
-            int r_idUsuario = -1;
-            while (reader.Read()) {
-                string r_codigo = reader.GetString("Codigo");
-                if (r_codigo == codigoUsuario) {
-                    r_idUsuario = reader.GetInt32("Usuario_IdUsuario");
-                    break;
-                }
-            }
-            if (r_idUsuario < 0) return false;
-            conn.Close();
-
-            //Verificar contrasena
-            conn = new MySqlConnection(url);
-            conn.Open();
-            cmd.CommandText = "SELECT * FROM Usuario;";
-            cmd.Connection = conn;
-            MySqlDataReader reader2 = cmd.ExecuteReader();
-            while (reader2.Read()) {
-                int r_idUsuario2 = reader2.GetInt32("IdUsuario");
-                if (r_idUsuario2 == r_idUsuario) {
-                    if (reader2.GetString("Password") == contrasenaUsuario) return true;
-                }
-            }
-            conn.Close();
-            return false;*/
-
             /* Buscar alumno */
             MySqlConnection conn = new MySqlConnection(url);
             conn.Open();
@@ -123,6 +76,7 @@ namespace AccesoDatos {
             else return false;
         }
 
+        /* NO USAR ESTE METODO */
         public string obtenerNombreUsuario(string codigoUsuario) {
             //Buscar codigo
             MySqlConnection conn = new MySqlConnection(url);
@@ -169,11 +123,97 @@ namespace AccesoDatos {
             cmd.Parameters.Add("p_nombre", MySqlDbType.String);
             cmd.Parameters["p_nombre"].Direction = System.Data.ParameterDirection.Output;
 
-            MySqlDataReader reader = cmd.ExecuteReader();
-            //string idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
+            cmd.ExecuteNonQuery();
+            //MySqlDataReader reader = cmd.ExecuteReader();
             string nombreUsuario = cmd.Parameters["p_nombre"].Value.ToString();
             conn.Close();
             return nombreUsuario;
+        }
+
+        public int devolverIDUsuario(string codigo) {
+            int idUsuario;
+
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "BUSCAR_USUARIO_EN_ALUMNO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("codigoUsuario", codigo);
+            cmd.Parameters.Add("idUsuario", MySqlDbType.Int32);
+            cmd.Parameters["idUsuario"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.ExecuteNonQuery();
+            //MySqlDataReader reader = cmd.ExecuteReader();
+
+            string resultQuery = cmd.Parameters["idUsuario"].Value.ToString();
+            conn.Close();
+
+            if (resultQuery == "") {
+                conn = new MySqlConnection(url);
+                conn.Open();
+                cmd = new MySqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "BUSCAR_USUARIO_EN_DOCENTE";
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("codigoUsuario", codigo);
+                cmd.Parameters.Add("idUsuario", MySqlDbType.Int32);
+                cmd.Parameters["idUsuario"].Direction = System.Data.ParameterDirection.Output;
+
+                cmd.ExecuteNonQuery();
+                //reader = cmd.ExecuteReader();
+
+                resultQuery = cmd.Parameters["idUsuario"].Value.ToString();
+                conn.Close();
+            }
+
+            if (resultQuery == "") return -1; //Si no existe
+
+            idUsuario = Int32.Parse(resultQuery);
+            return idUsuario;
+        }
+
+        public string obtenerCorreoAlternativo(int id) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "OBTENER_CORREO_ALTERNATIVO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("p_id", id);
+            cmd.Parameters.Add("emailAlt", MySqlDbType.String);
+            cmd.Parameters["emailAlt"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.ExecuteNonQuery();
+            //MySqlDataReader reader = cmd.ExecuteReader();
+
+            conn.Close();
+
+            return cmd.Parameters["emailAlt"].Value.ToString();
+        }
+
+        public string obtenerContrasenaUsuario(int id) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "OBTENER_CONTRASENA";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("p_id", id);
+            cmd.Parameters.Add("contra", MySqlDbType.String);
+            cmd.Parameters["contra"].Direction = System.Data.ParameterDirection.Output;
+
+            cmd.ExecuteNonQuery();
+            //MySqlDataReader reader = cmd.ExecuteReader();
+
+            string contrasena = cmd.Parameters["contra"].Value.ToString();
+            conn.Close();
+
+            return contrasena;
         }
 
         /***************Manfred**************/
