@@ -15,6 +15,7 @@ namespace Vista
     {
         private CarpetaBL carpetalog;
         private DocumentoBL documentolog;
+        private UsuarioBL usuariolog;
         private List<Carpeta> listaCarps;
         private List<List<Carpeta>> listaCarpsPasado;
         private List<Documento> listaDocs;
@@ -39,6 +40,7 @@ namespace Vista
             naveDocs.HorizontalScroll.Visible = false;
             carpetalog = new CarpetaBL();
             documentolog = new DocumentoBL();
+            usuariolog = new UsuarioBL();
             listaCarpsPasado = new List<List<Carpeta>>();
             listaDocsPasado = new List<List<Documento>>();
             Program.idCarpAct = 0;
@@ -58,18 +60,27 @@ namespace Vista
             }
             if (Program.userobj.Cargo == 0) //Profesor
             {
-                toolStripButton4.Enabled = false;
+                toolStripButton1.Visible = true;
+                toolStripSeparator1.Visible = true;
+                toolStripButton2.Visible = true;
+                toolStripSeparator2.Visible = true;
+                toolStripButton3.Visible = true;
             }
             else if (Program.userobj.Cargo == 2) //Personal
             {
-                toolStripButton4.Enabled = false;
+                toolStripButton1.Visible = true;
+                toolStripSeparator1.Visible = true;
+                toolStripButton2.Visible = true;
+                toolStripSeparator2.Visible = true;
+                toolStripButton3.Visible = true;
             }
             else //Alumno
             {
                 toolStripButton1.Visible = false;
+                toolStripSeparator1.Visible = false;
                 toolStripButton2.Visible = false;
+                toolStripSeparator2.Visible = false;
                 toolStripButton3.Visible = false;
-                toolStripButton4.Visible = false;
             }
 
         }
@@ -91,9 +102,15 @@ namespace Vista
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            
-            frmAgregarDoc FrmagregaDocumento = new frmAgregarDoc();
-            FrmagregaDocumento.ShowDialog();
+            if (usuariolog.verificarPermiso(Program.userobj.Id,Program.idCarpAct,1) || usuariolog.verificarPermiso(Program.userobj.Id, Program.idCarpAct, 3))
+            {
+                frmAgregarDoc FrmagregaDocumento = new frmAgregarDoc();
+                FrmagregaDocumento.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Usted no tiene permisos para agregar documentos en esta carpeta", "¡Permisos!", MessageBoxButtons.OK);
+            }
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {

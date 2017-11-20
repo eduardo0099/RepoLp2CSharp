@@ -72,7 +72,7 @@ namespace Vista
                     CargaDoc auxCargaDoc = new CargaDoc();
                     auxCargaDoc.Titulo = txtTit.Text;
                     auxCargaDoc.Ruta = txtArchSelec.Text;
-
+                    auxCargaDoc.TipoDoc = cmbTipoDoc.Text;
                     docsACargar.Add(auxCargaDoc);
                 }
                 else

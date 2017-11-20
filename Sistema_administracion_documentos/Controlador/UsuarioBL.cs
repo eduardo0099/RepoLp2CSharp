@@ -45,5 +45,10 @@ namespace Controlador {
         public string obtenerContrasenaUsuario(int id) {
             return sistemaUsuario.obtenerContrasenaUsuario(id);
         }
+
+        public bool verificarPermiso(int idUsuario, int idCarpeta, int idPermiso)
+        {
+            return sistemaUsuario.verificarPermiso(idUsuario, idCarpeta, idPermiso);
+        }
     }
 }

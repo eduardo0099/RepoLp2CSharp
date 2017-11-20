@@ -19,6 +19,34 @@ namespace AccesoDatos {
                 "port=3306;" +
                 "password=reFuKUxhUijfr8np;";
 
+        public bool verificarPermiso(int idUsuario,int idCarpeta, int idPermiso)
+        {
+            bool valor = false;
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "CONSULTAR_PERMISO_CARPETA";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("idUsu", idUsuario);
+            cmd.Parameters.AddWithValue("idCarp", idCarpeta);
+            cmd.Parameters.AddWithValue("idPer", idPermiso);
+            cmd.Parameters.Add("valor", MySqlDbType.Int32);
+            cmd.Parameters["valor"].Direction = System.Data.ParameterDirection.Output;
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            int valorAux = Int32.Parse(cmd.Parameters["valor"].Value.ToString());
+            conn.Close();
+            if (valorAux == 0)
+            {
+                valor = false;
+            }
+            else
+            {
+                valor = true;
+            }
+            return valor;
+        }
         public bool validarUsuario(string codigoUsuario, string contrasenaUsuario) {
             /* Buscar alumno */
             MySqlConnection conn = new MySqlConnection(url);
