@@ -25,7 +25,16 @@ namespace Vista
             InitializeComponent();
             docsACargar = new BindingList<CargaDoc>();
             dgvListaDocs.DataSource = docsACargar;
+            dgvListaDocs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             documentolog = new DocumentoBL();
+            if (Program.userobj.Cargo == 0)
+            {
+                cmbTipoDoc.Items.Add("Evaluación");
+                cmbTipoDoc.Items.Add("Normal");
+            }else if(Program.userobj.Cargo == 2)
+            {
+                cmbTipoDoc.Items.Add("Administrativo");
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -51,16 +60,26 @@ namespace Vista
 
             FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
             long fSize = fs.Length;
+        
             if (fSize <= 1000000)
             {
-                byte[] rawData = new byte[fSize];
-                fs.Read(rawData, 0, (int)fSize);
-                fs.Close();
-                //dgvListaDocs
-                CargaDoc auxCargaDoc = new CargaDoc();
-                auxCargaDoc.Titulo = txtTit.Text;
-                auxCargaDoc.Ruta = txtArchSelec.Text;
-                docsACargar.Add(auxCargaDoc);
+                if((cmbTipoDoc.Text != "") && (txtTit.Text != ""))
+                {
+                    byte[] rawData = new byte[fSize];
+                    fs.Read(rawData, 0, (int)fSize);
+                    fs.Close();
+                    //dgvListaDocs
+                    CargaDoc auxCargaDoc = new CargaDoc();
+                    auxCargaDoc.Titulo = txtTit.Text;
+                    auxCargaDoc.Ruta = txtArchSelec.Text;
+
+                    docsACargar.Add(auxCargaDoc);
+                }
+                else
+                {
+                    MessageBox.Show("Falta llenar campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                
             }
             else
             {

@@ -222,3 +222,26 @@ C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.dll
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.dll.config
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\Modelo.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\EntityFramework.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\Modelo.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySql.Data.xml
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySql.Data.Entity.EF6.xml
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.xml
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.xml
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\MySql.Web.xml
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\de\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\es\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\fr\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\it\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ja\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ko\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ru\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hans\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hant\EntityFramework.resources.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.csprojResolveAssemblyReference.cache
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\obj\Debug\AccesoDatos.pdb

@@ -259,6 +259,7 @@ namespace AccesoDatos {
             user.Dni = reader.GetString("DNI");
             user.Email = reader.GetString("Email");
             user.Nombres = reader.GetString("Nombre");
+            user.Cargo = reader.GetInt32("IdCargo");
             
             try
             {

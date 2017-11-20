@@ -63,3 +63,8 @@ C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\Mode
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb

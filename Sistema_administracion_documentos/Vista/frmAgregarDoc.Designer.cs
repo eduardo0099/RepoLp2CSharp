@@ -42,7 +42,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lblCursoAct = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDocs)).BeginInit();
@@ -103,6 +104,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbTipoDoc);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtTit);
@@ -110,9 +113,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtArchSelec);
-            this.groupBox1.Location = new System.Drawing.Point(26, 41);
+            this.groupBox1.Location = new System.Drawing.Point(26, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(347, 194);
+            this.groupBox1.Size = new System.Drawing.Size(347, 220);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo documento";
@@ -120,9 +123,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(118, 156);
+            this.button2.Location = new System.Drawing.Point(111, 185);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 23);
+            this.button2.Size = new System.Drawing.Size(109, 29);
             this.button2.TabIndex = 6;
             this.button2.Text = "Añadir a lista";
             this.button2.UseVisualStyleBackColor = true;
@@ -153,6 +156,7 @@
             // 
             this.dgvListaDocs.AllowUserToAddRows = false;
             this.dgvListaDocs.AllowUserToDeleteRows = false;
+            this.dgvListaDocs.AllowUserToResizeColumns = false;
             this.dgvListaDocs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaDocs.Location = new System.Drawing.Point(6, 19);
             this.dgvListaDocs.Name = "dgvListaDocs";
@@ -184,19 +188,28 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // lblCursoAct
+            // label4
             // 
-            this.lblCursoAct.Location = new System.Drawing.Point(141, 9);
-            this.lblCursoAct.Name = "lblCursoAct";
-            this.lblCursoAct.Size = new System.Drawing.Size(253, 23);
-            this.lblCursoAct.TabIndex = 11;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Tipo Documento:";
+            // 
+            // cmbTipoDoc
+            // 
+            this.cmbTipoDoc.FormattingEnabled = true;
+            this.cmbTipoDoc.Location = new System.Drawing.Point(168, 152);
+            this.cmbTipoDoc.Name = "cmbTipoDoc";
+            this.cmbTipoDoc.Size = new System.Drawing.Size(160, 21);
+            this.cmbTipoDoc.TabIndex = 8;
             // 
             // frmAgregarDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 466);
-            this.Controls.Add(this.lblCursoAct);
+            this.ClientSize = new System.Drawing.Size(400, 480);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
@@ -228,6 +241,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label lblCursoAct;
+        private System.Windows.Forms.ComboBox cmbTipoDoc;
+        private System.Windows.Forms.Label label4;
     }
 }

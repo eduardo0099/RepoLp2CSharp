@@ -20,6 +20,7 @@ namespace Modelo
         private string direccion;
         private string dni;
         private string numeroTele;
+        private int  _cargo;
 
         public Usuario()
         {
@@ -39,5 +40,6 @@ namespace Modelo
         public string NumeroTele { get => numeroTele; set => numeroTele = value; }
         public int Id { get => id; set => id = value; }
         public string EmailAlt { get => _emailAlt; set => _emailAlt = value; }
+        public int Cargo { get => _cargo; set => _cargo = value; }
     }
 }

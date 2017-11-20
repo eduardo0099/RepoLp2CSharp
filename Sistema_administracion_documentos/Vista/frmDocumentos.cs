@@ -42,7 +42,7 @@ namespace Vista
             listaCarpsPasado = new List<List<Carpeta>>();
             listaDocsPasado = new List<List<Documento>>();
             Program.idCarpAct = 0;
-            listaCarps = carpetalog.devolverListasCarpetasXPadre(0, 3);
+            listaCarps = carpetalog.devolverListasCarpetasXPadre(0,Program.userobj.Id);
             
             //generarPanelCarp(2,"Cursos en el ciclo","Documentos sobre el ciclo actual", DateTime.Parse("2017-11-01"));
             for (int i = 0; i < listaCarps.Count; i++)
@@ -55,6 +55,21 @@ namespace Vista
             {
                 generarPanelDoc(listaDocs[i].Id, listaDocs[i].Nombre, listaDocs[i].Descripcion, listaDocs[i].FechaCreacion);
 
+            }
+            if (Program.userobj.Cargo == 0) //Profesor
+            {
+                toolStripButton4.Enabled = false;
+            }
+            else if (Program.userobj.Cargo == 2) //Personal
+            {
+                toolStripButton4.Enabled = false;
+            }
+            else //Alumno
+            {
+                toolStripButton1.Visible = false;
+                toolStripButton2.Visible = false;
+                toolStripButton3.Visible = false;
+                toolStripButton4.Visible = false;
             }
 
         }
@@ -94,7 +109,7 @@ namespace Vista
             //Que ocurre cuando se entra a una carpeta
             //MessageBox.Show(idCarpeta.ToString());
             listaCarpsPasado.Add(listaCarps);
-            listaCarps = carpetalog.devolverListasCarpetasXPadre(idCarpeta, 3);
+            listaCarps = carpetalog.devolverListasCarpetasXPadre(idCarpeta, Program.userobj.Id);
             naveDocs.Controls.Clear();
             for (int i = 0; i < listaCarps.Count; i++)
             {
@@ -303,6 +318,11 @@ namespace Vista
             {
                 MessageBox.Show("No se puede retroceder más");
             }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

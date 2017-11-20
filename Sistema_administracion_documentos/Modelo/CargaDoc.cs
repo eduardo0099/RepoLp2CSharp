@@ -10,7 +10,7 @@ namespace Modelo
     {
         private String _Titulo;
         private String _Ruta;
-
+        private String tipoDoc;
         public CargaDoc()
         {
 
@@ -18,5 +18,6 @@ namespace Modelo
 
         public string Titulo { get => _Titulo; set => _Titulo = value; }
         public string Ruta { get => _Ruta; set => _Ruta = value; }
+        public string TipoDoc { get => tipoDoc; set => tipoDoc = value; }
     }
 }

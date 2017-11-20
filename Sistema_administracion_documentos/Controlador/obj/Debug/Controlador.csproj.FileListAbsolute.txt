@@ -135,3 +135,16 @@ C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
 C:\Users\Ronie Paolo\Documents\Ronie\C#\TA\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll.config
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.pdb
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.xml
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
+T:\TALP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
