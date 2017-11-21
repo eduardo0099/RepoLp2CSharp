@@ -104,44 +104,59 @@ namespace Vista
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Grabar la lista de documentos a la carpeta
-            Char delimiter = '\\';
-            Char delimiter2 = '.';
-            foreach (CargaDoc cd in docsACargar)
+            if (docsACargar.Count != 0)
             {
+                //Grabar la lista de documentos a la carpeta
+                Char delimiter = '\\';
+                Char delimiter2 = '.';
+                //frmCarga frmc = new frmCarga();
+                //frmc.Visible = true;
+                //frmc.ShowDialog();
 
-                FileStream fs = new FileStream(cd.Ruta, FileMode.OpenOrCreate, FileAccess.Read);
-                byte[] fileData = new byte[fs.Length];
-                fs.Read(fileData, 0, System.Convert.ToInt32(fs.Length));
-                String[] substrings = cd.Ruta.Split(delimiter);
+                foreach (CargaDoc cd in docsACargar)
+                {
 
-                String nombArchivo = "";
-                foreach (String substring in substrings)
-                {
-                    nombArchivo = substring;
-                }
-                String[] subNombArch = nombArchivo.Split(delimiter2);
-                int idAgreg = documentolog.agregarDocumento(Program.idCarpAct, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
-                int cicloActual = ciclolog.busquedaCicloVingente();
-                if (cd.TipoDoc== "Evaluación")
-                {
-                    int idCusoActual = carpetalog.devolveridCursoDeCarpeta(Program.idCarpAct);
-                    documentolog.insertarDocEvaluacion(idAgreg, cicloActual, idCusoActual);
+                    FileStream fs = new FileStream(cd.Ruta, FileMode.OpenOrCreate, FileAccess.Read);
+                    byte[] fileData = new byte[fs.Length];
+                    fs.Read(fileData, 0, System.Convert.ToInt32(fs.Length));
+                    String[] substrings = cd.Ruta.Split(delimiter);
+
+                    String nombArchivo = "";
+                    foreach (String substring in substrings)
+                    {
+                        nombArchivo = substring;
+                    }
+                    String[] subNombArch = nombArchivo.Split(delimiter2);
+                    int idAgreg = documentolog.agregarDocumento(Program.idCarpAct, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
+                    int cicloActual = ciclolog.busquedaCicloVingente();
+                    if (cd.TipoDoc == "Evaluación")
+                    {
+                        int idCusoActual = carpetalog.devolveridCursoDeCarpeta(Program.idCarpAct);
+                        documentolog.insertarDocEvaluacion(idAgreg, cicloActual, idCusoActual);
+
+                    }
+                    else if (cd.TipoDoc == "Administrativo")
+                    {
+                        MessageBox.Show("es de admi");
+                    }
+                    else
+                    {
+                        int idCusoActual = carpetalog.devolveridCursoDeCarpeta(Program.idCarpAct);
+                        documentolog.insertarDocDocente(idAgreg, cicloActual, idCusoActual);
+                    }
 
                 }
-                else if (cd.TipoDoc== "Administrativo")
-                {
-                    MessageBox.Show("es de admi");
-                }
-                else
-                {
-                    int idCusoActual = carpetalog.devolveridCursoDeCarpeta(Program.idCarpAct);
-                    documentolog.insertarDocDocente(idAgreg, cicloActual, idCusoActual);
-                }
-                
+
+                //frmc.Visible = false;
+                //frmc.Dispose();
+                MessageBox.Show("Documento guardado correctamente", "Aviso", MessageBoxButtons.OK);
+                this.Dispose();
             }
-            MessageBox.Show("Documento guardado correctamente", "Aviso", MessageBoxButtons.OK);
-            this.Dispose();
+            else
+            {
+                MessageBox.Show("No hay documentos para cargar", "Error", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
