@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controlador;
+using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,17 +13,29 @@ namespace Vista
 {
     public partial class frmInicio : Form
     {
-        public frmInicio()
-        {
-            InitializeComponent();
-        }
-
+        private int cicloVigente;//id del ciclo vigente
+        private CicloBL logicaN;
+        private CursoBL logicaCurso;
+        private BindingList<Curso> listaCursos;
+        private BindingList<Anuncio> listaAnuncio;
+        private AnuncioBL logicaAnuncio;
+        private Curso cursoSeleccionado;
         public frmInicio(Form padre)
         {
             InitializeComponent();
-            
-
             this.MdiParent = padre;
+            listaCursos = new BindingList<Curso>();
+            logicaN = new CicloBL();
+            logicaCurso = new CursoBL();
+            logicaAnuncio = new AnuncioBL();
+            listaAnuncio = new BindingList<Anuncio>();
+            cicloVigente = logicaN.busquedaCicloVingente();
+            listaCursos = logicaCurso.cursosDictados(cicloVigente, Program.userobj.Id);
+            comboBox1.ValueMember = "Nombre";
+            foreach (Curso c in listaCursos)
+            {
+                comboBox1.Items.Add(c);
+            }
         }
         private void frmInicio_Load(object sender, EventArgs e)
         {
