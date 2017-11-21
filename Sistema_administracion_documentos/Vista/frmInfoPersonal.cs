@@ -30,6 +30,7 @@ namespace Vista
             btnCancelar.Visible = false;
             btnGuardar.Visible = false;
             btnEditar.Visible = true;
+            btnSalir.Visible = true;
             txtCorreo.Enabled = false;
             txtCorreoAlt.Enabled = false;
             txtDireccion.Enabled = false;
@@ -58,6 +59,7 @@ namespace Vista
             btnCancelar.Visible = true;
             btnGuardar.Visible = true;
             btnEditar.Visible = false;
+            btnSalir.Visible = false;
             txtCorreoAlt.Enabled = true;
             txtDireccion.Enabled = true;
             txtNumero.Enabled = true;
@@ -107,6 +109,11 @@ namespace Vista
             {
                 estadoInit();
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

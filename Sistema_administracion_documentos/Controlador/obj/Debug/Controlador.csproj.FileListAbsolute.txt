@@ -36,20 +36,6 @@ T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\M
 T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
 T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
 T:\TA C#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.dll
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.dll
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.pdb
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll.config
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.pdb
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.xml
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
-C:\Users\Manfred\source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
 C:\Users\USER\Source\Repos\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
@@ -161,3 +147,17 @@ T:\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.D
 T:\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
 T:\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
 T:\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.dll
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.dll
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.pdb
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll.config
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.pdb
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.xml
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
+C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
