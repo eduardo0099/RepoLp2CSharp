@@ -20,6 +20,8 @@ namespace Vista
         private List<List<Carpeta>> listaCarpsPasado;
         private List<Documento> listaDocs;
         private List<List<Documento>> listaDocsPasado;
+        private List<String> ruta;
+        private String rutaTextoLabel;
         public frmDocumentos()
         {
             InitializeComponent();
@@ -41,9 +43,12 @@ namespace Vista
             carpetalog = new CarpetaBL();
             documentolog = new DocumentoBL();
             usuariolog = new UsuarioBL();
+            ruta = new List<string>();
             listaCarpsPasado = new List<List<Carpeta>>();
             listaDocsPasado = new List<List<Documento>>();
             Program.idCarpAct = 0;
+            ruta.Add("Root");
+            lblRuta.Text = " - Root ";
             listaCarps = carpetalog.devolverListasCarpetasXPadre(0,Program.userobj.Id);
             
             //generarPanelCarp(2,"Cursos en el ciclo","Documentos sobre el ciclo actual", DateTime.Parse("2017-11-01"));
@@ -165,12 +170,18 @@ namespace Vista
             if(clickedPanel.Name == "carpeta")
             {
                 ingresaCarpeta(Int32.Parse((String)clickedPanel.Tag));
+                ruta.Add(clickedPanel.Controls[1].Text);
+                rutaTextoLabel = "";
+                foreach (String rut in ruta)
+                {
+                    rutaTextoLabel += " - " + rut; 
+                }
+                lblRuta.Text = rutaTextoLabel;
             }
             else if(clickedPanel.Name == "documento")
             {
                 ingresaDocumento(Int32.Parse((String)clickedPanel.Tag));
             }
-            
         }
 
         private void bttLabelC_2Click(object sender, EventArgs e)
@@ -179,18 +190,46 @@ namespace Vista
             if (clickedLabel.Name == "carpeta")
             {
                 ingresaCarpeta(Int32.Parse((String)clickedLabel.Tag));
+                ruta.Add(clickedLabel.Controls[0].Name);
+                rutaTextoLabel = "";
+                foreach (String rut in ruta)
+                {
+                    rutaTextoLabel += " - " + rut;
+                }
+                lblRuta.Text = rutaTextoLabel;
             }
             else if (clickedLabel.Name == "documento")
             {
                 ingresaDocumento(Int32.Parse((String)clickedLabel.Tag));
             }
-            
         }
 
         private Panel generarPanelCarp(int idCarp, String tituloCarpeta, String descripcion, DateTime fechaCrea)
         {
+            //Label aux
+            Label labAux1 = new Label();
+            labAux1.Text = "";
+            labAux1.Name = tituloCarpeta;
+            labAux1.Size = new Size(0, 0);
+            //Label aux
+            Label labAux2 = new Label();
+            labAux2.Text = "";
+            labAux2.Name = tituloCarpeta;
+            labAux2.Size = new Size(0, 0);
+            //Label aux
+            Label labAux3 = new Label();
+            labAux3.Text = "";
+            labAux3.Name = tituloCarpeta;
+            labAux3.Size = new Size(0, 0);
+            //Label aux
+            Label labAux4 = new Label();
+            labAux4.Text = "";
+            labAux4.Name = tituloCarpeta;
+            labAux4.Size = new Size(0, 0);
             //Imagen Carpeta
             Label labCarp = new Label();
+
+            labCarp.Controls.Add(labAux1);
             Image i = Image.FromFile("carpeta50.png");
             labCarp.Size = new Size(i.Width, i.Height);
             labCarp.Image = i;
@@ -200,6 +239,7 @@ namespace Vista
             labCarp.Name = "carpeta";
             //Titulo Carpeta
             Label labTit = new Label();
+            labTit.Controls.Add(labAux2);
             labTit.Size = new Size(400, 20);
             labTit.Text = tituloCarpeta;
             labTit.Location = new Point(105, 12);
@@ -217,6 +257,7 @@ namespace Vista
             labDes.Tag = idCarp.ToString();
             labDes.DoubleClick += bttLabelC_2Click;
             labDes.Name = "carpeta";
+            labDes.Controls.Add(labAux3);
             //Fecha creacion
             Label labCrea = new Label();
             labCrea.Size = new Size(400, 20);
@@ -226,10 +267,11 @@ namespace Vista
             labCrea.Tag = idCarp.ToString();
             labCrea.DoubleClick += bttLabelC_2Click;
             labCrea.Name = "carpeta";
+            labCrea.Controls.Add(labAux4);
             //CheckBoX
-            CheckBox checSec = new CheckBox();
-            checSec.Location = new Point(12, 12);
-            checSec.Size = new Size(15, 15);
+            //CheckBox checSec = new CheckBox();
+            //checSec.Location = new Point(12, 12);
+            //checSec.Size = new Size(15, 15);
             //Panel
             Panel p = new Panel();
             p.Name = "carpeta";
@@ -242,8 +284,8 @@ namespace Vista
             p.Controls.Add(labTit);
             p.Controls.Add(labDes);
             p.Controls.Add(labCrea);
-            p.Controls.Add(checSec);
-
+            //p.Controls.Add(checSec);
+            
             naveDocs.Controls.Add(p);
             naveDocs.Invalidate();
             return p;
@@ -287,10 +329,7 @@ namespace Vista
             labCrea.Tag = idDocu.ToString();
             labCrea.DoubleClick += bttLabelC_2Click;
             labCrea.Name = "documento";
-            //CheckBoX
-            CheckBox checSec = new CheckBox();
-            checSec.Location = new Point(12, 12);
-            checSec.Size = new Size(15, 15);
+            
             //Panel
             Panel p = new Panel();
             p.Name = "documento";
@@ -304,8 +343,17 @@ namespace Vista
             p.Controls.Add(labTit);
             p.Controls.Add(labDes);
             p.Controls.Add(labCrea);
-            p.Controls.Add(checSec);
-
+            //CheckBoX
+            CheckBox checSec;
+            if (Program.userobj.Cargo != 1)
+            {
+                checSec = new CheckBox();
+                checSec.Location = new Point(12, 12);
+                checSec.Size = new Size(15, 15);
+                p.Controls.Add(checSec);
+            }
+            
+            
             naveDocs.Controls.Add(p);
             naveDocs.Invalidate();
             
@@ -314,8 +362,16 @@ namespace Vista
 
         private void bttRegresar_Click(object sender, EventArgs e)
         {
+
             if (listaCarpsPasado.Count != 0)
             {
+                ruta.RemoveAt(ruta.Count - 1);
+                rutaTextoLabel = "";
+                foreach (String rut in ruta)
+                {
+                    rutaTextoLabel += " - " + rut;
+                }
+                lblRuta.Text = rutaTextoLabel;
                 listaCarps = listaCarpsPasado[listaCarpsPasado.Count - 1];
                 listaCarpsPasado.RemoveAt(listaCarpsPasado.Count - 1);
                 naveDocs.Controls.Clear();
@@ -343,6 +399,18 @@ namespace Vista
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            //Eliminar
+            foreach(Panel pan in naveDocs.Controls)
+            {
+                //if (((CheckBox)pan.Controls[4]).Checked)
+                //{
+                //    MessageBox.Show(pan.Tag + "");
+                //}
+            }
         }
     }
 }
