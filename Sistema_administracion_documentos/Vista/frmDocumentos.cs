@@ -415,7 +415,27 @@ namespace Vista
                 {
                     if (((CheckBox)pan.Controls[4]).Checked)
                     {
-                        MessageBox.Show(pan.Tag + "");
+                        int idDocument = Int32.Parse(pan.Tag.ToString());
+
+                        if (usuariolog.verificarPermiso(Program.userobj.Id, Program.idCarpAct, 1))
+                        {
+                            documentolog.eliminarDocumento(idDocument, Program.userobj.Id);
+                            MessageBox.Show("Documento eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+
+                            if (documentolog.verificarAutoria(idDocument, Program.userobj.Id))
+                            {
+                                documentolog.eliminarDocumento(idDocument, Program.userobj.Id);
+                                MessageBox.Show("Documento eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No tiene permisos para eliminar este documento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+
                     }
                 }
             }

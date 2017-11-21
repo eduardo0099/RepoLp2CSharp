@@ -289,5 +289,48 @@ namespace AccesoDatos {
 
             return doc;
         }
+        public bool verificarAutoria(int idDoc, int idUsu)
+        {
+            bool val = false;
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "VERIFICAR_AUTORIA_DOC";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("_idDoc", idDoc);
+            cmd.Parameters.AddWithValue("_idUsu", idUsu);
+            cmd.Parameters.Add("_valor", MySqlDbType.Int32);
+            cmd.Parameters["_valor"].Direction = System.Data.ParameterDirection.Output;
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            conn.Close();
+            int auxcount = Int32.Parse(cmd.Parameters["_valor"].Value.ToString());
+            if (auxcount == 0)
+            {
+                val = false;
+            }
+            else
+            {
+                val = true;
+            }
+            return val;
+        }
+        public void eliminarDocumento(int idDoc, int idUsu)
+        {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "ELIMINAR_DOCUMENTO";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("_idDoc", idDoc);
+            cmd.Parameters.AddWithValue("_idUsu", idUsu);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            conn.Close();
+        }
     }
 }

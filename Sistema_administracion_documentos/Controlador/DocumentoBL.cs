@@ -50,5 +50,13 @@ namespace Controlador {
         {
             accDocumento.insertarDocAdmin(idDoc, fechaIni, fechaFin);
         }
+        public bool verificarAutoria(int idDoc, int idUsu)
+        {
+            return accDocumento.verificarAutoria(idDoc, idUsu);
+        }
+        public void eliminarDocumento(int idDoc, int idUsu)
+        {
+            accDocumento.eliminarDocumento(idDoc, idUsu);
+        }
     }
 }

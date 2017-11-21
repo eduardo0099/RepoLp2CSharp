@@ -382,3 +382,4 @@ C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos
 C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
 C:\Users\Ronie Paolo\source\repos\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmCarga.resources
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmCarga.resources
