@@ -403,13 +403,21 @@ namespace Vista
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
+        {
             //Eliminar
-            foreach(Panel pan in naveDocs.Controls)
+            foreach (Panel pan in naveDocs.Controls)
             {
-                //if (((CheckBox)pan.Controls[4]).Checked)
-                //{
-                //    MessageBox.Show(pan.Tag + "");
-                //}
+                if (pan.Controls.Count == 5)
+                {
+                    if (((CheckBox)pan.Controls[4]).Checked)
+                    {
+                        MessageBox.Show(pan.Tag + "");
+                    }
+                }
             }
         }
     }

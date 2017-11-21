@@ -145,16 +145,6 @@ C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_document
 C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hans\EntityFramework.resources.dll
 C:\Users\USER\Desktop\siempre pull\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hant\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\EntityFramework.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\de\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\es\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\fr\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\it\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ja\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ko\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\ru\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hans\EntityFramework.resources.dll
-C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\zh-Hant\EntityFramework.resources.dll
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.dll.config
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.dll
 C:\Users\USER\Desktop\yyyyy\RepoLp2CSharp\Sistema_administracion_documentos\AccesoDatos\bin\Debug\AccesoDatos.pdb
