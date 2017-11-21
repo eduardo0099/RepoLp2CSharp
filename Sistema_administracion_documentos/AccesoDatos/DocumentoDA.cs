@@ -19,8 +19,9 @@ namespace AccesoDatos {
 
         }
 
-        public void insertarDocumento(int idCarpe, int idUsu, String tit, String nomb, String ext, Byte[] arrDato,int tam)
+        public int insertarDocumento(int idCarpe, int idUsu, String tit, String nomb, String ext, Byte[] arrDato,int tam)
         {
+            int auxRet = -1;
             MySqlConnection con =
                 new MySqlConnection(url);
             con.Open();
@@ -36,6 +37,62 @@ namespace AccesoDatos {
             comando.Parameters.AddWithValue("_Extension", ext);
             comando.Parameters.AddWithValue("_ArrBinDatos", arrDato);
             comando.Parameters.AddWithValue("_TamDatos", tam);
+            comando.Parameters.Add("_ID", MySqlDbType.Int32);
+            comando.Parameters["_ID"].Direction = System.Data.ParameterDirection.Output;
+
+            comando.ExecuteReader();
+            auxRet = Int32.Parse(comando.Parameters["_ID"].Value.ToString());
+            con.Close();
+            return auxRet;
+        }
+
+        public void insertarDocDocente(int idDoc, int idCiclo, int idCurso)
+        {
+            MySqlConnection con =
+                new MySqlConnection(url);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "INSERTAR_DOC_DOCENTE";
+            comando.CommandType =
+                System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("_IdDoc", idDoc);
+            comando.Parameters.AddWithValue("_IdCiclo", idCiclo);
+            comando.Parameters.AddWithValue("_IdCurso", idCurso);
+            comando.ExecuteReader();
+            con.Close();
+        }
+
+        public void insertarDocEvaluacion(int idDoc, int idCiclo, int idCurso)
+        {
+            MySqlConnection con =
+                new MySqlConnection(url);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "INSERTAR_DOC_EVALUACION";
+            comando.CommandType =
+                System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("_IdDoc", idDoc);
+            comando.Parameters.AddWithValue("_IdCiclo", idCiclo);
+            comando.Parameters.AddWithValue("_IdCurso", idCurso);
+            comando.ExecuteReader();
+            con.Close();
+        }
+
+        public void insertarDocAdmin(int idDoc,DateTime fechaIni, DateTime fechaFin)
+        {
+            MySqlConnection con =
+                new MySqlConnection(url);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "INSERTAR_DOC_ADMIN";
+            comando.CommandType =
+                System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("_IdDoc", idDoc);
+            comando.Parameters.AddWithValue("_FechaIni", fechaIni);
+            comando.Parameters.AddWithValue("_FechaFin", fechaFin);
             comando.ExecuteReader();
             con.Close();
         }

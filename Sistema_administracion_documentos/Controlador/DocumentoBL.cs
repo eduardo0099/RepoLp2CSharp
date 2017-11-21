@@ -14,8 +14,8 @@ namespace Controlador {
             accDocumento = new DocumentoDA();
         }
 
-        public void agregarDocumento(int idCarpe, int idUsu, String tit, String nomb, String ext, Byte[] arrDato, int tam){
-            accDocumento.insertarDocumento(idCarpe, idUsu, tit, nomb, ext, arrDato, tam);
+        public int agregarDocumento(int idCarpe, int idUsu, String tit, String nomb, String ext, Byte[] arrDato, int tam) {
+            return accDocumento.insertarDocumento(idCarpe, idUsu, tit, nomb, ext, arrDato, tam);
         }
         public List<Documento> obtenerDocumentosCarpeta(int idCarpe)
         {
@@ -36,6 +36,19 @@ namespace Controlador {
 
         public Documento obtenerObjetoDocumento(int id) {
             return accDocumento.obtenerObjetoDocumento(id);
+        }
+
+        public void insertarDocDocente(int idDoc, int idCiclo, int idCurso)
+        {
+            accDocumento.insertarDocDocente(idDoc, idCiclo, idCurso);
+        }
+        public void insertarDocEvaluacion(int idDoc, int idCiclo, int idCurso)
+        {
+            accDocumento.insertarDocEvaluacion(idDoc, idCiclo, idCurso);
+        }
+        public void insertarDocAdmin(int idDoc, DateTime fechaIni, DateTime fechaFin)
+        {
+            accDocumento.insertarDocAdmin(idDoc, fechaIni, fechaFin);
         }
     }
 }

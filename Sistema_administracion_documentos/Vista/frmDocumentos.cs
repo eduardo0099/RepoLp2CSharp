@@ -102,6 +102,9 @@ namespace Vista
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            //1 es administrador
+            //2 es consumidor 
+            //3 es contribuidor
             if (usuariolog.verificarPermiso(Program.userobj.Id,Program.idCarpAct,1) || usuariolog.verificarPermiso(Program.userobj.Id, Program.idCarpAct, 3))
             {
                 frmAgregarDoc FrmagregaDocumento = new frmAgregarDoc();

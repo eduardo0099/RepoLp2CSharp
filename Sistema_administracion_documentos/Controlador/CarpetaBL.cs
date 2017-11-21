@@ -22,5 +22,10 @@ namespace Controlador {
         {
             return accCarpeta.devolverNombreCarpeta(id);
         }
+
+        public int devolveridCursoDeCarpeta(int idCarpe)
+        {
+            return accCarpeta.devolveridCursoDeCarpeta(idCarpe);
+        }
     }
 }

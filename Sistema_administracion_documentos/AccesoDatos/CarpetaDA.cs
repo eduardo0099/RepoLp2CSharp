@@ -22,7 +22,7 @@ namespace AccesoDatos {
                 "port=3306;" +
                 "password=reFuKUxhUijfr8np;";
         }
-        
+
         public String devolverNombreCarpeta(int idCarpe)
         {
             String nombAux = "";
@@ -32,16 +32,37 @@ namespace AccesoDatos {
             //Comando
             MySqlCommand cmd = new MySqlCommand();
             System.Console.WriteLine(">>>>>id> " + idCarpe);
-            cmd.CommandText = "SELECT nombre FROM Carpeta where id="+ idCarpe;
+            cmd.CommandText = "SELECT nombre FROM Carpeta where id=" + idCarpe;
             cmd.Connection = conn;
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 nombAux = reader.GetString("nombre");
             }
-            System.Console.WriteLine(">>>>>> "+nombAux);
             conn.Close();
             return nombAux;
+        }
+
+        public int devolveridCursoDeCarpeta(int idCarp)
+        {
+            int idRet = -1;
+            MySqlConnection con =
+                new MySqlConnection(url);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "OBTENER_CURSO_X_CARPETA";
+            comando.CommandType =
+                System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("_IdCarp", idCarp);
+            comando.Parameters.Add("valCur", MySqlDbType.Int32);
+            comando.Parameters["valCur"].Direction = System.Data.ParameterDirection.Output;
+
+            comando.ExecuteReader();
+            idRet = Int32.Parse(comando.Parameters["valCur"].Value.ToString());
+            con.Close();
+            return idRet;
+
         }
 
         public List<Carpeta> devolverListasCarpetasXPadre(int idCarpe,int idUsu)

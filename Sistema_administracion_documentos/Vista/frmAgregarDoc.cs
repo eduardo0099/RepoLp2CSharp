@@ -17,9 +17,11 @@ namespace Vista
         private int idCarpetaActual;
         private DocumentoBL documentolog;
         private CarpetaBL carpetalog;
+        private CicloBL ciclolog;
         public frmAgregarDoc()
         {
             carpetalog = new CarpetaBL();
+            ciclolog = new CicloBL();
             String val = carpetalog.retornarNombreCarpeta(Program.idCarpAct);
             MessageBox.Show("Su archivo se agregará en la carpeta: "+ val,"Anuncio",MessageBoxButtons.OK);
             InitializeComponent();
@@ -29,11 +31,15 @@ namespace Vista
             documentolog = new DocumentoBL();
             if (Program.userobj.Cargo == 0)
             {
+                cmbTipoDoc.Text = "Normal";
                 cmbTipoDoc.Items.Add("Evaluación");
                 cmbTipoDoc.Items.Add("Normal");
-            }else if(Program.userobj.Cargo == 2)
+                
+            }
+            else if(Program.userobj.Cargo == 2)
             {
                 cmbTipoDoc.Items.Add("Administrativo");
+                cmbTipoDoc.Text = "Administrativo";
             }
         }
 
@@ -103,20 +109,39 @@ namespace Vista
             Char delimiter2 = '.';
             foreach (CargaDoc cd in docsACargar)
             {
+
                 FileStream fs = new FileStream(cd.Ruta, FileMode.OpenOrCreate, FileAccess.Read);
                 byte[] fileData = new byte[fs.Length];
                 fs.Read(fileData, 0, System.Convert.ToInt32(fs.Length));
                 String[] substrings = cd.Ruta.Split(delimiter);
-                
+
                 String nombArchivo = "";
                 foreach (String substring in substrings)
                 {
                     nombArchivo = substring;
                 }
                 String[] subNombArch = nombArchivo.Split(delimiter2);
-                documentolog.agregarDocumento(Program.idCarpAct, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
-                MessageBox.Show("Documento guardado correctamente", "Aviso", MessageBoxButtons.OK);
+                int idAgreg = documentolog.agregarDocumento(Program.idCarpAct, Program.userobj.Id, cd.Titulo, subNombArch[0], subNombArch[1], fileData, System.Convert.ToInt32(fs.Length));
+                int cicloActual = ciclolog.busquedaCicloVingente();
+                if (cd.TipoDoc== "Evaluación")
+                {
+                    int idCusoActual = carpetalog.devolveridCursoDeCarpeta(Program.idCarpAct);
+                    documentolog.insertarDocEvaluacion(idAgreg, cicloActual, idCusoActual);
+
+                }
+                else if (cd.TipoDoc== "Administrativo")
+                {
+                    MessageBox.Show("es de admi");
+                }
+                else
+                {
+                    int idCusoActual = carpetalog.devolveridCursoDeCarpeta(Program.idCarpAct);
+                    documentolog.insertarDocDocente(idAgreg, cicloActual, idCusoActual);
+                }
+                
             }
+            MessageBox.Show("Documento guardado correctamente", "Aviso", MessageBoxButtons.OK);
+            this.Dispose();
         }
 
         private void button4_Click(object sender, EventArgs e)
