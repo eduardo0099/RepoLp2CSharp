@@ -50,5 +50,9 @@ namespace Controlador {
         {
             return sistemaUsuario.verificarPermiso(idUsuario, idCarpeta, idPermiso);
         }
+
+        public void registrarMovimientoUsuario(int idDocumento, int idUsuario) {
+            sistemaUsuario.registrarMovimientoUsuario(idDocumento, idUsuario);
+        }
     }
 }

@@ -244,6 +244,21 @@ namespace AccesoDatos {
             return contrasena;
         }
 
+        public void registrarMovimientoUsuario(int idDocumento, int idUsuario) {
+            MySqlConnection conn = new MySqlConnection(url);
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "AUDITORIA_LEER_DESCARGAR";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("p_docID", idDocumento);
+            cmd.Parameters.AddWithValue("p_usuID", idUsuario);
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
         /***************Manfred**************/
 
         public void actualizarUsuario(Usuario user)

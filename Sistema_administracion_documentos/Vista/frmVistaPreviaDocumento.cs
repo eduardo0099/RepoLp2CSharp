@@ -33,17 +33,20 @@ namespace Vista {
             docParam = new Documento();
             docParam = doc;
             InitializeComponent();
+
             sistemaUsuario = new UsuarioBL();
             sistemaDocumento = new DocumentoBL();
             estadoCampos(estado.Inicial);
             dia = new Dictionary<string, string>();
             inicializarMapas();
-
             /* IDs de los usuarios y documento*/
             idUsuarioDocumento = doc.IdUsuario;
             idUsuarioLogueado = idUsuario;
             idDocumento = doc.Id;
             idCarpeta = idCarpetaAux;
+
+            /* Auditoria */
+            sistemaUsuario.registrarMovimientoUsuario(idDocumento, idUsuarioLogueado);
 
             /* Rellenar los campos del documento */
             txtboxNombre.Text = doc.Nombre; nombreDocumento = doc.Nombre;
@@ -69,6 +72,10 @@ namespace Vista {
                                   doc.FechaMod.Day.ToString() + " de " +
                                   mes[doc.FechaMod.Month - 1] + " de " +
                                   doc.FechaMod.Year;
+
+            /* Vista previa del documento */
+            
+
         }
 
         public void inicializarMapas() {
@@ -139,24 +146,12 @@ namespace Vista {
             sfd.DefaultExt = extensionDocumento;
 
             /* Extensiones */
-            /*sfd.Filter = "Archivo de Texto|*.txt";
-            sfd.Filter = "Documento de Word|*.docx";
             sfd.Filter = "PDF|*.pdf";
-            sfd.Filter = "Presentacion de Power Point|*.ppt";
-            sfd.Filter = "Libro de Excel|*.xlsx";
-            sfd.Filter = "JPEG|*.jpg";
-            sfd.Filter = "PNG|*.png";
-            sfd.Filter = "BMP|*.bmp";
-            sfd.Filter = "GIF|*.gif";
-            sfd.Filter = "Pagina Web|*.html";*/
-
+            
             /* Se abre la ventana */
             if (sfd.ShowDialog() == DialogResult.OK) {
                 string path = sfd.FileName;
                 File.WriteAllBytes(path, docParam.DatosBinary);
-                //BinaryWriter bw = new BinaryWriter(File.Create(path));
-                //bw.Write("Holi");
-                //bw.Dispose();
             }
         }
 
