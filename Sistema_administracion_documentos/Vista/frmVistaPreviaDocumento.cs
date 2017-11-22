@@ -24,7 +24,7 @@ namespace Vista {
         private int idCarpeta;
         private Documento docParam;
 
-        public enum estado { Inicial, Editar, Eliminado };
+        public enum estado { Inicial, Editar, Eliminado, InicialAlumno };
         private Dictionary<string, string> dia;
         private string[] mes = { "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
         "septiembre", "octubre", "noviembre", "diciembre"};
@@ -36,7 +36,10 @@ namespace Vista {
 
             sistemaUsuario = new UsuarioBL();
             sistemaDocumento = new DocumentoBL();
-            estadoCampos(estado.Inicial);
+
+            if (Program.userobj.Cargo == 1) estadoCampos(estado.InicialAlumno);
+            else estadoCampos(estado.Inicial);
+
             dia = new Dictionary<string, string>();
             inicializarMapas();
             /* IDs de los usuarios y documento*/
@@ -113,6 +116,13 @@ namespace Vista {
                     bttnCancelar.Enabled = false;
                     bttnDescargar.Enabled = false;
                     break;
+                case estado.InicialAlumno:
+                    txtboxNombre.Enabled = false;
+                    txtboxDescripcion.Enabled = false;
+                    bttnGuardar.Visible = false;
+                    bttnEditar.Visible = false;
+                    bttnCancelar.Visible = false;
+                    break;
             }
         }
 
@@ -167,6 +177,8 @@ namespace Vista {
                 sistemaDocumento.actualizarNombreDocumento(nombreDocumento, idDocumento);
                 sistemaDocumento.actualizarDescripcionDocumento(descripcionDocumento, idDocumento);
                 sistemaDocumento.actualizarFechaModDocumento(idDocumento);
+
+                sistemaUsuario.registrarMovimientoEditarUsuario(idDocumento, idUsuarioLogueado);
 
                 estadoCampos(estado.Inicial);
             }

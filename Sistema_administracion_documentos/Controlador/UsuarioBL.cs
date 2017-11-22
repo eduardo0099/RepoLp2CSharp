@@ -54,5 +54,9 @@ namespace Controlador {
         public void registrarMovimientoUsuario(int idDocumento, int idUsuario) {
             sistemaUsuario.registrarMovimientoUsuario(idDocumento, idUsuario);
         }
+
+        public void registrarMovimientoEditarUsuario(int idDocumento, int idUsuario) {
+            sistemaUsuario.registrarMovimientoEditarUsuario(idDocumento, idUsuario);
+        }
     }
 }
