@@ -440,5 +440,21 @@ namespace Vista
                 }
             }
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            frmBusqueda fbus = new frmBusqueda();
+            if(fbus.ShowDialog() == DialogResult.OK)
+            {
+                List<Documento> listaBusqDoc = new List<Documento>();
+                listaBusqDoc = fbus.ListaResultado;
+                naveDocs.Controls.Clear();
+                for (int i = 0; i < listaBusqDoc.Count; i++)
+                {
+                    generarPanelDoc(listaBusqDoc[i].Id, listaBusqDoc[i].Nombre, listaBusqDoc[i].Descripcion, listaBusqDoc[i].FechaCreacion);
+
+                }
+            }
+        }
     }
 }

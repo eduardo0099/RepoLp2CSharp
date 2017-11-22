@@ -19,7 +19,7 @@ namespace AccesoDatos {
 
         }
 
-        public int insertarDocumento(int idCarpe, int idUsu, String tit, String nomb, String ext, Byte[] arrDato,int tam)
+        public int insertarDocumento(int idCarpe, int idUsu, String tit, String nomb, String ext, Byte[] arrDato, int tam)
         {
             int auxRet = -1;
             MySqlConnection con =
@@ -80,7 +80,7 @@ namespace AccesoDatos {
             con.Close();
         }
 
-        public void insertarDocAdmin(int idDoc,DateTime fechaIni, DateTime fechaFin)
+        public void insertarDocAdmin(int idDoc, DateTime fechaIni, DateTime fechaFin)
         {
             MySqlConnection con =
                 new MySqlConnection(url);
@@ -260,7 +260,7 @@ namespace AccesoDatos {
             //cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();
             //string idUsuario = cmd.Parameters["idUsuario"].Value.ToString();
-            
+
             int _idCarpeta = Int32.Parse(cmd.Parameters["p_Carpeta_id"].Value.ToString());
             int _idUsuario = Int32.Parse(cmd.Parameters["p_Usuario_IdUsuario"].Value.ToString());
             DateTime _fechaCreacion = DateTime.Parse(cmd.Parameters["p_FechaCreacion"].Value.ToString());
@@ -271,7 +271,7 @@ namespace AccesoDatos {
             Byte[] _datosBinary = (Byte[])(cmd.Parameters["p_DatosBinDoc"].Value);
             long _tamañoDatos = Int64.Parse(cmd.Parameters["p_tamanoDatos"].Value.ToString());
             String _descripcion = cmd.Parameters["p_Descripcion"].Value.ToString();
-            
+
             conn.Close();
 
             Documento doc = new Documento();
@@ -331,6 +331,34 @@ namespace AccesoDatos {
 
             MySqlDataReader reader = cmd.ExecuteReader();
             conn.Close();
+        }
+        public List<Documento> devolverListaDocXCARPXPAL(int idCarp, String pal)
+        {
+            List<Documento> docAuxLista = new List<Documento>();
+            MySqlConnection con =
+                new MySqlConnection(url);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "BUSCAR_DOCUMENTOS";
+            comando.CommandType =
+                System.Data.CommandType.StoredProcedure;
+            String newPal = "%" + pal + "%";
+            comando.Parameters.AddWithValue("palabra", newPal);
+            comando.Parameters.AddWithValue("idCarp", idCarp);
+            MySqlDataReader dr = comando.ExecuteReader();
+            while (dr.Read())
+            {
+                Documento docAux = new Documento();
+                docAux.Id = dr.GetInt32("Id");
+                docAux.FechaCreacion = dr.GetDateTime("FechaCreacion");
+                docAux.Descripcion = dr.GetString("Descripcion");
+                docAux.Nombre = dr.GetString("Titulo");
+                System.Console.WriteLine(">"+ idCarp +">"+ newPal+ ":" +dr.GetString("Titulo"));
+                docAuxLista.Add(docAux);
+            }
+            con.Close();
+            return docAuxLista;
         }
     }
 }

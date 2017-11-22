@@ -27,5 +27,10 @@ namespace Controlador {
         {
             return accCarpeta.devolveridCursoDeCarpeta(idCarpe);
         }
+
+        public List<int> listarcarpetasIdHijas(int idCarp)
+        {
+            return accCarpeta.listarcarpetasIdHijas(idCarp);
+        }
     }
 }

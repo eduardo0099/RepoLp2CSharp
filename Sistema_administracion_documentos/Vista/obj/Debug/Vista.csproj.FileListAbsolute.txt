@@ -473,3 +473,4 @@ C:\Users\USER\Desktop\Proyecto c#\RepoLp2CSharp\Sistema_administracion_documento
 C:\Users\USER\Desktop\Proyecto c#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\Proyecto c#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.exe
 C:\Users\USER\Desktop\Proyecto c#\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.pdb
+C:\Users\Eduardo G\Desktop\RepoLp2CSharp\Sistema_administracion_documentos\Vista\obj\Debug\Vista.frmBusqueda.resources

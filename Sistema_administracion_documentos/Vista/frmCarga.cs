@@ -15,6 +15,13 @@ namespace Vista
         public frmCarga()
         {
             InitializeComponent();
+
+        }
+
+        public void p(Form g)
+        {
+
+            g.Dispose();
         }
     }
 }

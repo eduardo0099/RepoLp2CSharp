@@ -31,7 +31,6 @@ namespace AccesoDatos {
             conn.Open();
             //Comando
             MySqlCommand cmd = new MySqlCommand();
-            System.Console.WriteLine(">>>>>id> " + idCarpe);
             cmd.CommandText = "SELECT nombre FROM Carpeta where id=" + idCarpe;
             cmd.Connection = conn;
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -101,6 +100,27 @@ namespace AccesoDatos {
             }
             con.Close();
             return listaAux;
+        }
+
+        public List<int> listarcarpetasIdHijas(int idCarpe)
+        {
+            List<int> listaRet = new List<int>();
+
+            //Conexion
+            MySqlConnection con = new MySqlConnection(url);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "OBTENER_HIJOS_CARPETA";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("ID_PADRE", idCarpe);
+            MySqlDataReader dr = comando.ExecuteReader();
+            while(dr.Read())
+            {
+                int idAux = dr.GetInt32("id");
+                listaRet.Add(idAux);
+            }
+            return listaRet;
         }
     }
 }

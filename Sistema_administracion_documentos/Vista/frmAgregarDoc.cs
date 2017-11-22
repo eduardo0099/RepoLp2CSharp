@@ -9,6 +9,8 @@ using System.Text;
 using System.Windows.Forms;
 using Modelo;
 using Controlador;
+using System.Threading;
+
 namespace Vista
 {
     public partial class frmAgregarDoc : Form
@@ -23,7 +25,7 @@ namespace Vista
             carpetalog = new CarpetaBL();
             ciclolog = new CicloBL();
             String val = carpetalog.retornarNombreCarpeta(Program.idCarpAct);
-            MessageBox.Show("Su archivo se agregará en la carpeta: "+ val,"Anuncio",MessageBoxButtons.OK);
+            MessageBox.Show("Su archivo se agregará en la carpeta: " + val, "Anuncio", MessageBoxButtons.OK);
             InitializeComponent();
             docsACargar = new BindingList<CargaDoc>();
             dgvListaDocs.DataSource = docsACargar;
@@ -34,9 +36,9 @@ namespace Vista
                 cmbTipoDoc.Text = "Normal";
                 cmbTipoDoc.Items.Add("Evaluación");
                 cmbTipoDoc.Items.Add("Normal");
-                
+
             }
-            else if(Program.userobj.Cargo == 2)
+            else if (Program.userobj.Cargo == 2)
             {
                 cmbTipoDoc.Items.Add("Administrativo");
                 cmbTipoDoc.Text = "Administrativo";
@@ -50,7 +52,7 @@ namespace Vista
 
         private void frmAgregarDoc_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,10 +68,10 @@ namespace Vista
 
             FileStream fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
             long fSize = fs.Length;
-        
+
             if (fSize <= 1000000)
             {
-                if((cmbTipoDoc.Text != "") && (txtTit.Text != ""))
+                if ((cmbTipoDoc.Text != "") && (txtTit.Text != ""))
                 {
                     byte[] rawData = new byte[fSize];
                     fs.Read(rawData, 0, (int)fSize);
@@ -85,11 +87,11 @@ namespace Vista
                 {
                     MessageBox.Show("Falta llenar campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                
+
             }
             else
             {
-                MessageBox.Show("No se puede agregar archivo mayores a 1MB", "Error", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se puede agregar archivo mayores a 1MB", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
@@ -99,7 +101,7 @@ namespace Vista
             //Eliminar un archivo de la lista
             int index = dgvListaDocs.CurrentRow.Index;
             docsACargar.RemoveAt(index);
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -109,9 +111,9 @@ namespace Vista
                 //Grabar la lista de documentos a la carpeta
                 Char delimiter = '\\';
                 Char delimiter2 = '.';
-                //frmCarga frmc = new frmCarga();
+                frmCarga frmc = new frmCarga();
                 //frmc.Visible = true;
-                //frmc.ShowDialog();
+                frmc.ShowDialog();
 
                 foreach (CargaDoc cd in docsACargar)
                 {
@@ -146,6 +148,17 @@ namespace Vista
                     }
 
                 }
+                //try
+                //{
+                //    Thread t = new Thread(prueba);
+                //    t.Start();
+
+                //}
+                //catch (Exception ex)
+                //{
+
+                //}
+                
 
                 //frmc.Visible = false;
                 //frmc.Dispose();
@@ -154,7 +167,7 @@ namespace Vista
             }
             else
             {
-                MessageBox.Show("No hay documentos para cargar", "Error", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("No hay documentos para cargar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -162,6 +175,12 @@ namespace Vista
         private void button4_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        public void prueba()
+        {
+            Thread.Sleep(5000);
+
         }
     }
 }

@@ -58,5 +58,10 @@ namespace Controlador {
         {
             accDocumento.eliminarDocumento(idDoc, idUsu);
         }
+
+        public List<Documento> devolverListaDocXCARPXPAL(int idCarp, String pal)
+        {
+            return accDocumento.devolverListaDocXCARPXPAL(idCarp, pal);
+        }
     }
 }
