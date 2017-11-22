@@ -81,7 +81,7 @@ namespace Vista
             d.Id = Program.userobj.Id;
             Ciclo cl = new Ciclo();
             cl.Id = cicloVigente;
-            anuncio = new Anuncio(this.txtTitulo.Text, this.txtAnunsio.Text, DateTime.Today, d, c, cl);
+            anuncio = new Anuncio(this.txtTitulo.Text, this.txtAnunsio.Text, DateTime.Now, d, c, cl);
             logicaAnuncio.guardarAnuncio(anuncio);
 
             estadoInitsial();

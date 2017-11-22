@@ -51,7 +51,7 @@ namespace AccesoDatos
                 c.Id = idCiclo;
                 Curso cu = new Curso();
                 cu.Id = idCurso;
-                Anuncio a = new Anuncio(reader.GetString("Titulo"), reader.GetString("Descripcion"), reader.GetDateTime("FechaCreacion"), d, cu, c);
+                Anuncio a = new Anuncio(Int32.Parse(reader.GetString("Id")),reader.GetString("Titulo"), reader.GetString("Descripcion"), reader.GetDateTime("FechaCreacion"), d, cu, c);
                 lista.Add(a);
             }
             con.Close();
@@ -65,17 +65,16 @@ namespace AccesoDatos
             con.Open();
             MySqlCommand comando = new MySqlCommand();
             comando.Connection = con;
-            comando.CommandText = "SELECT * FROM Anuncio WHERE Anuncio.CursoXCiclo_Curso_idCurso in (SELECT )";
+            comando.CommandText = "SELECT * FROM Anuncio WHERE Anuncio.CursoXCiclo_Ciclo_idCiclo in (SELECT Ciclo_idCiclo from CursoXCiclo where CursoXCiclo.Curso_idCurso =" + idCurso + " AND CursoXCiclo.Ciclo_idCiclo = " + idCiclo + ");";
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
                 Docente d = new Docente();
-                d.Id = idUsuario;
                 Ciclo c = new Ciclo();
                 c.Id = idCiclo;
                 Curso cu = new Curso();
                 cu.Id = idCurso;
-                Anuncio a = new Anuncio(reader.GetString("Titulo"), reader.GetString("Descripcion"), reader.GetDateTime("FechaCreacion"), d, cu, c);
+                Anuncio a = new Anuncio(Int32.Parse(reader.GetString("Id")),reader.GetString("Titulo"), reader.GetString("Descripcion"), reader.GetDateTime("FechaCreacion"), d, cu, c);
                 lista.Add(a);
             }
             con.Close();

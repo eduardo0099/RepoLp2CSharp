@@ -180,6 +180,23 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\Modelo.Administrador.datasource" />
+    <None Include="Properties\DataSources\Modelo.Alumno.datasource" />
+    <None Include="Properties\DataSources\Modelo.Anuncio.datasource" />
+    <None Include="Properties\DataSources\Modelo.ArbolP.datasource" />
+    <None Include="Properties\DataSources\Modelo.CargaDoc.datasource" />
+    <None Include="Properties\DataSources\Modelo.Carpeta.datasource" />
+    <None Include="Properties\DataSources\Modelo.Ciclo.datasource" />
+    <None Include="Properties\DataSources\Modelo.Curso.datasource" />
+    <None Include="Properties\DataSources\Modelo.Docente.datasource" />
+    <None Include="Properties\DataSources\Modelo.Documento.datasource" />
+    <None Include="Properties\DataSources\Modelo.Grupo.datasource" />
+    <None Include="Properties\DataSources\Modelo.MovimientoAuditoria.datasource" />
+    <None Include="Properties\DataSources\Modelo.NodoArbolP.datasource" />
+    <None Include="Properties\DataSources\Modelo.Permiso.datasource" />
+    <None Include="Properties\DataSources\Modelo.Personal.datasource" />
+    <None Include="Properties\DataSources\Modelo.Sitio.datasource" />
+    <None Include="Properties\DataSources\Modelo.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -20,6 +20,7 @@ namespace Vista
         private BindingList<Anuncio> listaAnuncio;
         private AnuncioBL logicaAnuncio;
         private Curso cursoSeleccionado;
+        private Anuncio anuncioSeleccionado;
         public frmInicio(Form padre)
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace Vista
             {
                 comboBox1.Items.Add(c);
             }
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         private void frmInicio_Load(object sender, EventArgs e)
         {
@@ -61,6 +63,31 @@ namespace Vista
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            int i = comboBox1.SelectedIndex;
+            cursoSeleccionado = listaCursos[i];
+            listaAnuncio = logicaAnuncio.mostrarAnuncio(cursoSeleccionado.Id, cicloVigente, Program.userobj.Id, Program.userobj.Cargo);
+            dataGridView1.DataSource = listaAnuncio;
+        }
+
+        private void bttSelecAnuncio_Click(object sender, EventArgs e)
+        {
+            anuncioSeleccionado = (Anuncio)dataGridView1.CurrentRow.DataBoundItem;
+            txtAnuncio.Text = anuncioSeleccionado.Titulo + "\r\n---------------------------------------\r\n"+ anuncioSeleccionado.Descripcion;
+            lblFechaAnu.Text = anuncioSeleccionado.Fechacreacion.ToString();
+            if (Program.userobj.Cargo == 0)//Profesor
+                lblAutorAnu.Text = Program.userobj.Nombres + " " + Program.userobj.APaterno;
+            else
+                lblAutorAnu.Text = logicaAnuncio.autor(anuncioSeleccionado.Id);
+        }
+
+        private void txtAnuncio_TextChanged(object sender, EventArgs e)
         {
 
         }

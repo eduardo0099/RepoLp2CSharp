@@ -25,6 +25,17 @@ namespace Modelo
             this.ciclo = ciclo;
         }
 
+        public Anuncio(int id,string titulo, string descripcion, DateTime fechacreacion, Docente docenteCreador, Curso curso, Ciclo ciclo)
+        {
+            this.id = id;
+            this.titulo = titulo;
+            this.descripcion = descripcion;
+            this.fechacreacion = fechacreacion;
+            this.docenteCreador = docenteCreador;
+            this.curso = curso;
+            this.ciclo = ciclo;
+        }
+
         public int Id { get => id; set => id = value; }
         public string Titulo { get => titulo; set => titulo = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }

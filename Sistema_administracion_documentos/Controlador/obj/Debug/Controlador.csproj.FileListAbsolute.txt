@@ -175,3 +175,17 @@ C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\C
 C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
 C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
 C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll.config
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.dll
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Controlador.pdb
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.dll
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.dll
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.pdb
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\AccesoDatos.dll.config
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\Modelo.pdb
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\bin\Debug\MySql.Data.xml
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.dll
+C:\Users\USER\Desktop\trabajo c#\RepoLp2CSharp\Sistema_administracion_documentos\Controlador\obj\Debug\Controlador.pdb

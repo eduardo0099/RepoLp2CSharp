@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,10 +55,11 @@
             this.lblColorAnu = new System.Windows.Forms.Label();
             this.bttSelecAnuncio = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColNombAnuncio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCurso = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCurso = new System.Windows.Forms.Button();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.anuncioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +67,8 @@
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -91,7 +95,7 @@
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(641, 403);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Actividades";
@@ -230,6 +234,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnCurso);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.bttSelecAnuncio);
             this.tabPage1.Controls.Add(this.dataGridView1);
@@ -237,7 +242,7 @@
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(641, 403);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Anuncios";
@@ -263,9 +268,8 @@
             this.lblAutorAnu.AutoSize = true;
             this.lblAutorAnu.Location = new System.Drawing.Point(258, 143);
             this.lblAutorAnu.Name = "lblAutorAnu";
-            this.lblAutorAnu.Size = new System.Drawing.Size(71, 13);
+            this.lblAutorAnu.Size = new System.Drawing.Size(0, 13);
             this.lblAutorAnu.TabIndex = 5;
-            this.lblAutorAnu.Text = "Nombre autor";
             // 
             // lblPorAnu
             // 
@@ -282,9 +286,8 @@
             this.lblFechaAnu.AutoSize = true;
             this.lblFechaAnu.Location = new System.Drawing.Point(79, 143);
             this.lblFechaAnu.Name = "lblFechaAnu";
-            this.lblFechaAnu.Size = new System.Drawing.Size(37, 13);
+            this.lblFechaAnu.Size = new System.Drawing.Size(0, 13);
             this.lblFechaAnu.TabIndex = 3;
-            this.lblFechaAnu.Text = "Fecha";
             // 
             // lblPubli
             // 
@@ -303,7 +306,7 @@
             this.txtAnuncio.Name = "txtAnuncio";
             this.txtAnuncio.Size = new System.Drawing.Size(478, 110);
             this.txtAnuncio.TabIndex = 1;
-            this.txtAnuncio.Text = "[Titulo del anuncio] \r\n[Contenido del anuncio]";
+            this.txtAnuncio.TextChanged += new System.EventHandler(this.txtAnuncio_TextChanged);
             // 
             // lblColorAnu
             // 
@@ -322,31 +325,15 @@
             this.bttSelecAnuncio.TabIndex = 3;
             this.bttSelecAnuncio.Text = "Seleccionar";
             this.bttSelecAnuncio.UseVisualStyleBackColor = true;
+            this.bttSelecAnuncio.Click += new System.EventHandler(this.bttSelecAnuncio_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColNombAnuncio,
-            this.ColFecha});
             this.dataGridView1.Location = new System.Drawing.Point(38, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(525, 138);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // ColNombAnuncio
-            // 
-            this.ColNombAnuncio.HeaderText = "Titulo";
-            this.ColNombAnuncio.Name = "ColNombAnuncio";
-            this.ColNombAnuncio.ReadOnly = true;
-            this.ColNombAnuncio.Width = 250;
-            // 
-            // ColFecha
-            // 
-            this.ColFecha.HeaderText = "Fecha Publicación";
-            this.ColFecha.Name = "ColFecha";
-            this.ColFecha.ReadOnly = true;
-            this.ColFecha.Width = 150;
             // 
             // lblCurso
             // 
@@ -365,6 +352,25 @@
             this.comboBox1.Size = new System.Drawing.Size(237, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btnCurso
+            // 
+            this.btnCurso.Location = new System.Drawing.Point(348, 18);
+            this.btnCurso.Name = "btnCurso";
+            this.btnCurso.Size = new System.Drawing.Size(28, 23);
+            this.btnCurso.TabIndex = 6;
+            this.btnCurso.Text = "...";
+            this.btnCurso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCurso.UseVisualStyleBackColor = true;
+            this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Modelo.Usuario);
+            // 
+            // anuncioBindingSource
+            // 
+            this.anuncioBindingSource.DataSource = typeof(Modelo.Anuncio);
             // 
             // frmInicio
             // 
@@ -389,6 +395,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,8 +410,6 @@
         private System.Windows.Forms.Label lblColorAnu;
         private System.Windows.Forms.Button bttSelecAnuncio;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombAnuncio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColFecha;
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblAutorAnu;
@@ -425,5 +431,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCursoActivi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDocActivi;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCurso;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private System.Windows.Forms.BindingSource anuncioBindingSource;
     }
 }
