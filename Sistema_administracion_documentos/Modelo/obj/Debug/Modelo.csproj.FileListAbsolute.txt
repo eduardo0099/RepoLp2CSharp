@@ -73,3 +73,9 @@ C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos
 C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
 C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb
 C:\Users\Manfred\Source\ReposLP2\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.dll
+C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\bin\Debug\Modelo.pdb
+C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.dll
+C:\Users\USER\Desktop\c#-final\RepoLp2CSharp\Sistema_administracion_documentos\Modelo\obj\Debug\Modelo.pdb

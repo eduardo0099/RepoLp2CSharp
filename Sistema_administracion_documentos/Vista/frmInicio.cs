@@ -30,7 +30,10 @@ namespace Vista
             logicaAnuncio = new AnuncioBL();
             listaAnuncio = new BindingList<Anuncio>();
             cicloVigente = logicaN.busquedaCicloVingente();
-            listaCursos = logicaCurso.cursosDictados(cicloVigente, Program.userobj.Id);
+            if(Program.userobj.Cargo == 0) //PROFESOR
+                listaCursos = logicaCurso.cursosDictados(cicloVigente, Program.userobj.Id);
+            if (Program.userobj.Cargo == 1) //ALUMNO
+                listaCursos = logicaCurso.listaCursoMatriculado(cicloVigente, Program.userobj.Id);
             comboBox1.ValueMember = "Nombre";
             foreach (Curso c in listaCursos)
             {
@@ -53,6 +56,11 @@ namespace Vista
         }
 
         private void cmbFiltroCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

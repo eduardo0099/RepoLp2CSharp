@@ -21,6 +21,11 @@ namespace Vista
             InitializeComponent();
             lblNombreUsuario.Text = Program.userobj.Nombres;
             blcarp = new CarpetaBL();
+            if (Program.userobj.Cargo == 0)//Profesor
+                this.toolStripButton3.Visible = true;
+            if(Program.userobj.Cargo == 1)//Alumno
+                this.toolStripButton3.Visible = false;
+
             //this.WindowState = FormWindowState.Maximized;
             //Left = Top = 0;
             //Width = Screen.PrimaryScreen.WorkingArea.Width;

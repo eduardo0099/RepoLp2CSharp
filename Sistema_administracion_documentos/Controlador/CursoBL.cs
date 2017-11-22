@@ -18,5 +18,13 @@ namespace Controlador
             lista = accesoDatos.cursosDictados(id_Ciclo, id_Usuario);
             return lista;
         }
+
+        public BindingList<Curso> listaCursoMatriculado(int id_Ciclo, int id_Usuario)
+        {
+            BindingList<Curso> lista = new BindingList<Curso>();
+            CursoDA accesoDatos = new CursoDA();
+            lista = accesoDatos.listaCursoMatriculado(id_Usuario,id_Ciclo);
+            return lista;
+        }
     }
 }
