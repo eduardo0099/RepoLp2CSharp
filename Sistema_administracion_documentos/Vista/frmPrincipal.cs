@@ -95,8 +95,8 @@ namespace Vista
         }
 
         private void btnCerrarSes_Click(object sender, EventArgs e) {
-            frmLogin ventanaLogin = new frmLogin();
-            
+            //frmLogin ventanaLogin = new frmLogin();
+            /*
             this.Hide();
             if (ventanaLogin.ShowDialog() == DialogResult.OK) {
                 lblNombreUsuario.Text = Program.userobj.Nombres;
@@ -106,7 +106,8 @@ namespace Vista
                 //Program.listaId = blcarp.devolverListaCarpetas(Program.userobj.Id);
             }
             else if(ventanaLogin.estado == false) this.Close();
-
+            */
+            this.Dispose();
         }
 
         private void btnDetallesPersonal_Click(object sender, EventArgs e)

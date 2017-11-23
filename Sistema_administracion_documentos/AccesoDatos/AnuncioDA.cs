@@ -108,5 +108,22 @@ namespace AccesoDatos
             con.Close();
         }
 
+        public string buscarDocente(int idCiclo, int idCurso)
+        {
+            string s = "";
+            BindingList<Anuncio> lista = new BindingList<Anuncio>();
+            MySqlConnection con = new MySqlConnection(cadenabd);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "BUSCAR_DOCENTE";
+            comando.Parameters.AddWithValue("_IDCICLO", idCiclo);
+            comando.Parameters.AddWithValue("_IDCURSO", idCurso);
+            MySqlDataReader reader = comando.ExecuteReader();
+            reader.Read();
+            s = reader.GetString("Nombre") + reader.GetString("APaterno");
+            con.Close();
+            return s;
+        }
     }
 }

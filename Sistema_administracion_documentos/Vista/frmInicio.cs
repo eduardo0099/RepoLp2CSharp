@@ -107,7 +107,7 @@ namespace Vista
                     this.button2.Visible = true;
                 }
                 else
-                    lblAutorAnu.Text = logicaAnuncio.autor(anuncioSeleccionado.Id);
+                    //lblAutorAnu.Text = logicaAnuncio.autor(Program.cicloVigente,cursoSeleccionado.Id);
                 this.bttEditar.Visible = true;
                 this.button2.Visible = true;
             }
@@ -138,6 +138,7 @@ namespace Vista
             estadoInicial();
             listaAnuncio.RemoveAt(i);
             MessageBox.Show("Se elimino correctamente", "Anuncio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.button2.Visible = false;
             estadoInicial();
         }
 
@@ -149,6 +150,7 @@ namespace Vista
             this.pnlEdicion.Visible = false;
             bttGuardar.Visible = false;
             bttEditar.Visible = false;
+            
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -161,6 +163,11 @@ namespace Vista
             logicaAnuncio.Actualizar(anuncioSeleccionado.Id, txtTitulo.Text, txtDes.Text);
             MessageBox.Show("Se guardo correctamente", "Anuncio", MessageBoxButtons.OK, MessageBoxIcon.Information);
             estadoInicial();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

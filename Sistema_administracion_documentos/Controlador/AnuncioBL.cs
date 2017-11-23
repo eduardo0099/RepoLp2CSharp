@@ -33,10 +33,10 @@ namespace Controlador
             return lista;
         }
 
-        public string autor(int idAnuncio)
+        public string autor(int idCiclo,int idCurso)
         {
 
-            string nombre = "jajaja";
+            string nombre = accesoD.buscarDocente(idCiclo,idCurso);
             return nombre;
         }
 
