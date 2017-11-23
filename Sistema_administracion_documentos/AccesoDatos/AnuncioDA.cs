@@ -81,5 +81,32 @@ namespace AccesoDatos
             return lista;
         }
 
+        public void eliminarAnuncio(Anuncio an)
+        {
+            BindingList<Anuncio> lista = new BindingList<Anuncio>();
+            MySqlConnection con = new MySqlConnection(cadenabd);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "DELETE FROM Anuncio WHERE Anuncio.id = " + an.Id + ";";
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
+        public void actualizarAnuncio(int id, string titulo, string descripcion)
+        {
+            BindingList<Anuncio> lista = new BindingList<Anuncio>();
+            MySqlConnection con = new MySqlConnection(cadenabd);
+            con.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = con;
+            comando.CommandText = "ACTUALIZAR_ANUNCIO";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("_TITULO", titulo);
+            comando.Parameters.AddWithValue("_DESCRIPCION", descripcion);
+            comando.Parameters.AddWithValue("_ID", id);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
+
     }
 }

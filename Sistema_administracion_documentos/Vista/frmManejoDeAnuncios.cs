@@ -43,7 +43,7 @@ namespace Vista
             cboCursos.Enabled = true;
             txtTitulo.Enabled = true;
             txtAnunsio.Enabled = true;
-            buscarAnuncioToolStripButton.Enabled = false;
+            //buscarAnuncioToolStripButton.Enabled = false;
             nuevoAnuncioToolStripButton.Enabled = false;
             cancelarToolStripButton.Enabled = true;
             guardarAnuncioToolStripButton.Enabled = true;
@@ -54,42 +54,37 @@ namespace Vista
             }
         }
 
-        private void buscarAnuncioToolStripButton_Click_1(object sender, EventArgs e)
-        {
-            frmBuscarAnuncio formBuscarAnuncio = new frmBuscarAnuncio();
-            //formBuscarAnuncio.Show();
-            formBuscarAnuncio.Owner = this;
-            if (formBuscarAnuncio.ShowDialog() == DialogResult.OK)
-            {
-                txtAnunsio.Text = formBuscarAnuncio.SelectedAnuncio.Descripcion;
-                txtTitulo.Text = formBuscarAnuncio.SelectedAnuncio.Titulo;
-                cboCursos.Text = formBuscarAnuncio.SelectedAnuncio.Curso.Codigo;
-                modificarAnuncioToolStripButton.Enabled = true;
-                eleminarAnuncioToolStripButton.Enabled = true;
-                guardarAnuncioToolStripButton.Enabled = false;
-                nuevoAnuncioToolStripButton.Enabled = false;
-                cancelarToolStripButton.Enabled = true;
-            }
-        }
+        
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            // guardar el anuncio.
-            int i = cboCursos.SelectedIndex;
-            Curso c = listaCursos[i];
-            Docente d = new Docente();
-            d.Id = Program.userobj.Id;
-            Ciclo cl = new Ciclo();
-            cl.Id = cicloVigente;
-            anuncio = new Anuncio(this.txtTitulo.Text, this.txtAnunsio.Text, DateTime.Now, d, c, cl);
-            logicaAnuncio.guardarAnuncio(anuncio);
-
-            estadoInitsial();
+            if (this.txtTitulo.Text == "")
+                MessageBox.Show("Falta ingresar el titulo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (this.txtAnunsio.Text == "")
+                MessageBox.Show("Falta ingresar la descripcion ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (this.txtAnunsio.Text == "" && this.txtTitulo.Text == "")
+                MessageBox.Show("Falta ingresar el titulo y la descripcion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (this.cboCursos.Text == "")
+                MessageBox.Show("Falta seleccionar el curso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                // guardar el anuncio.
+                int i = cboCursos.SelectedIndex;
+                Curso c = listaCursos[i];
+                Docente d = new Docente();
+                d.Id = Program.userobj.Id;
+                Ciclo cl = new Ciclo();
+                cl.Id = cicloVigente;
+                anuncio = new Anuncio(this.txtTitulo.Text, this.txtAnunsio.Text, DateTime.Now, d, c, cl);
+                logicaAnuncio.guardarAnuncio(anuncio);
+                MessageBox.Show("Se guardo correctamente", "Anuncio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                estadoInitsial();
+            }
         }
 
         private void eleminarAnuncioToolStripButton_Click_1(object sender, EventArgs e)
         {
-            DialogResult eliminateResult = MessageBox.Show("Está seguro?", "Esta voy a eliminar el anuncio!", MessageBoxButtons.YesNo);
+            DialogResult eliminateResult = MessageBox.Show("Está seguro?", "Estonces se eliminara el anuncio!", MessageBoxButtons.YesNo);
             if (eliminateResult == DialogResult.Yes)
             {
 
@@ -126,10 +121,10 @@ namespace Vista
             txtTitulo.Enabled = false;
             txtAnunsio.Enabled = false;
             nuevoAnuncioToolStripButton.Enabled = true;
-            buscarAnuncioToolStripButton.Enabled = true;
+            //buscarAnuncioToolStripButton.Enabled = true;
             guardarAnuncioToolStripButton.Enabled = false;
-            modificarAnuncioToolStripButton.Enabled = false;
-            eleminarAnuncioToolStripButton.Enabled = false;
+            //modificarAnuncioToolStripButton.Enabled = false;
+            //eleminarAnuncioToolStripButton.Enabled = false;
             cancelarToolStripButton.Enabled = false;
         }
     }

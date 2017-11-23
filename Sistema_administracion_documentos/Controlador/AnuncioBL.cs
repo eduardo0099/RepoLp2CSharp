@@ -39,5 +39,15 @@ namespace Controlador
             string nombre = "jajaja";
             return nombre;
         }
+
+        public void eliminarAnuncio(Anuncio an)
+        {
+            accesoD.eliminarAnuncio(an);
+        }
+
+        public void Actualizar(int id,string titulo,string descripcion)
+        {
+            accesoD.actualizarAnuncio(id, titulo, descripcion);
+        }
     }
 }

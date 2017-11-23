@@ -23,7 +23,7 @@ namespace Vista
             blcarp = new CarpetaBL();
             if (Program.userobj.Cargo == 0)//Profesor
                 this.toolStripButton3.Visible = true;
-            if(Program.userobj.Cargo == 1)//Alumno
+            if(Program.userobj.Cargo == 1 || Program.userobj.Cargo == 2)//Alumno y Personal
                 this.toolStripButton3.Visible = false;
 
             //this.WindowState = FormWindowState.Maximized;

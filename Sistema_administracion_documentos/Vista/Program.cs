@@ -13,6 +13,7 @@ namespace Vista
         /// </summary>
 
         public static Usuario userobj;
+        public static int cicloVigente;//id del ciclo vigente
         public static List<int> listaId;
         public static int idCarpAct = 0;
         public static List<int> listidCarpPast;
