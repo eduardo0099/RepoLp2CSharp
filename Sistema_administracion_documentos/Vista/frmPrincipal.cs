@@ -19,7 +19,7 @@ namespace Vista
         public frmPrincipal(string nombreUsuario)
         {
             InitializeComponent();
-            lblNombreUsuario.Text = Program.userobj.Nombres;
+            lblNombreUsuario.Text = Program.userobj.Nombres + " " + Program.userobj.APaterno;
             blcarp = new CarpetaBL();
             if (Program.userobj.Cargo == 0)//Profesor
                 this.toolStripButton3.Visible = true;

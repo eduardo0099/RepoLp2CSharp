@@ -107,9 +107,9 @@ namespace Vista
                     this.button2.Visible = true;
                 }
                 else
-                    //lblAutorAnu.Text = logicaAnuncio.autor(Program.cicloVigente,cursoSeleccionado.Id);
-                this.bttEditar.Visible = true;
-                this.button2.Visible = true;
+                {
+                    lblAutorAnu.Text = logicaAnuncio.autor(Program.cicloVigente,cursoSeleccionado.Id);
+                }
             }
             else
             {

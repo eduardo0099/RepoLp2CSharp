@@ -29,14 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.bttGuardar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.bttEditar = new System.Windows.Forms.Button();
             this.btnCurso = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pnlEdicion = new System.Windows.Forms.Panel();
+            this.txtDes = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.lblDescrip = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblAutorAnu = new System.Windows.Forms.Label();
             this.lblPorAnu = new System.Windows.Forms.Label();
             this.lblFechaAnu = new System.Windows.Forms.Label();
@@ -45,32 +53,25 @@
             this.lblColorAnu = new System.Windows.Forms.Label();
             this.bttSelecAnuncio = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechacreacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anuncioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lblCurso = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.anuncioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.anuncioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bttEditar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pnlEdicion = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblDescrip = new System.Windows.Forms.Label();
-            this.txtTitulo = new System.Windows.Forms.TextBox();
-            this.txtDes = new System.Windows.Forms.TextBox();
-            this.bttGuardar = new System.Windows.Forms.Button();
-            this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechacreacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.pnlEdicion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource1)).BeginInit();
-            this.pnlEdicion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -85,8 +86,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -101,24 +102,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 85);
+            this.label5.Location = new System.Drawing.Point(248, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 39);
+            this.label5.Size = new System.Drawing.Size(187, 39);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Bienvenido:";
+            this.label5.Text = "Bienvenido";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = global::Vista.Properties.Resources.loguin;
-            this.pictureBox1.Image = global::Vista.Properties.Resources.loguin;
-            this.pictureBox1.InitialImage = global::Vista.Properties.Resources.loguin;
-            this.pictureBox1.Location = new System.Drawing.Point(479, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -147,6 +136,36 @@
             this.tabPage1.Text = "Anuncios";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // bttGuardar
+            // 
+            this.bttGuardar.Location = new System.Drawing.Point(120, 201);
+            this.bttGuardar.Name = "bttGuardar";
+            this.bttGuardar.Size = new System.Drawing.Size(75, 23);
+            this.bttGuardar.TabIndex = 9;
+            this.bttGuardar.Text = "Guardar";
+            this.bttGuardar.UseVisualStyleBackColor = true;
+            this.bttGuardar.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(392, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Eliminar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // bttEditar
+            // 
+            this.bttEditar.Location = new System.Drawing.Point(38, 200);
+            this.bttEditar.Name = "bttEditar";
+            this.bttEditar.Size = new System.Drawing.Size(75, 23);
+            this.bttEditar.TabIndex = 7;
+            this.bttEditar.Text = "Editar";
+            this.bttEditar.UseVisualStyleBackColor = true;
+            this.bttEditar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnCurso
             // 
             this.btnCurso.Location = new System.Drawing.Point(348, 18);
@@ -173,6 +192,51 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Anuncio:";
+            // 
+            // pnlEdicion
+            // 
+            this.pnlEdicion.Controls.Add(this.txtDes);
+            this.pnlEdicion.Controls.Add(this.txtTitulo);
+            this.pnlEdicion.Controls.Add(this.lblDescrip);
+            this.pnlEdicion.Controls.Add(this.lblTitulo);
+            this.pnlEdicion.Location = new System.Drawing.Point(25, 22);
+            this.pnlEdicion.Name = "pnlEdicion";
+            this.pnlEdicion.Size = new System.Drawing.Size(478, 110);
+            this.pnlEdicion.TabIndex = 6;
+            // 
+            // txtDes
+            // 
+            this.txtDes.Location = new System.Drawing.Point(90, 45);
+            this.txtDes.Multiline = true;
+            this.txtDes.Name = "txtDes";
+            this.txtDes.Size = new System.Drawing.Size(363, 50);
+            this.txtDes.TabIndex = 3;
+            // 
+            // txtTitulo
+            // 
+            this.txtTitulo.Location = new System.Drawing.Point(90, 14);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(363, 20);
+            this.txtTitulo.TabIndex = 2;
+            // 
+            // lblDescrip
+            // 
+            this.lblDescrip.AutoSize = true;
+            this.lblDescrip.Location = new System.Drawing.Point(17, 45);
+            this.lblDescrip.Name = "lblDescrip";
+            this.lblDescrip.Size = new System.Drawing.Size(66, 13);
+            this.lblDescrip.TabIndex = 1;
+            this.lblDescrip.Text = "Descripcion:";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(14, 14);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(36, 13);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Titulo:";
+            this.lblTitulo.Click += new System.EventHandler(this.label6_Click);
             // 
             // lblAutorAnu
             // 
@@ -256,6 +320,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(525, 138);
             this.dataGridView1.TabIndex = 2;
             // 
+            // tituloDataGridViewTextBoxColumn
+            // 
+            this.tituloDataGridViewTextBoxColumn.DataPropertyName = "Titulo";
+            this.tituloDataGridViewTextBoxColumn.HeaderText = "Titulo";
+            this.tituloDataGridViewTextBoxColumn.Name = "tituloDataGridViewTextBoxColumn";
+            this.tituloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechacreacionDataGridViewTextBoxColumn
+            // 
+            this.fechacreacionDataGridViewTextBoxColumn.DataPropertyName = "Fechacreacion";
+            this.fechacreacionDataGridViewTextBoxColumn.HeaderText = "Fechacreacion";
+            this.fechacreacionDataGridViewTextBoxColumn.Name = "fechacreacionDataGridViewTextBoxColumn";
+            this.fechacreacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // anuncioBindingSource1
+            // 
+            this.anuncioBindingSource1.DataSource = typeof(Modelo.Anuncio);
+            // 
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
@@ -282,105 +371,14 @@
             // 
             this.anuncioBindingSource.DataSource = typeof(Modelo.Anuncio);
             // 
-            // anuncioBindingSource1
+            // pictureBox2
             // 
-            this.anuncioBindingSource1.DataSource = typeof(Modelo.Anuncio);
-            // 
-            // bttEditar
-            // 
-            this.bttEditar.Location = new System.Drawing.Point(38, 200);
-            this.bttEditar.Name = "bttEditar";
-            this.bttEditar.Size = new System.Drawing.Size(75, 23);
-            this.bttEditar.TabIndex = 7;
-            this.bttEditar.Text = "Editar";
-            this.bttEditar.UseVisualStyleBackColor = true;
-            this.bttEditar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(392, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pnlEdicion
-            // 
-            this.pnlEdicion.Controls.Add(this.txtDes);
-            this.pnlEdicion.Controls.Add(this.txtTitulo);
-            this.pnlEdicion.Controls.Add(this.lblDescrip);
-            this.pnlEdicion.Controls.Add(this.lblTitulo);
-            this.pnlEdicion.Location = new System.Drawing.Point(25, 22);
-            this.pnlEdicion.Name = "pnlEdicion";
-            this.pnlEdicion.Size = new System.Drawing.Size(478, 110);
-            this.pnlEdicion.TabIndex = 6;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(14, 14);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(36, 13);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Titulo:";
-            this.lblTitulo.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // lblDescrip
-            // 
-            this.lblDescrip.AutoSize = true;
-            this.lblDescrip.Location = new System.Drawing.Point(17, 45);
-            this.lblDescrip.Name = "lblDescrip";
-            this.lblDescrip.Size = new System.Drawing.Size(66, 13);
-            this.lblDescrip.TabIndex = 1;
-            this.lblDescrip.Text = "Descripcion:";
-            // 
-            // txtTitulo
-            // 
-            this.txtTitulo.Location = new System.Drawing.Point(90, 14);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(363, 20);
-            this.txtTitulo.TabIndex = 2;
-            // 
-            // txtDes
-            // 
-            this.txtDes.Location = new System.Drawing.Point(90, 45);
-            this.txtDes.Multiline = true;
-            this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(363, 50);
-            this.txtDes.TabIndex = 3;
-            // 
-            // bttGuardar
-            // 
-            this.bttGuardar.Location = new System.Drawing.Point(120, 201);
-            this.bttGuardar.Name = "bttGuardar";
-            this.bttGuardar.Size = new System.Drawing.Size(75, 23);
-            this.bttGuardar.TabIndex = 9;
-            this.bttGuardar.Text = "Guardar";
-            this.bttGuardar.UseVisualStyleBackColor = true;
-            this.bttGuardar.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // tituloDataGridViewTextBoxColumn
-            // 
-            this.tituloDataGridViewTextBoxColumn.DataPropertyName = "Titulo";
-            this.tituloDataGridViewTextBoxColumn.HeaderText = "Titulo";
-            this.tituloDataGridViewTextBoxColumn.Name = "tituloDataGridViewTextBoxColumn";
-            this.tituloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechacreacionDataGridViewTextBoxColumn
-            // 
-            this.fechacreacionDataGridViewTextBoxColumn.DataPropertyName = "Fechacreacion";
-            this.fechacreacionDataGridViewTextBoxColumn.HeaderText = "Fechacreacion";
-            this.fechacreacionDataGridViewTextBoxColumn.Name = "fechacreacionDataGridViewTextBoxColumn";
-            this.fechacreacionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(18, 164);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(211, 227);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // frmInicio
             // 
@@ -398,17 +396,17 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource1)).EndInit();
             this.pnlEdicion.ResumeLayout(false);
             this.pnlEdicion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,7 +428,6 @@
         private System.Windows.Forms.Label lblPubli;
         private System.Windows.Forms.TextBox txtAnuncio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCurso;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
@@ -447,5 +444,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tituloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechacreacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

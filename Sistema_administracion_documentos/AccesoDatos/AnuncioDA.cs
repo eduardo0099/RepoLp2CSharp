@@ -111,12 +111,12 @@ namespace AccesoDatos
         public string buscarDocente(int idCiclo, int idCurso)
         {
             string s = "";
-            BindingList<Anuncio> lista = new BindingList<Anuncio>();
             MySqlConnection con = new MySqlConnection(cadenabd);
             con.Open();
             MySqlCommand comando = new MySqlCommand();
             comando.Connection = con;
             comando.CommandText = "BUSCAR_DOCENTE";
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("_IDCICLO", idCiclo);
             comando.Parameters.AddWithValue("_IDCURSO", idCurso);
             MySqlDataReader reader = comando.ExecuteReader();
