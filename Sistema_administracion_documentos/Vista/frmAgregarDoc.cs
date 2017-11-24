@@ -111,9 +111,9 @@ namespace Vista
                 //Grabar la lista de documentos a la carpeta
                 Char delimiter = '\\';
                 Char delimiter2 = '.';
-                frmCarga frmc = new frmCarga();
+                //frmCarga frmc = new frmCarga();
                 //frmc.Visible = true;
-                frmc.ShowDialog();
+                //frmc.ShowDialog();
 
                 foreach (CargaDoc cd in docsACargar)
                 {

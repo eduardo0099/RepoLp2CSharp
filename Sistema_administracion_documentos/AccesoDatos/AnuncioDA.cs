@@ -65,7 +65,7 @@ namespace AccesoDatos
             con.Open();
             MySqlCommand comando = new MySqlCommand();
             comando.Connection = con;
-            comando.CommandText = "SELECT * FROM Anuncio WHERE Anuncio.CursoXCiclo_Ciclo_idCiclo in (SELECT Ciclo_idCiclo from CursoXCiclo where CursoXCiclo.Curso_idCurso =" + idCurso + " AND CursoXCiclo.Ciclo_idCiclo = " + idCiclo + ");";
+            comando.CommandText = "SELECT * FROM Anuncio WHERE Anuncio.CursoXCiclo_Curso_idCurso in (SELECT Curso_idCurso from CursoXCiclo where CursoXCiclo.Curso_idCurso =" + idCurso + " AND CursoXCiclo.Ciclo_idCiclo = " + idCiclo + ");";
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
